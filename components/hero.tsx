@@ -1,0 +1,186 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Phone, ArrowRight, Shield, Award, Clock } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { projectImages } from '@/lib/services-data';
+
+const heroSlides = [
+  {
+    image: projectImages[1],
+    title: 'Acoperisuri de Calitate Superioara',
+    subtitle: 'Montaj profesional cu materiale premium',
+  },
+  {
+    image: projectImages[3],
+    title: 'Renovari Complete',
+    subtitle: 'Transformam acoperisul tau in doar cateva zile',
+  },
+  {
+    image: projectImages[9],
+    title: 'Tigla Ceramica & Metalica',
+    subtitle: 'Diversitate de modele si culori',
+  },
+];
+
+const stats = [
+  { icon: Shield, value: '15+', label: 'Ani Experienta' },
+  { icon: Award, value: '2000+', label: 'Proiecte Finalizate' },
+  { icon: Clock, value: '24h', label: 'Raspuns Rapid' },
+];
+
+export function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Image Carousel */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0"
+        >
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroSlides[currentSlide].image})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/40" />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
+        <div className="max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2 mb-6"
+          >
+            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+            <span className="text-primary-foreground text-sm font-medium">
+              Servicii in toata Romania
+            </span>
+          </motion.div>
+
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={`title-${currentSlide}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-4 font-serif leading-tight text-balance"
+            >
+              {heroSlides[currentSlide].title}
+            </motion.h1>
+          </AnimatePresence>
+
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={`subtitle-${currentSlide}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-xl md:text-2xl text-background/80 mb-8"
+            >
+              {heroSlides[currentSlide].subtitle}
+            </motion.p>
+          </AnimatePresence>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 mb-12"
+          >
+            <a href="tel:+40799676512">
+              <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 text-lg px-8">
+                <Phone className="w-5 h-5" />
+                Suna Acum
+              </Button>
+            </a>
+            <Link href="/servicii">
+              <Button size="lg" variant="outline" className="rounded-full border-background/30 text-background hover:bg-background/10 gap-2 text-lg px-8">
+                Vezi Serviciile
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="grid grid-cols-3 gap-4 md:gap-8"
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
+                className="flex items-center gap-3"
+              >
+                <div className="w-12 h-12 rounded-xl bg-background/10 backdrop-blur-sm flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <div className="text-2xl md:text-3xl font-bold text-background">{stat.value}</div>
+                  <div className="text-xs md:text-sm text-background/70">{stat.label}</div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'w-8 bg-accent' 
+                : 'bg-background/50 hover:bg-background/70'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="absolute bottom-8 right-8 hidden md:block"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-background/30 rounded-full flex justify-center pt-2"
+        >
+          <div className="w-1.5 h-3 bg-background/50 rounded-full" />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
