@@ -115,7 +115,7 @@ export function Hero() {
               </Button>
             </a>
             <Link href="/servicii">
-              <Button size="lg" variant="outline" className="rounded-full border-background/30 text-background hover:bg-background/10 gap-2 text-lg px-8">
+              <Button size="lg" variant="outline" className="rounded-full border-background/30 bg-transparent dark:bg-transparent text-background hover:bg-background/10 hover:text-background dark:hover:bg-background/10 gap-2 text-lg px-8">
                 Vezi Serviciile
                 <ArrowRight className="w-5 h-5" />
               </Button>
