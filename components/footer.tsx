@@ -3,11 +3,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
 import { services, serviceCategories } from '@/lib/services-data';
 
 const quickLinks = [
-  { label: 'Acasa', href: '/' },
+  { label: 'Acasă', href: '/' },
   { label: 'Servicii', href: '/servicii' },
   { label: 'Portofoliu', href: '/portofoliu' },
   { label: 'Despre Noi', href: '/despre' },
@@ -46,34 +46,18 @@ export function Footer() {
               </div>
               <div>
                 <span className="block text-xl font-bold font-serif">AcoperiRO</span>
-                <p className="text-xs text-background/60 -mt-1">Experti in acoperisuri</p>
+                <p className="text-xs text-background/60 -mt-1">Experți în acoperișuri</p>
               </div>
             </Link>
             <p className="text-background/70 mb-6 leading-relaxed">
-              Firma de acoperisuri cu echipe in toata Romania: montaj acoperisuri, reparatii,
-              mansardari, dulgherie si hidroizolatii. Cu peste 15 ani de experienta, garantam calitate si satisfactie.
+              Firmă de acoperișuri cu echipe în toată România: montaj acoperișuri, reparații,
+              mansardări, dulgherie și hidroizolații. Cu peste 15 ani de experiență, garantăm calitate și satisfacție.
             </p>
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <p className="text-lg font-semibold mb-6">Navigare Rapida</p>
+            <p className="text-lg font-semibold mb-6">Navigare Rapidă</p>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -151,7 +135,7 @@ export function Footer() {
                 </div>
                 <div>
                   <div className="text-sm text-background/50">Zona de Acoperire</div>
-                  <div className="font-semibold text-background">Toata Romania</div>
+                  <div className="font-semibold text-background">Toată România</div>
                 </div>
               </li>
               <li className="flex items-center gap-3 text-background/70">
@@ -160,7 +144,7 @@ export function Footer() {
                 </div>
                 <div>
                   <div className="text-sm text-background/50">Program</div>
-                  <div className="font-semibold text-background">Luni - Sambata: 07:00 - 19:00</div>
+                  <div className="font-semibold text-background">Luni - Sâmbătă: 07:00 - 19:00</div>
                 </div>
               </li>
             </ul>
@@ -176,10 +160,10 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6 text-sm text-background/60">
             <Link href="/confidentialitate" className="hover:text-background transition-colors">
-              Politica de Confidentialitate
+              Politica de Confidențialitate
             </Link>
             <Link href="/termeni" className="hover:text-background transition-colors">
-              Termeni si Conditii
+              Termeni și Condiții
             </Link>
           </div>
         </div>

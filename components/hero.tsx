@@ -5,30 +5,31 @@ import { motion } from 'framer-motion';
 import { Phone, ArrowRight, Shield, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 import { projectImages } from '@/lib/services-data';
 
 const heroSlides = [
   {
     image: projectImages[1],
-    title: 'Montaj Acoperisuri cu Materiale Premium',
-    subtitle: 'Instalare profesionala, garantie extinsa si echipe cu peste 15 ani de experienta',
+    title: 'Montaj Acoperișuri cu Materiale Premium',
+    subtitle: 'Instalare profesională, garanție extinsă și echipe cu peste 15 ani de experiență',
   },
   {
     image: projectImages[3],
-    title: 'Renovari si Reparatii de Acoperisuri',
-    subtitle: 'Transformam acoperisul tau in doar cateva zile',
+    title: 'Renovări și Reparații de Acoperișuri',
+    subtitle: 'Transformăm acoperișul tău în doar câteva zile',
   },
   {
     image: projectImages[9],
-    title: 'Tigla Ceramica si Tigla Metalica',
-    subtitle: 'Diversitate de modele si culori pentru orice casa',
+    title: 'Țiglă Ceramică și Țiglă Metalică',
+    subtitle: 'Diversitate de modele și culori pentru orice casă',
   },
 ];
 
 const stats = [
-  { icon: Shield, value: '15+', label: 'Ani Experienta' },
+  { icon: Shield, value: '15+', label: 'Ani Experiență' },
   { icon: Award, value: '2000+', label: 'Proiecte Finalizate' },
-  { icon: Clock, value: '24h', label: 'Raspuns Rapid' },
+  { icon: Clock, value: '24h', label: 'Răspuns Rapid' },
 ];
 
 export function Hero() {
@@ -62,9 +63,13 @@ export function Hero() {
           className="absolute inset-0 bg-foreground"
           aria-hidden="true"
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image})` }}
+          <Image
+            src={slide.image}
+            alt=""
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/40" />
         </motion.div>
@@ -81,12 +86,12 @@ export function Hero() {
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
             <span className="text-primary-foreground text-sm font-medium">
-              Servicii in toata Romania
+              Servicii în toată România
             </span>
           </motion.div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-6 font-serif leading-tight text-balance">
-            Firma de Acoperisuri in Toata Romania: Montaj, Reparatii si Renovari
+            Firmă de Acoperișuri în Toată România: Montaj, Reparații și Renovări
           </h1>
 
           <div className="grid mb-8">
@@ -118,7 +123,7 @@ export function Hero() {
             <a href="tel:+40799676512">
               <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 text-lg px-8">
                 <Phone className="w-5 h-5" />
-                Suna Acum
+                Sună Acum
               </Button>
             </a>
             <Link href="/servicii">

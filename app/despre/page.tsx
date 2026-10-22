@@ -4,9 +4,9 @@ import { projectImages } from '@/lib/services-data';
 import { DespreClient } from './despre-client';
 
 export const metadata = buildMetadata({
-  title: 'Despre Noi: Firma de Acoperisuri din 2009',
+  title: 'Despre Noi: Firmă de Acoperișuri din 2009',
   description:
-    'Afla povestea AcoperiRO: din 2009 montam si reparam acoperisuri in toata Romania, cu o echipa de specialisti, materiale certificate si garantie extinsa.',
+    'Află povestea AcoperiRO: din 2009 montăm și reparăm acoperișuri în toată România, cu o echipă de specialiști, materiale certificate și garanție extinsă.',
   path: '/despre',
   image: projectImages[10],
 });
@@ -23,7 +23,7 @@ export default function DesprePage() {
       about: { '@id': ORGANIZATION_ID },
     },
     breadcrumbJsonLd([
-      ['Acasa', '/'],
+      ['Acasă', '/'],
       ['Despre Noi', '/despre'],
     ]),
   ];

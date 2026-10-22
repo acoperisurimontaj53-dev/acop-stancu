@@ -45,12 +45,12 @@ export function ServiciiClient() {
               Serviciile Noastre
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif text-balance">
-              Servicii de Acoperisuri: Montaj, Reparatii, Izolatii si Mansardari
+              Servicii de Acoperișuri: Montaj, Reparații, Izolații și Mansardări
             </h1>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Alege dintre cele {services.length} servicii profesionale pentru acoperisul tau,
-              in toata Romania: de la montaj acoperis si reparatii pana la dulgherie,
-              hidroizolatii si izolatii termice.
+              Alege dintre cele {services.length} servicii profesionale pentru acoperișul tău,
+              în toată România: de la montaj acoperiș și reparații până la dulgherie,
+              hidroizolații și izolații termice.
             </p>
             
             {/* Search Bar */}
@@ -58,8 +58,8 @@ export function ServiciiClient() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="text"
-                aria-label="Cauta servicii de acoperisuri"
-                placeholder="Cauta servicii..."
+                aria-label="Caută servicii de acoperișuri"
+                placeholder="Caută servicii..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 rounded-full bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
@@ -110,7 +110,7 @@ export function ServiciiClient() {
       {/* Services Grid */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="sr-only">Lista serviciilor de acoperisuri</h2>
+          <h2 className="sr-only">Lista serviciilor de acoperișuri</h2>
           {filteredServices.length > 0 ? (
             <motion.div
               layout
@@ -193,10 +193,10 @@ export function ServiciiClient() {
                 <Search className="w-12 h-12 text-muted-foreground" />
               </div>
               <h3 className="text-2xl font-semibold text-foreground mb-2">
-                Nu am gasit niciun serviciu
+                Nu am găsit niciun serviciu
               </h3>
               <p className="text-muted-foreground mb-6">
-                Incearca sa modifici filtrul sau termenul de cautare
+                Încearcă să modifici filtrul sau termenul de căutare
               </p>
               <Button
                 onClick={() => {
@@ -205,7 +205,7 @@ export function ServiciiClient() {
                 }}
                 className="rounded-full"
               >
-                Reseteaza filtrele
+                Resetează filtrele
               </Button>
             </motion.div>
           )}
@@ -216,26 +216,26 @@ export function ServiciiClient() {
       <section className="py-16 bg-secondary">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-serif text-balance">
-            Servicii de Acoperisuri pentru Case, Hale si Cladiri Speciale
+            Servicii de Acoperișuri pentru Case, Hale și Clădiri Speciale
           </h2>
           <div className="space-y-4 text-lg text-muted-foreground">
             <p>
               AcoperiRO ofera servicii complete pentru acoperisuri, de la{' '}
-              <Link href="/servicii/montaj-acoperisuri" className="text-primary font-medium hover:underline">montaj acoperisuri</Link>{' '}
-              noi cu <Link href="/servicii/tigla-metalica" className="text-primary font-medium hover:underline">tigla metalica</Link>,{' '}
-              <Link href="/servicii/tigla-ceramica" className="text-primary font-medium hover:underline">tigla ceramica</Link> sau{' '}
-              <Link href="/servicii/tabla-faltuita" className="text-primary font-medium hover:underline">tabla faltuita</Link>,
-              pana la <Link href="/servicii/reparatii-acoperis" className="text-primary font-medium hover:underline">reparatii acoperis</Link>{' '}
-              si interventii urgente dupa furtuni sau infiltratii.
+              <Link href="/servicii/montaj-acoperisuri" className="text-primary font-medium hover:underline">montaj acoperișuri</Link>{' '}
+              noi cu <Link href="/servicii/tigla-metalica" className="text-primary font-medium hover:underline">țiglă metalică</Link>,{' '}
+              <Link href="/servicii/tigla-ceramica" className="text-primary font-medium hover:underline">țiglă ceramică</Link> sau{' '}
+              <Link href="/servicii/tabla-faltuita" className="text-primary font-medium hover:underline">tablă fălțuită</Link>,
+              pana la <Link href="/servicii/reparatii-acoperis" className="text-primary font-medium hover:underline">reparații acoperiș</Link>{' '}
+              și intervenții urgente după furtuni sau infiltrații.
             </p>
             <p>
               Executam lucrari de <Link href="/servicii/dulgherie" className="text-primary font-medium hover:underline">dulgherie</Link>,{' '}
-              <Link href="/servicii/mansardari" className="text-primary font-medium hover:underline">mansardari</Link>,{' '}
-              <Link href="/servicii/hidroizolatii" className="text-primary font-medium hover:underline">hidroizolatii</Link> si{' '}
-              <Link href="/servicii/izolatie-termica-acoperis" className="text-primary font-medium hover:underline">izolatie termica a acoperisului</Link>,
+              <Link href="/servicii/mansardari" className="text-primary font-medium hover:underline">mansardări</Link>,{' '}
+              <Link href="/servicii/hidroizolatii" className="text-primary font-medium hover:underline">hidroizolații</Link> si{' '}
+              <Link href="/servicii/izolatie-termica-acoperis" className="text-primary font-medium hover:underline">izolație termică a acoperișului</Link>,
               iar pentru scurgerea apei montam{' '}
-              <Link href="/servicii/jgheaburi-burlane" className="text-primary font-medium hover:underline">jgheaburi si burlane</Link>.
-              Lucram in toata Romania, atat pentru locuinte, cat si pentru hale, terase si cladiri de patrimoniu.
+              <Link href="/servicii/jgheaburi-burlane" className="text-primary font-medium hover:underline">jgheaburi și burlane</Link>.
+              Lucrăm în toată România, atât pentru locuințe, cât și pentru hale, terase și clădiri de patrimoniu.
             </p>
           </div>
         </div>
@@ -251,11 +251,11 @@ export function ServiciiClient() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-serif">
-              Nu Gasesti Serviciul Cautat? Suna-ne
+              Nu Găsești Serviciul Căutat? Sună-ne
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Suna-ne si discutam despre proiectul tau. Oferim solutii personalizate
-              pentru orice tip de acoperis, cu oferta gratuita.
+              Sună-ne și discutăm despre proiectul tău. Oferim soluții personalizate
+              pentru orice tip de acoperiș, cu ofertă gratuită.
             </p>
             <a href="tel:+40799676512">
               <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2">

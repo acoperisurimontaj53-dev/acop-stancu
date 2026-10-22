@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 const DESCRIPTION_MAX_LENGTH = 160;
-const DESCRIPTION_CTA = 'Oferta gratuita, toata Romania.';
+const DESCRIPTION_CTA = 'Ofertă gratuită, toată România.';
 
 /** Meta description: short description + as many features as fit in 160 characters. */
 function buildServiceDescription(service: Service) {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!service) {
     return {
-      title: 'Serviciu Negasit',
+      title: 'Serviciu Negăsit',
       robots: { index: false, follow: false },
     };
   }
@@ -77,10 +77,10 @@ export default async function ServicePage({ params }: PageProps) {
       image: service.image,
       category: categoryName,
       provider: { '@id': ORGANIZATION_ID },
-      areaServed: { '@type': 'Country', name: 'Romania' },
+      areaServed: { '@type': 'Country', name: 'România' },
     },
     breadcrumbJsonLd([
-      ['Acasa', '/'],
+      ['Acasă', '/'],
       ['Servicii', '/servicii'],
       [service.name, `/servicii/${service.slug}`],
     ]),

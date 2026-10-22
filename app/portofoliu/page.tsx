@@ -4,9 +4,9 @@ import { projectImages } from '@/lib/services-data';
 import { PortofoliuClient } from './portofoliu-client';
 
 export const metadata = buildMetadata({
-  title: 'Portofoliu Acoperisuri: Montaj si Renovari',
+  title: 'Portofoliu Acoperișuri: Montaj și Renovări',
   description:
-    'Vezi lucrari reale de acoperisuri realizate de AcoperiRO: renovari, mansardari, montaj tigla metalica si ceramica, hidroizolatii si finisaje, in toata Romania.',
+    'Vezi lucrări reale de acoperișuri realizate de AcoperiRO: renovări, mansardări, montaj țiglă metalică și ceramică, hidroizolații și finisaje, în toată România.',
   path: '/portofoliu',
   image: projectImages[3],
 });
@@ -16,13 +16,13 @@ export default function PortofoliuPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Portofoliu acoperisuri AcoperiRO',
+      name: 'Portofoliu acoperișuri AcoperiRO',
       url: absoluteUrl('/portofoliu'),
       inLanguage: 'ro-RO',
       isPartOf: { '@id': WEBSITE_ID },
     },
     breadcrumbJsonLd([
-      ['Acasa', '/'],
+      ['Acasă', '/'],
       ['Portofoliu', '/portofoliu'],
     ]),
   ];

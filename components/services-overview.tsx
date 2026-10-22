@@ -43,11 +43,11 @@ export function ServicesOverview() {
             Serviciile Noastre
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-serif text-balance">
-            Servicii de Acoperisuri: de la Montaj la Hidroizolatii
+            Servicii de Acoperișuri: de la Montaj la Hidroizolații
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Oferim o gama completa de servicii pentru acoperisuri: montaj acoperisuri noi,
-            reparatii, dulgherie, mansardari, izolatii termice si hidroizolatii, in toata Romania.
+            Oferim o gamă completă de servicii pentru acoperișuri: montaj acoperișuri noi,
+            reparații, dulgherie, mansardări, izolații termice și hidroizolații, în toată România.
           </p>
         </motion.div>
 
@@ -93,7 +93,7 @@ export function ServicesOverview() {
                       {service.shortDescription}
                     </p>
                     <div className="flex items-center text-primary font-medium text-sm">
-                      <span>Afla mai mult</span>
+                      <span>Află mai mult</span>
                       <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2" />
                     </div>
                   </div>
@@ -116,7 +116,7 @@ export function ServicesOverview() {
               href="/servicii"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors"
             >
-              Vezi Toate Cele {services.length} Servicii de Acoperisuri
+              Vezi Toate Cele {services.length} Servicii de Acoperișuri
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>

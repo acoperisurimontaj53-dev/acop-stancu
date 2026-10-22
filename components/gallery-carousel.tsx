@@ -12,17 +12,17 @@ const galleryImages = projectImages.map((src, index) => ({
   src,
   title: [
     'Montaj membrane hidroizolante',
-    'Renovare acoperis tigla ceramica',
-    'Izolatie termica mansarda',
-    'Constructie acoperis casa',
-    'Montaj coama metalica',
-    'Renovare sarpanta cladire',
+    'Renovare acoperiș țiglă ceramică',
+    'Izolație termică mansardă',
+    'Construcție acoperiș casă',
+    'Montaj coamă metalică',
+    'Renovare șarpantă clădire',
     'Finisaje lambriu metalic',
-    'Montaj sindrila bituminoasa',
-    'Acoperis tabla faltuita',
-    'Tigla ceramica noua',
-    'Montaj jgheaburi si burlane',
-    'Acoperis tigla metalica',
+    'Montaj șindrilă bituminoasă',
+    'Acoperiș tablă fălțuită',
+    'Țiglă ceramică nouă',
+    'Montaj jgheaburi și burlane',
+    'Acoperiș țiglă metalică',
   ][index] || `Proiect ${index + 1}`,
 }));
 
@@ -71,7 +71,7 @@ export function GalleryCarousel() {
               Portofoliu
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground font-serif">
-              Lucrari de Acoperisuri Realizate de Noi
+              Lucrări de Acoperișuri Realizate de Noi
             </h2>
           </div>
           
@@ -170,7 +170,7 @@ export function GalleryCarousel() {
 
         <div className="text-center mt-8">
           <Link href="/portofoliu" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
-            Vezi tot portofoliul de acoperisuri
+            Vezi tot portofoliul de acoperișuri
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -201,7 +201,7 @@ export function GalleryCarousel() {
           >
             <Image
               src={lightboxImage}
-              alt={galleryImages.find((image) => image.src === lightboxImage)?.title ?? 'Lucrare de acoperis realizata de AcoperiRO'}
+              alt={galleryImages.find((image) => image.src === lightboxImage)?.title ?? 'Lucrare de acoperiș realizată de AcoperiRO'}
               fill
               className="object-contain"
               sizes="(max-width: 1280px) 100vw, 1280px"

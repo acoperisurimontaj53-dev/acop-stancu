@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Menu, X, ChevronDown, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -11,6 +12,15 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    (href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`)) ? 'page' : undefined;
+
+  const navLinkClass = (href: string) =>
+    `transition-colors font-medium ${
+      isActive(href) ? 'text-primary' : 'text-foreground/80 hover:text-foreground'
+    }`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +38,7 @@ export function Header() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Servicii in toata Romania</span>
+              <span>Servicii în toată România</span>
             </div>
           </div>
           <a 
@@ -52,7 +62,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2" aria-label="AcoperiRO - Acasa">
+            <Link href="/" className="flex items-center gap-2" aria-label="AcoperiRO - Acasă">
               <motion.div 
                 className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
@@ -65,17 +75,18 @@ export function Header() {
               </motion.div>
               <div className="hidden sm:block">
                 <span className="block text-xl font-bold text-foreground font-serif">AcoperiRO</span>
-                <p className="text-xs text-muted-foreground -mt-1">Experti in acoperisuri</p>
+                <p className="text-xs text-muted-foreground -mt-1">Experți în acoperișuri</p>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
-              <Link 
-                href="/" 
-                className="text-foreground/80 hover:text-foreground transition-colors font-medium"
+            <nav aria-label="Meniu principal" className="hidden lg:flex items-center gap-8">
+              <Link
+                href="/"
+                aria-current={isActive('/')}
+                className={navLinkClass('/')}
               >
-                Acasa
+                Acasă
               </Link>
               
               {/* No `relative` here: the mega menu is positioned against the sticky header.
@@ -85,10 +96,16 @@ export function Header() {
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <button className="flex items-center gap-1 text-foreground/80 hover:text-foreground transition-colors font-medium">
+                <Link
+                  href="/servicii"
+                  aria-current={isActive('/servicii')}
+                  aria-haspopup="true"
+                  aria-expanded={isServicesOpen}
+                  className={`flex items-center gap-1 ${navLinkClass('/servicii')}`}
+                >
                   Servicii
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                </Link>
                 
                 <AnimatePresence>
                   {isServicesOpen && (
@@ -143,23 +160,26 @@ export function Header() {
                 </AnimatePresence>
               </div>
 
-              <Link 
-                href="/portofoliu" 
-                className="text-foreground/80 hover:text-foreground transition-colors font-medium"
+              <Link
+                href="/portofoliu"
+                aria-current={isActive('/portofoliu')}
+                className={navLinkClass('/portofoliu')}
               >
                 Portofoliu
               </Link>
-              
-              <Link 
-                href="/despre" 
-                className="text-foreground/80 hover:text-foreground transition-colors font-medium"
+
+              <Link
+                href="/despre"
+                aria-current={isActive('/despre')}
+                className={navLinkClass('/despre')}
               >
                 Despre Noi
               </Link>
-              
-              <Link 
-                href="/contact" 
-                className="text-foreground/80 hover:text-foreground transition-colors font-medium"
+
+              <Link
+                href="/contact"
+                aria-current={isActive('/contact')}
+                className={navLinkClass('/contact')}
               >
                 Contact
               </Link>
@@ -174,13 +194,13 @@ export function Header() {
                 <Button variant="outline" className="rounded-full gap-2">
                   <Phone className="w-4 h-4" />
                   <span className="hidden md:inline">+40 799 676 512</span>
-                  <span className="md:hidden">Suna</span>
+                  <span className="md:hidden">Sună</span>
                 </Button>
               </a>
               
               <Link href="/contact">
                 <Button className="rounded-full bg-primary hover:bg-primary/90">
-                  Solicita Oferta
+                  Solicită Ofertă
                 </Button>
               </Link>
 
@@ -188,7 +208,8 @@ export function Header() {
               <button
                 className="lg:hidden p-2"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle menu"
+                aria-label={isMobileMenuOpen ? 'Închide meniul' : 'Deschide meniul'}
+                aria-expanded={isMobileMenuOpen}
               >
                 {isMobileMenuOpen ? (
                   <X className="w-6 h-6" />
@@ -209,38 +230,43 @@ export function Header() {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-card border-t border-border"
             >
-              <nav className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-4">
+              <nav aria-label="Meniu principal mobil" className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-4">
                 <Link 
                   href="/" 
-                  className="text-foreground py-2 font-medium"
+                  aria-current={isActive('/')}
+                  className={`py-2 font-medium ${isActive('/') ? 'text-primary' : 'text-foreground'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Acasa
+                  Acasă
                 </Link>
                 <Link 
                   href="/servicii" 
-                  className="text-foreground py-2 font-medium"
+                  aria-current={isActive('/servicii')}
+                  className={`py-2 font-medium ${isActive('/servicii') ? 'text-primary' : 'text-foreground'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Servicii
                 </Link>
                 <Link 
                   href="/portofoliu" 
-                  className="text-foreground py-2 font-medium"
+                  aria-current={isActive('/portofoliu')}
+                  className={`py-2 font-medium ${isActive('/portofoliu') ? 'text-primary' : 'text-foreground'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Portofoliu
                 </Link>
                 <Link 
                   href="/despre" 
-                  className="text-foreground py-2 font-medium"
+                  aria-current={isActive('/despre')}
+                  className={`py-2 font-medium ${isActive('/despre') ? 'text-primary' : 'text-foreground'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Despre Noi
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="text-foreground py-2 font-medium"
+                  aria-current={isActive('/contact')}
+                  className={`py-2 font-medium ${isActive('/contact') ? 'text-primary' : 'text-foreground'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact

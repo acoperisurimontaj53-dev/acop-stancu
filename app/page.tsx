@@ -10,10 +10,10 @@ import { FloatingContact } from '@/components/floating-contact';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  title: 'AcoperiRO | Montaj si Reparatii Acoperisuri in Toata Romania',
+  title: 'AcoperiRO | Montaj și Reparații Acoperișuri în Toată România',
   absoluteTitle: true,
   description:
-    'Firma de acoperisuri cu peste 15 ani experienta: montaj, reparatii, mansardari, dulgherie si hidroizolatii in toata Romania. Oferta gratuita: +40 799 676 512.',
+    'Firmă de acoperișuri cu peste 15 ani experiență: montaj, reparații, mansardări, dulgherie și hidroizolații în toată România. Ofertă gratuită: +40 799 676 512.',
   path: '/',
 });
 

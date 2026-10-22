@@ -14,42 +14,42 @@ import Link from 'next/link';
 const projects = [
   {
     id: 1,
-    title: 'Renovare Completa Casa Familiala',
-    location: 'Bucuresti',
+    title: 'Renovare Completă Casă Familială',
+    location: 'București',
     category: 'Renovare',
-    description: 'Renovare completa a acoperisului cu montaj de tigla ceramica si hidroizolatie noua.',
+    description: 'Renovare completă a acoperișului cu montaj de țiglă ceramică și hidroizolație nouă.',
     images: [projectImages[1], projectImages[3], projectImages[9]],
   },
   {
     id: 2,
-    title: 'Mansardare Vila',
+    title: 'Mansardare Vilă',
     location: 'Cluj-Napoca',
     category: 'Mansardare',
-    description: 'Mansardare completa cu izolatie termica si ferestre Velux.',
+    description: 'Mansardare completă cu izolație termică și ferestre Velux.',
     images: [projectImages[2], projectImages[5], projectImages[0]],
   },
   {
     id: 3,
-    title: 'Acoperis Nou Casa Moderna',
-    location: 'Timisoara',
+    title: 'Acoperiș Nou Casă Modernă',
+    location: 'Timișoara',
     category: 'Montaj',
-    description: 'Montaj acoperis nou cu tigla metalica si sistem complet de drenaj.',
+    description: 'Montaj acoperiș nou cu țiglă metalică și sistem complet de drenaj.',
     images: [projectImages[11], projectImages[4], projectImages[8]],
   },
   {
     id: 4,
-    title: 'Renovare Cladire Istorica',
-    location: 'Brasov',
+    title: 'Renovare Clădire Istorică',
+    location: 'Brașov',
     category: 'Renovare',
-    description: 'Renovare sarpanta si invelitoare pentru cladire de patrimoniu.',
+    description: 'Renovare șarpantă și învelitoare pentru clădire de patrimoniu.',
     images: [projectImages[5], projectImages[3], projectImages[6]],
   },
   {
     id: 5,
-    title: 'Hidroizolatie Terasa',
-    location: 'Constanta',
-    category: 'Hidroizolatie',
-    description: 'Aplicare membrane hidroizolante pentru terasa mare de bloc.',
+    title: 'Hidroizolație Terasă',
+    location: 'Constanța',
+    category: 'Hidroizolație',
+    description: 'Aplicare membrane hidroizolante pentru terasă mare de bloc.',
     images: [projectImages[0], projectImages[7], projectImages[2]],
   },
   {
@@ -57,12 +57,12 @@ const projects = [
     title: 'Finisaje Lambriu Metalic',
     location: 'Sibiu',
     category: 'Finisaje',
-    description: 'Montaj lambriu metalic pentru stresini si fatada.',
+    description: 'Montaj lambriu metalic pentru streșini și fațadă.',
     images: [projectImages[6], projectImages[10], projectImages[1]],
   },
 ];
 
-const categories = ['Toate', 'Renovare', 'Mansardare', 'Montaj', 'Hidroizolatie', 'Finisaje'];
+const categories = ['Toate', 'Renovare', 'Mansardare', 'Montaj', 'Hidroizolație', 'Finisaje'];
 
 export function PortofoliuClient() {
   const [selectedCategory, setSelectedCategory] = useState('Toate');
@@ -70,7 +70,7 @@ export function PortofoliuClient() {
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const filteredProjects = selectedCategory === 'Toate' 
-    ? projects 
+    ? projects
     : projects.filter(p => p.category === selectedCategory);
 
   const openLightbox = (project: typeof projects[0], imageIndex: number = 0) => {
@@ -117,11 +117,11 @@ export function PortofoliuClient() {
               Portofoliu
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif text-balance">
-              Portofoliu Acoperisuri: Proiecte de Montaj, Renovare si Mansardare
+              Portofoliu Acoperișuri: Proiecte de Montaj, Renovare și Mansardare
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              Descopera cateva dintre cele mai recente lucrari de acoperisuri finalizate cu succes,
-              in toata Romania. Fiecare acoperis are o poveste, iar noi suntem mandri de fiecare.
+              Descoperă câteva dintre cele mai recente lucrări de acoperișuri finalizate cu succes,
+              în toată România. Fiecare acoperiș are o poveste, iar noi suntem mândri de fiecare.
             </p>
           </motion.div>
         </div>
@@ -153,7 +153,7 @@ export function PortofoliuClient() {
       {/* Projects Grid */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="sr-only">Lucrari recente de acoperisuri</h2>
+          <h2 className="sr-only">Lucrări recente de acoperișuri</h2>
           <motion.div
             layout
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -229,11 +229,11 @@ export function PortofoliuClient() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-serif">
-              Vrei un Acoperis ca in Portofoliul Nostru? Cere o Oferta
+              Vrei un Acoperiș ca în Portofoliul Nostru? Cere o Ofertă
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Contacteaza-ne acum si hai sa discutam despre montajul sau renovarea acoperisului tau.
-              Fiecare acoperis poate fi transformat.
+              Contactează-ne acum și hai să discutăm despre montajul sau renovarea acoperișului tău.
+              Fiecare acoperiș poate fi transformat.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="tel:+40799676512">
@@ -244,7 +244,7 @@ export function PortofoliuClient() {
               </a>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="rounded-full">
-                  Solicita Oferta
+                  Solicită Ofertă
                 </Button>
               </Link>
             </div>

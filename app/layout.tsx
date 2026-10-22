@@ -14,11 +14,11 @@ const siteJsonLd = [
     url: SITE_URL,
     logo: `${SITE_URL}/apple-icon.png`,
     image: `${SITE_URL}/apple-icon.png`,
-    description: 'Firma de acoperisuri: montaj, reparatii, mansardari, dulgherie si hidroizolatii in toata Romania.',
+    description: 'Firmă de acoperișuri: montaj, reparații, mansardări, dulgherie și hidroizolații în toată România.',
     telephone: SITE_PHONE,
     email: SITE_EMAIL,
     foundingDate: '2009',
-    areaServed: { '@type': 'Country', name: 'Romania' },
+    areaServed: { '@type': 'Country', name: 'România' },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -52,10 +52,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'AcoperiRO | Montaj si Reparatii Acoperisuri in Toata Romania',
+    default: 'AcoperiRO | Montaj și Reparații Acoperișuri în Toată România',
     template: '%s | AcoperiRO',
   },
-  description: 'Firma de acoperisuri cu peste 15 ani experienta: montaj, reparatii, mansardari, dulgherie si hidroizolatii in toata Romania. Oferta gratuita.',
+  description: 'Firmă de acoperișuri cu peste 15 ani experiență: montaj, reparații, mansardări, dulgherie și hidroizolații în toată România. Ofertă gratuită.',
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,

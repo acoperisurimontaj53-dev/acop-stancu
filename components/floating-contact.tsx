@@ -34,7 +34,7 @@ export function FloatingContact() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-foreground">Sunati acum</p>
+                  <p className="text-sm font-medium text-foreground">Sunați acum</p>
                   <p className="text-xs text-muted-foreground">{PHONE_NUMBER}</p>
                 </div>
               </motion.a>
@@ -53,7 +53,7 @@ export function FloatingContact() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">WhatsApp</p>
-                  <p className="text-xs text-muted-foreground">Scrieti-ne un mesaj</p>
+                  <p className="text-xs text-muted-foreground">Scrieți-ne un mesaj</p>
                 </div>
               </motion.a>
 
@@ -71,7 +71,7 @@ export function FloatingContact() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-foreground">Formular contact</p>
-                    <p className="text-xs text-muted-foreground">Cereti o oferta</p>
+                    <p className="text-xs text-muted-foreground">Cereți o ofertă</p>
                   </div>
                 </Link>
               </motion.div>
@@ -88,7 +88,7 @@ export function FloatingContact() {
         }`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        aria-label={isOpen ? "Inchide meniul de contact" : "Contacteaza-ne"}
+        aria-label={isOpen ? "Închide meniul de contact" : "Contacteaza-ne"}
       >
         <AnimatePresence mode="wait">
           {isOpen ? (

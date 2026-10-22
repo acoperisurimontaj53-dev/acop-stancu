@@ -8,33 +8,33 @@ import { projectImages } from '@/lib/services-data';
 const features = [
   {
     icon: Shield,
-    title: 'Garantie Extinsa',
-    description: 'Oferim garantie de pana la 30 de ani pentru materialele montate si lucrarile executate.',
+    title: 'Garanție Extinsă',
+    description: 'Oferim garanție de până la 30 de ani pentru materialele montate și lucrările executate.',
   },
   {
     icon: Users,
-    title: 'Echipa Profesionista',
-    description: 'Specialisti cu experienta de peste 15 ani in domeniul constructiilor de acoperisuri.',
+    title: 'Echipă Profesionistă',
+    description: 'Specialiști cu experiență de peste 15 ani în domeniul construcțiilor de acoperișuri.',
   },
   {
     icon: Clock,
     title: 'Livrare la Timp',
-    description: 'Respectam termenele stabilite si comunicam transparent pe tot parcursul proiectului.',
+    description: 'Respectăm termenele stabilite și comunicăm transparent pe tot parcursul proiectului.',
   },
   {
     icon: Award,
     title: 'Calitate Premium',
-    description: 'Folosim doar materiale de la producatori de top, certificate si testate.',
+    description: 'Folosim doar materiale de la producători de top, certificate și testate.',
   },
   {
     icon: Wrench,
     title: 'Servicii Complete',
-    description: 'De la consultanta si proiectare pana la executie si intretinere post-montaj.',
+    description: 'De la consultanță și proiectare până la execuție și întreținere post-montaj.',
   },
   {
     icon: MapPin,
-    title: 'Acoperire Nationala',
-    description: 'Oferim servicii in toata Romania, cu echipe mobile disponibile rapid.',
+    title: 'Acoperire Națională',
+    description: 'Oferim servicii în toată România, cu echipe mobile disponibile rapid.',
   },
 ];
 
@@ -54,7 +54,7 @@ export function WhyChooseUs() {
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
                 src={projectImages[3]}
-                alt="Echipa AcoperiRO la montajul unui acoperis"
+                alt="Echipa AcoperiRO la montajul unui acoperiș"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -76,7 +76,7 @@ export function WhyChooseUs() {
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-foreground">98%</div>
-                  <div className="text-sm text-muted-foreground">Clienti Multumiti</div>
+                  <div className="text-sm text-muted-foreground">Clienți Mulțumiți</div>
                 </div>
               </div>
             </motion.div>
@@ -97,11 +97,11 @@ export function WhyChooseUs() {
                 De Ce Noi
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-serif text-balance">
-                De Ce Sa Alegi AcoperiRO pentru Acoperisul Tau
+                De Ce Să Alegi AcoperiRO pentru Acoperișul Tău
               </h2>
               <p className="text-lg text-muted-foreground mb-10">
-                Suntem o firma de acoperisuri dedicata sa ofere cele mai bune solutii pentru casa ta,
-                combinand expertiza tehnica cu materiale de calitate si servicii exceptionale.
+                Suntem o firmă de acoperișuri dedicată să ofere cele mai bune soluții pentru casa ta,
+                combinând expertiză tehnică cu materiale de calitate și servicii excepționale.
               </p>
             </motion.div>
 

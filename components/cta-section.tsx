@@ -32,7 +32,7 @@ export function CTASection() {
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="inline-block text-accent font-medium mb-4 tracking-wider uppercase text-sm"
               >
-                Contacteaza-ne
+                Contactează-ne
               </motion.span>
               <motion.h2
                 initial={{ opacity: 0, y: 10 }}
@@ -41,7 +41,7 @@ export function CTASection() {
                 transition={{ duration: 0.4, delay: 0.3 }}
                 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-serif text-balance"
               >
-                Ai un Proiect de Acoperis? Cere o Oferta Gratuita
+                Ai un Proiect de Acoperiș? Cere o Ofertă Gratuită
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
@@ -50,8 +50,8 @@ export function CTASection() {
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className="text-lg text-muted-foreground mb-8"
               >
-                Suna-ne acum pentru o consultatie gratuita si o oferta personalizata de montaj sau
-                reparatii acoperis. Echipa noastra este pregatita sa te ajute cu orice proiect, mare sau mic.
+                Sună-ne acum pentru o consultație gratuită și o ofertă personalizată de montaj sau
+                reparații acoperiș. Echipa noastră este pregătită să te ajute cu orice proiect, mare sau mic.
               </motion.p>
 
               <motion.div
@@ -86,11 +86,11 @@ export function CTASection() {
             >
               <div className="bg-primary/5 rounded-2xl p-6 text-center">
                 <div className="text-4xl font-bold text-primary mb-2">24h</div>
-                <div className="text-sm text-muted-foreground">Timp de Raspuns</div>
+                <div className="text-sm text-muted-foreground">Timp de Răspuns</div>
               </div>
               <div className="bg-accent/10 rounded-2xl p-6 text-center">
                 <div className="text-4xl font-bold text-accent mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Satisfactie Garantata</div>
+                <div className="text-sm text-muted-foreground">Satisfacție Garantată</div>
               </div>
               <div className="bg-accent/10 rounded-2xl p-6 text-center">
                 <div className="text-4xl font-bold text-accent mb-2">42</div>
@@ -98,7 +98,7 @@ export function CTASection() {
               </div>
               <div className="bg-primary/5 rounded-2xl p-6 text-center">
                 <div className="text-4xl font-bold text-primary mb-2">RO</div>
-                <div className="text-sm text-muted-foreground">Toata Romania</div>
+                <div className="text-sm text-muted-foreground">Toată România</div>
               </div>
             </motion.div>
           </div>

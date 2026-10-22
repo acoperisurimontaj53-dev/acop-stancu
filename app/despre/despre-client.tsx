@@ -9,10 +9,10 @@ import { FloatingContact } from '@/components/floating-contact';
 import { Button } from '@/components/ui/button';
 import { projectImages } from '@/lib/services-data';
 import { 
-  Phone, 
-  Award, 
-  Users, 
-  MapPin, 
+  Phone,
+  Award,
+  Users,
+  MapPin,
   Target,
   Heart,
   Shield,
@@ -21,9 +21,9 @@ import {
 } from 'lucide-react';
 
 const stats = [
-  { value: '15+', label: 'Ani Experienta', icon: Clock },
+  { value: '15+', label: 'Ani Experiență', icon: Clock },
   { value: '2000+', label: 'Proiecte Finalizate', icon: Award },
-  { value: '98%', label: 'Clienti Multumiti', icon: Heart },
+  { value: '98%', label: 'Clienți Mulțumiți', icon: Heart },
   { value: '42', label: 'Tipuri de Servicii', icon: Target },
 ];
 
@@ -31,31 +31,31 @@ const values = [
   {
     icon: Shield,
     title: 'Calitate',
-    description: 'Folosim doar materiale certificate si aplicam cele mai bune practici din industrie.',
+    description: 'Folosim doar materiale certificate și aplicăm cele mai bune practici din industrie.',
   },
   {
     icon: Users,
     title: 'Profesionalism',
-    description: 'Echipa noastra este formata din specialisti cu experienta si certificari relevante.',
+    description: 'Echipa noastră este formată din specialiști cu experiență și certificări relevante.',
   },
   {
     icon: Heart,
     title: 'Dedicare',
-    description: 'Tratam fiecare proiect cu aceeasi dedicare, indiferent de dimensiunea sa.',
+    description: 'Tratăm fiecare proiect cu aceeași dedicare, indiferent de dimensiunea să.',
   },
   {
     icon: Target,
     title: 'Precizie',
-    description: 'Atentie la detalii si executie impecabila pentru rezultate de lunga durata.',
+    description: 'Atenție la detalii și execuție impecabilă pentru rezultate de lungă durată.',
   },
 ];
 
 const timeline = [
-  { year: '2009', title: 'Inceputuri', description: 'Am inceput ca o mica echipa de 3 dulgheri pasionati.' },
-  { year: '2013', title: 'Prima Extindere', description: 'Am ajuns la 15 angajati si am deschis primul depozit.' },
-  { year: '2017', title: 'Extindere Nationala', description: 'Am inceput sa oferim servicii in toata Romania.' },
-  { year: '2020', title: 'Diversificare', description: 'Am adaugat hidroizolatii si izolatii termice la servicii.' },
-  { year: '2024', title: 'Prezent', description: 'Peste 2000 de proiecte finalizate si o echipa de 50+ specialisti.' },
+  { year: '2009', title: 'Începuturi', description: 'Am început ca o mică echipă de 3 dulgheri pasionați.' },
+  { year: '2013', title: 'Prima Extindere', description: 'Am ajuns la 15 angajați și am deschis primul depozit.' },
+  { year: '2017', title: 'Extindere Națională', description: 'Am început să oferim servicii în toată România.' },
+  { year: '2020', title: 'Diversificare', description: 'Am adăugat hidroizolații și izolații termice la servicii.' },
+  { year: '2024', title: 'Prezent', description: 'Peste 2000 de proiecte finalizate și o echipă de 50+ specialiști.' },
 ];
 
 export function DespreClient() {
@@ -81,11 +81,11 @@ export function DespreClient() {
               Despre Noi
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif text-balance">
-              Despre AcoperiRO: Firma de Acoperisuri cu Peste 15 Ani de Experienta
+              Despre AcoperiRO: Firmă de Acoperișuri cu Peste 15 Ani de Experiență
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              De peste 15 ani montam, reparam si renovam acoperisuri in toata Romania,
-              cu dedicare si profesionalism.
+              De peste 15 ani montăm, reparăm și renovăm acoperișuri în toată România,
+              cu dedicare și profesionalism.
             </p>
           </motion.div>
         </div>
@@ -129,7 +129,7 @@ export function DespreClient() {
               <div className="relative h-[500px] rounded-3xl overflow-hidden">
                 <Image
                   src={projectImages[10]}
-                  alt="Echipa AcoperiRO la lucru pe un acoperis"
+                  alt="Echipa AcoperiRO la lucru pe un acoperiș"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -148,7 +148,7 @@ export function DespreClient() {
                 className="absolute -bottom-6 right-6 bg-primary text-primary-foreground rounded-2xl p-6 shadow-2xl"
               >
                 <div className="text-4xl font-bold">15+</div>
-                <div className="text-sm text-primary-foreground/80">Ani de Experienta</div>
+                <div className="text-sm text-primary-foreground/80">Ani de Experiență</div>
               </motion.div>
             </motion.div>
 
@@ -161,41 +161,41 @@ export function DespreClient() {
               className="order-1 lg:order-2"
             >
               <span className="inline-block text-accent font-medium mb-4 tracking-wider uppercase text-sm">
-                Povestea Noastra
+                Povestea Noastră
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-serif text-balance">
-                De la o Echipa de Dulgheri la Firma de Acoperisuri din Toata Romania
+                De la o Echipă de Dulgheri la Firmă de Acoperișuri din Toată România
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  AcoperiRO a inceput in 2009 ca o mica echipa de trei dulgheri pasionati,
-                  cu un vis simplu: sa ofere servicii de acoperisuri de cea mai inalta calitate
-                  la preturi corecte, de la montaj acoperis pana la reparatii si dulgherie.
+                  AcoperiRO a început în 2009 ca o mică echipă de trei dulgheri pasionați,
+                  cu un vis simplu: să ofere servicii de acoperișuri de cea mai înaltă calitate
+                  la prețuri corecte, de la montaj acoperiș până la reparații și dulgherie.
                 </p>
                 <p>
-                  De-a lungul anilor, am crescut organic, bazandu-ne pe recomandari si pe 
-                  reputatia construita proiect dupa proiect. Astazi, suntem o echipa de peste 
-                  50 de specialisti, cu capacitatea de a executa proiecte in toata Romania.
+                  De-a lungul anilor, am crescut organic, bazându-ne pe recomandări și pe
+                  reputația construită proiect după proiect. Astăzi, suntem o echipă de peste
+                  50 de specialiști, cu capacitatea de a executa proiecte în toată România.
                 </p>
                 <p>
-                  Principiile noastre au ramas aceleasi: calitate fara compromis, comunicare 
-                  transparenta si respect pentru fiecare client. Credem ca fiecare casa merita 
-                  un acoperis care sa o protejeze generatii de-a randul.
+                  Principiile noastre au rămas aceleași: calitate fără compromis, comunicare
+                  transparentă și respect pentru fiecare client. Credem că fiecare casă merită
+                  un acoperiș care să o protejeze generații de-a rândul.
                 </p>
               </div>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-accent" />
-                  <span className="text-foreground font-medium">Certificati ISO</span>
+                  <span className="text-foreground font-medium">Certificați ISO</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-accent" />
-                  <span className="text-foreground font-medium">Asigurati</span>
+                  <span className="text-foreground font-medium">Asigurați</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-accent" />
-                  <span className="text-foreground font-medium">Garantie Extinsa</span>
+                  <span className="text-foreground font-medium">Garanție Extinsă</span>
                 </div>
               </div>
             </motion.div>
@@ -217,7 +217,7 @@ export function DespreClient() {
               Valorile Noastre
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
-              Principiile Dupa Care Lucram la Fiecare Acoperis
+              Principiile După Care Lucrăm la Fiecare Acoperiș
             </h2>
           </motion.div>
 
@@ -253,10 +253,10 @@ export function DespreClient() {
             className="text-center mb-16"
           >
             <span className="inline-block text-accent font-medium mb-4 tracking-wider uppercase text-sm">
-              Istoria Noastra
+              Istoria Noastră
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
-              Evolutia AcoperiRO din 2009 pana Astazi
+              Evoluția AcoperiRO din 2009 până Astăzi
             </h2>
           </motion.div>
 
@@ -302,11 +302,11 @@ export function DespreClient() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-              Cere o Consultatie Gratuita pentru Acoperisul Tau
+              Cere o Consultație Gratuită pentru Acoperișul Tău
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Contacteaza-ne acum pentru o consultatie gratuita. Suntem aici sa te ajutam
-              cu orice proiect legat de acoperisuri: montaj, reparatii, mansardari sau hidroizolatii.
+              Contactează-ne acum pentru o consultație gratuită. Suntem aici să te ajutăm
+              cu orice proiect legat de acoperișuri: montaj, reparații, mansardări sau hidroizolații.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="tel:+40799676512">

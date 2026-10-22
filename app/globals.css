@@ -123,4 +123,14 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Tailwind v4 resets buttons to the default cursor */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  select,
+  summary {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
 }

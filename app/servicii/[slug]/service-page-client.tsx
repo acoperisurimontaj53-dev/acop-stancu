@@ -8,12 +8,12 @@ import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Service } from '@/lib/services-data';
 import { 
-  Phone, 
-  ArrowRight, 
+  Phone,
+  ArrowRight,
   ArrowLeft,
-  Check, 
-  MapPin, 
-  Clock, 
+  Check,
+  MapPin,
+  Clock,
   Shield,
   ChevronRight
 } from 'lucide-react';
@@ -34,7 +34,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
         <div className="max-w-7xl mx-auto px-4">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground transition-colors">
-              Acasa
+              Acasă
             </Link>
             <ChevronRight className="w-4 h-4" aria-hidden="true" />
             <Link href="/servicii" className="hover:text-foreground transition-colors">
@@ -90,12 +90,12 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                 <a href="tel:+40799676512">
                   <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 w-full sm:w-auto">
                     <Phone className="w-5 h-5" />
-                    Suna Acum
+                    Sună Acum
                   </Button>
                 </a>
                 <Link href="/contact">
                   <Button size="lg" variant="outline" className="rounded-full gap-2 w-full sm:w-auto">
-                    Solicita Oferta
+                    Solicită Ofertă
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                 </Link>
@@ -112,7 +112,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden">
                 <Image
                   src={service.image}
-                  alt={`${service.name} - lucrare realizata de AcoperiRO`}
+                  alt={`${service.name} - lucrare realizată de AcoperiRO`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -133,7 +133,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">Suna pentru detalii</div>
+                    <div className="text-sm text-muted-foreground">Sună pentru detalii</div>
                     <a href="tel:+40799676512" className="text-lg font-bold text-foreground hover:text-primary transition-colors">
                       +40 799 676 512
                     </a>
@@ -141,7 +141,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <MapPin className="w-4 h-4" />
-                  <span>Servicii in toata Romania</span>
+                  <span>Servicii în toată România</span>
                 </div>
               </motion.div>
               
@@ -160,7 +160,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               De Ce AcoperiRO
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground font-serif text-balance">
-              Ce Primesti cand Alegi {service.name}
+              Ce Primești când Alegi {service.name}
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -174,9 +174,9 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Garantie</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Garanție</h3>
               <p className="text-muted-foreground">
-                Oferim garantie extinsa pentru toate lucrarile executate si materialele montate.
+                Oferim garanție extinsă pentru toate lucrările executate și materialele montate.
               </p>
             </motion.div>
 
@@ -190,9 +190,9 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
                 <Clock className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Timp de Executie</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Timp de Execuție</h3>
               <p className="text-muted-foreground">
-                Respectam termenele stabilite si comunicam transparent pe tot parcursul proiectului.
+                Respectăm termenele stabilite și comunicăm transparent pe tot parcursul proiectului.
               </p>
             </motion.div>
 
@@ -206,9 +206,9 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Acoperire Nationala</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Acoperire Națională</h3>
               <p className="text-muted-foreground">
-                Echipe mobile disponibile in toata Romania, gata sa intervina rapid.
+                Echipe mobile disponibile în toată România, gata să intervină rapid.
               </p>
             </motion.div>
           </div>
@@ -257,7 +257,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                       <div className="relative h-48 overflow-hidden">
                         <Image
                           src={related.image}
-                          alt={`${related.name} - lucrare realizata de AcoperiRO`}
+                          alt={`${related.name} - lucrare realizată de AcoperiRO`}
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
                           sizes="(max-width: 768px) 100vw, 33vw"
@@ -272,7 +272,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                           {related.shortDescription}
                         </p>
                         <div className="flex items-center text-primary text-sm font-medium">
-                          <span>Afla mai mult</span>
+                          <span>Află mai mult</span>
                           <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2" />
                         </div>
                       </div>
@@ -304,11 +304,11 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-              Ai Nevoie de {service.name}? Cere o Oferta Gratuita
+              Ai Nevoie de {service.name}? Cere o Ofertă Gratuită
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Contacteaza-ne acum pentru o consultatie gratuita si o oferta personalizata
-              pentru {service.name.toLowerCase()}, oriunde in Romania.
+              Contactează-ne acum pentru o consultație gratuită și o ofertă personalizată
+              pentru {service.name.toLowerCase()}, oriunde în România.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="tel:+40799676512">
@@ -320,7 +320,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <Link href="/servicii">
                 <Button size="lg" variant="outline" className="rounded-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 gap-2 w-full sm:w-auto">
                   <ArrowLeft className="w-5 h-5" />
-                  Inapoi la Servicii
+                  Înapoi la Servicii
                 </Button>
               </Link>
             </div>

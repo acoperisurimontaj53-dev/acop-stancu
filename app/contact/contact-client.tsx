@@ -7,10 +7,10 @@ import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
 import { Button } from '@/components/ui/button';
 import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   Send,
   CheckCircle,
   User,
@@ -54,11 +54,11 @@ export function ContactClient() {
               Contact
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif text-balance">
-              Contact AcoperiRO: Cere Oferta Gratuita pentru Acoperisul Tau
+              Contact AcoperiRO: Cere o Ofertă Gratuită pentru Acoperișul Tău
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              Suntem aici sa te ajutam cu montaj, reparatii sau renovare acoperis. Contacteaza-ne
-              prin telefon sau completeaza formularul si te vom contacta in cel mai scurt timp.
+              Suntem aici să te ajutăm cu montaj, reparații sau renovare acoperiș. Contactează-ne
+              prin telefon sau completează formularul și te vom contacta în cel mai scurt timp.
             </p>
           </motion.div>
         </div>
@@ -80,7 +80,7 @@ export function ContactClient() {
                 <Phone className="w-7 h-7 text-accent" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Telefon</h3>
-              <p className="text-muted-foreground mb-1">Suna-ne oricand</p>
+              <p className="text-muted-foreground mb-1">Sună-ne oricând</p>
               <p className="text-xl font-bold text-primary">+40 799 676 512</p>
             </motion.a>
 
@@ -108,9 +108,9 @@ export function ContactClient() {
               <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-4">
                 <MapPin className="w-7 h-7 text-accent" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Locatie</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Locație</h3>
               <p className="text-muted-foreground mb-1">Zona de acoperire</p>
-              <p className="text-foreground font-medium">Toata Romania</p>
+              <p className="text-foreground font-medium">Toată România</p>
             </motion.div>
 
             <motion.div
@@ -123,7 +123,7 @@ export function ContactClient() {
                 <Clock className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Program</h3>
-              <p className="text-muted-foreground mb-1">Luni - Sambata</p>
+              <p className="text-muted-foreground mb-1">Luni - Sâmbătă</p>
               <p className="text-foreground font-medium">07:00 - 19:00</p>
             </motion.div>
           </div>
@@ -145,11 +145,11 @@ export function ContactClient() {
                 Formular de Contact
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-serif">
-                Cere o Oferta pentru Montaj sau Reparatii Acoperis
+                Cere o Ofertă pentru Montaj sau Reparații Acoperiș
               </h2>
               <p className="text-muted-foreground mb-8">
-                Completeaza formularul si te vom contacta in cel mult 24 de ore pentru
-                a discuta despre proiectul tau si a-ti trimite o oferta gratuita.
+                Completează formularul și te vom contacta în cel mult 24 de ore pentru
+                a discuta despre proiectul tău și a-ți trimite o ofertă gratuită.
               </p>
 
               {isSubmitted ? (
@@ -165,7 +165,7 @@ export function ContactClient() {
                     Mesaj Trimis cu Succes!
                   </h3>
                   <p className="text-muted-foreground mb-6">
-                    Multumim pentru mesaj. Te vom contacta in cel mai scurt timp posibil.
+                    Mulțumim pentru mesaj. Te vom contacta în cel mai scurt timp posibil.
                   </p>
                   <Button
                     onClick={() => setIsSubmitted(false)}
@@ -238,13 +238,13 @@ export function ContactClient() {
                       name="service"
                       className="w-full px-4 py-3 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     >
-                      <option value="">Selecteaza un serviciu</option>
-                      <option value="montaj">Montaj Acoperisuri</option>
-                      <option value="reparatii">Reparatii Acoperis</option>
+                      <option value="">Selectează un serviciu</option>
+                      <option value="montaj">Montaj Acoperișuri</option>
+                      <option value="reparatii">Reparații Acoperiș</option>
                       <option value="dulgherie">Dulgherie</option>
-                      <option value="mansardari">Mansardari</option>
-                      <option value="hidroizolatii">Hidroizolatii</option>
-                      <option value="tigla-metalica">Tigla Metalica</option>
+                      <option value="mansardari">Mansardări</option>
+                      <option value="hidroizolatii">Hidroizolații</option>
+                      <option value="tigla-metalica">Țiglă Metalică</option>
                       <option value="altele">Altele</option>
                     </select>
                   </div>
@@ -261,7 +261,7 @@ export function ContactClient() {
                         required
                         rows={5}
                         className="w-full pl-12 pr-4 py-3 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                        placeholder="Descrieti proiectul sau problema..."
+                        placeholder="Descrieți proiectul sau problema..."
                       />
                     </div>
                   </div>
@@ -302,7 +302,7 @@ export function ContactClient() {
             >
               <div className="bg-card rounded-3xl p-8 border border-border">
                 <h2 className="text-2xl font-bold text-foreground mb-6 font-serif">
-                  De Ce Sa Alegi AcoperiRO
+                  De Ce Să Alegi AcoperiRO
                 </h2>
                 
                 <div className="space-y-6">
@@ -311,9 +311,9 @@ export function ContactClient() {
                       <CheckCircle className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Consultatie Gratuita</h3>
+                      <h3 className="font-semibold text-foreground mb-1">Consultație Gratuită</h3>
                       <p className="text-muted-foreground text-sm">
-                        Oferim consultatie si evaluare gratuita pentru orice proiect.
+                        Oferim consultație și evaluare gratuită pentru orice proiect.
                       </p>
                     </div>
                   </div>
@@ -323,9 +323,9 @@ export function ContactClient() {
                       <CheckCircle className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Raspuns in 24h</h3>
+                      <h3 className="font-semibold text-foreground mb-1">Răspuns în 24h</h3>
                       <p className="text-muted-foreground text-sm">
-                        Raspundem la orice solicitare in maximum 24 de ore.
+                        Răspundem la orice solicitare în maximum 24 de ore.
                       </p>
                     </div>
                   </div>
@@ -335,9 +335,9 @@ export function ContactClient() {
                       <CheckCircle className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Oferta Personalizata</h3>
+                      <h3 className="font-semibold text-foreground mb-1">Ofertă Personalizată</h3>
                       <p className="text-muted-foreground text-sm">
-                        Fiecare proiect primeste o oferta adaptata nevoilor specifice.
+                        Fiecare proiect primește o ofertă adaptată nevoilor specifice.
                       </p>
                     </div>
                   </div>
@@ -347,9 +347,9 @@ export function ContactClient() {
                       <CheckCircle className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Fara Obligatii</h3>
+                      <h3 className="font-semibold text-foreground mb-1">Fără Obligații</h3>
                       <p className="text-muted-foreground text-sm">
-                        Nu exista nicio obligatie pana cand nu esti multumit de oferta noastra.
+                        Nu există nicio obligație până când nu ești mulțumit de oferta noastră.
                       </p>
                     </div>
                   </div>
@@ -357,7 +357,7 @@ export function ContactClient() {
 
                 <div className="mt-8 pt-8 border-t border-border">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Preferi sa vorbesti direct cu noi?
+                    Preferi să vorbești direct cu noi?
                   </p>
                   <a href="tel:+40799676512">
                     <Button className="w-full rounded-xl bg-primary hover:bg-primary/90 gap-2">

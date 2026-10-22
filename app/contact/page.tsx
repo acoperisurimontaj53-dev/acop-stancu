@@ -3,9 +3,9 @@ import { absoluteUrl, breadcrumbJsonLd, buildMetadata, ORGANIZATION_ID, WEBSITE_
 import { ContactClient } from './contact-client';
 
 export const metadata = buildMetadata({
-  title: 'Contact si Oferta Gratuita pentru Acoperis',
+  title: 'Contact și Ofertă Gratuită pentru Acoperiș',
   description:
-    'Suna la +40 799 676 512 sau cere o oferta gratuita pentru montaj, reparatii ori renovare acoperis. Raspundem in maximum 24 de ore, in toata Romania.',
+    'Sună la +40 799 676 512 sau cere o ofertă gratuită pentru montaj, reparații ori renovare acoperiș. Răspundem în maximum 24 de ore, în toată România.',
   path: '/contact',
 });
 
@@ -21,7 +21,7 @@ export default function ContactPage() {
       about: { '@id': ORGANIZATION_ID },
     },
     breadcrumbJsonLd([
-      ['Acasa', '/'],
+      ['Acasă', '/'],
       ['Contact', '/contact'],
     ]),
   ];

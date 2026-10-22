@@ -8,42 +8,42 @@ const testimonials = [
   {
     id: 1,
     name: 'Mihai Popescu',
-    location: 'Bucuresti',
+    location: 'București',
     rating: 5,
-    text: 'Echipa de la AcoperiRO a facut o treaba exceptionala cu acoperisul nostru. Profesionalism, punctualitate si calitate la cel mai inalt nivel. Recomand cu incredere!',
-    project: 'Montaj tigla metalica',
+    text: 'Echipa de la AcoperiRO a făcut o treabă excepțională cu acoperișul nostru. Profesionalism, punctualitate și calitate la cel mai înalt nivel. Recomand cu încredere!',
+    project: 'Montaj țiglă metalică',
   },
   {
     id: 2,
     name: 'Ana Maria Ionescu',
     location: 'Cluj-Napoca',
     rating: 5,
-    text: 'Mansardarea casei noastre a fost un vis devenit realitate datorita echipei AcoperiRO. Au transformat podul intr-un spatiu magnific, cu atentie la fiecare detaliu.',
-    project: 'Mansardare completa',
+    text: 'Mansardarea casei noastre a fost un vis devenit realitate datorită echipei AcoperiRO. Au transformat podul într-un spațiu magnific, cu atenție la fiecare detaliu.',
+    project: 'Mansardare completă',
   },
   {
     id: 3,
     name: 'George Dumitrescu',
-    location: 'Timisoara',
+    location: 'Timișoara',
     rating: 5,
-    text: 'Aveam probleme cu infiltratiile de ani de zile. Dupa ce au intervenit, nici o problema. Hidroizolatia facuta de ei e impecabila. Multumim!',
-    project: 'Hidroizolatie terasa',
+    text: 'Aveam probleme cu infiltrațiile de ani de zile. După ce au intervenit, nicio problemă. Hidroizolația făcută de ei e impecabilă. Mulțumim!',
+    project: 'Hidroizolație terasă',
   },
   {
     id: 4,
-    name: 'Elena Stanescu',
-    location: 'Brasov',
+    name: 'Elena Stănescu',
+    location: 'Brașov',
     rating: 5,
-    text: 'Am fost impresionata de rapiditatea cu care au lucrat si de curatenia pe care au lasat-o dupa finalizarea proiectului. O firma serioasa si de incredere.',
-    project: 'Renovare acoperis',
+    text: 'Am fost impresionată de rapiditatea cu care au lucrat și de curățenia pe care au lăsat-o după finalizarea proiectului. O firmă serioasă și de încredere.',
+    project: 'Renovare acoperiș',
   },
   {
     id: 5,
     name: 'Andrei Marin',
-    location: 'Iasi',
+    location: 'Iași',
     rating: 5,
-    text: 'Pretul a fost corect, comunicarea excelenta si rezultatul final a depasit asteptarile. Cu siguranta voi apela la ei si pentru viitoarele proiecte.',
-    project: 'Invelitoare noua casa',
+    text: 'Prețul a fost corect, comunicarea excelentă și rezultatul final a depășit așteptările. Cu siguranță voi apela la ei și pentru viitoarele proiecte.',
+    project: 'Învelitoare nouă casă',
   },
 ];
 
@@ -101,7 +101,7 @@ export function Testimonials() {
             Testimoniale
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-serif">
-            Ce Spun Clientii Despre Lucrarile AcoperiRO
+            Ce Spun Clienții Despre Lucrările AcoperiRO
           </h2>
         </motion.div>
 

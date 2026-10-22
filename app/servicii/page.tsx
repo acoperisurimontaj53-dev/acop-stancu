@@ -4,9 +4,9 @@ import { absoluteUrl, breadcrumbJsonLd, buildMetadata, ORGANIZATION_ID, WEBSITE_
 import { ServiciiClient } from './servicii-client';
 
 export const metadata = buildMetadata({
-  title: 'Servicii pentru Acoperisuri: Montaj si Reparatii',
+  title: 'Servicii pentru Acoperișuri: Montaj și Reparații',
   description:
-    'Servicii de acoperisuri in toata Romania: montaj, reparatii, dulgherie, mansardari, hidroizolatii si izolatii termice. Alege serviciul si cere oferta gratuita.',
+    'Servicii de acoperișuri în toată România: montaj, reparații, dulgherie, mansardări, hidroizolații și izolații termice. Alege serviciul și cere oferta gratuită.',
   path: '/servicii',
 });
 
@@ -15,7 +15,7 @@ export default function ServiciiPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Servicii de acoperisuri',
+      name: 'Servicii de acoperișuri',
       url: absoluteUrl('/servicii'),
       inLanguage: 'ro-RO',
       isPartOf: { '@id': WEBSITE_ID },
@@ -31,7 +31,7 @@ export default function ServiciiPage() {
       },
     },
     breadcrumbJsonLd([
-      ['Acasa', '/'],
+      ['Acasă', '/'],
       ['Servicii', '/servicii'],
     ]),
   ];
