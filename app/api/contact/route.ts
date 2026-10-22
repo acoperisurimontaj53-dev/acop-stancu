@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { COUNTIES } from '@/lib/counties';
+import { describeLeadSource } from '@/lib/lead-source';
 
 export const runtime = 'nodejs';
 
@@ -89,6 +90,7 @@ export async function POST(request: Request) {
     ['Email', email || 'necompletat'],
     ['Județ', county],
     ['Serviciu dorit', service || 'necompletat'],
+    ['Sursa lead-ului', describeLeadSource(body.source)],
   ];
 
   const text = `${rows.map(([label, value]) => `${label}: ${value}`).join('\n')}\n\nMesaj:\n${message}`;

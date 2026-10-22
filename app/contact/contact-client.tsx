@@ -7,6 +7,7 @@ import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
 import { Button } from '@/components/ui/button';
 import { COUNTIES } from '@/lib/counties';
+import { readLeadSource } from '@/lib/lead-source';
 import {
   Phone,
   Mail,
@@ -45,6 +46,7 @@ export function ContactClient() {
           service: serviceSelect.value ? serviceSelect.selectedOptions[0].text : '',
           message: data.get('message'),
           website: data.get('website'),
+          source: readLeadSource(),
         }),
       });
 
