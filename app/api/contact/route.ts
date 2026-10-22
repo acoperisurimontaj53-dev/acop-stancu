@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { COUNTIES } from '@/lib/counties';
 
 export const runtime = 'nodejs';
 
@@ -51,6 +52,7 @@ export async function POST(request: Request) {
   const name = clean(body.name, 100);
   const phone = clean(body.phone, 30);
   const email = clean(body.email, 120);
+  const county = clean(body.county, 50);
   const service = clean(body.service, 100);
   const message = clean(body.message, 3000);
 
@@ -62,6 +64,9 @@ export async function POST(request: Request) {
   }
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ error: 'Adresa de email nu pare validă.' }, { status: 400 });
+  }
+  if (!(COUNTIES as readonly string[]).includes(county)) {
+    return NextResponse.json({ error: 'Te rugăm să selectezi județul.' }, { status: 400 });
   }
   if (message.length < 10) {
     return NextResponse.json({ error: 'Mesajul este prea scurt.' }, { status: 400 });
@@ -82,6 +87,7 @@ export async function POST(request: Request) {
     ['Nume', name],
     ['Telefon', phone],
     ['Email', email || 'necompletat'],
+    ['Județ', county],
     ['Serviciu dorit', service || 'necompletat'],
   ];
 

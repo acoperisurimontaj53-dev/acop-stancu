@@ -6,7 +6,8 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
 import { Button } from '@/components/ui/button';
-import { 
+import { COUNTIES } from '@/lib/counties';
+import {
   Phone,
   Mail,
   MapPin,
@@ -40,6 +41,7 @@ export function ContactClient() {
           name: data.get('name'),
           phone: data.get('phone'),
           email: data.get('email'),
+          county: data.get('county'),
           service: serviceSelect.value ? serviceSelect.selectedOptions[0].text : '',
           message: data.get('message'),
           website: data.get('website'),
@@ -262,24 +264,46 @@ export function ContactClient() {
                     </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
-                      Serviciu Dorit
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-3 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                    >
-                      <option value="">Selectează un serviciu</option>
-                      <option value="montaj">Montaj Acoperișuri</option>
-                      <option value="reparatii">Reparații Acoperiș</option>
-                      <option value="dulgherie">Dulgherie</option>
-                      <option value="mansardari">Mansardări</option>
-                      <option value="hidroizolatii">Hidroizolații</option>
-                      <option value="tigla-metalica">Țiglă Metalică</option>
-                      <option value="altele">Altele</option>
-                    </select>
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="county" className="block text-sm font-medium text-foreground mb-2">
+                        Județ *
+                      </label>
+                      <select
+                        id="county"
+                        name="county"
+                        required
+                        defaultValue=""
+                        className="w-full px-4 py-3 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      >
+                        <option value="" disabled>Selectează județul</option>
+                        {COUNTIES.map((county) => (
+                          <option key={county} value={county}>
+                            {county}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
+                        Serviciu Dorit
+                      </label>
+                      <select
+                        id="service"
+                        name="service"
+                        className="w-full px-4 py-3 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      >
+                        <option value="">Selectează un serviciu</option>
+                        <option value="montaj">Montaj Acoperișuri</option>
+                        <option value="reparatii">Reparații Acoperiș</option>
+                        <option value="dulgherie">Dulgherie</option>
+                        <option value="mansardari">Mansardări</option>
+                        <option value="hidroizolatii">Hidroizolații</option>
+                        <option value="tigla-metalica">Țiglă Metalică</option>
+                        <option value="altele">Altele</option>
+                      </select>
+                    </div>
                   </div>
 
                   <div>
