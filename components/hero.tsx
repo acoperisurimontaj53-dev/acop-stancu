@@ -10,18 +10,18 @@ import { projectImages } from '@/lib/services-data';
 const heroSlides = [
   {
     image: projectImages[1],
-    title: 'Acoperisuri de Calitate Superioara',
-    subtitle: 'Montaj profesional cu materiale premium',
+    title: 'Montaj Acoperisuri cu Materiale Premium',
+    subtitle: 'Instalare profesionala, garantie extinsa si echipe cu peste 15 ani de experienta',
   },
   {
     image: projectImages[3],
-    title: 'Renovari Complete',
+    title: 'Renovari si Reparatii de Acoperisuri',
     subtitle: 'Transformam acoperisul tau in doar cateva zile',
   },
   {
     image: projectImages[9],
-    title: 'Tigla Ceramica & Metalica',
-    subtitle: 'Diversitate de modele si culori',
+    title: 'Tigla Ceramica si Tigla Metalica',
+    subtitle: 'Diversitate de modele si culori pentru orice casa',
   },
 ];
 
@@ -85,6 +85,10 @@ export function Hero() {
             </span>
           </motion.div>
 
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-6 font-serif leading-tight text-balance">
+            Firma de Acoperisuri in Toata Romania: Montaj, Reparatii si Renovari
+          </h1>
+
           <div className="grid mb-8">
             {heroSlides.map((slide, index) => (
               <motion.div
@@ -95,10 +99,10 @@ export function Hero() {
                 className="col-start-1 row-start-1"
                 aria-hidden={index !== currentSlide}
               >
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-4 font-serif leading-tight text-balance">
+                <h2 className="text-2xl md:text-3xl font-semibold text-background mb-2 font-serif leading-snug text-balance">
                   {slide.title}
                 </h2>
-                <p className="text-xl md:text-2xl text-background/80">
+                <p className="text-lg md:text-xl text-background/80">
                   {slide.subtitle}
                 </p>
               </motion.div>

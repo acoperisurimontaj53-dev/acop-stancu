@@ -3,7 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, useAnimation, useMotionValue } from 'framer-motion';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, Expand, X } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, ChevronLeft, ChevronRight, Expand, X } from 'lucide-react';
 import { projectImages } from '@/lib/services-data';
 
 const galleryImages = projectImages.map((src, index) => ({
@@ -70,7 +71,7 @@ export function GalleryCarousel() {
               Portofoliu
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground font-serif">
-              Proiectele Noastre
+              Lucrari de Acoperisuri Realizate de Noi
             </h2>
           </div>
           
@@ -166,6 +167,13 @@ export function GalleryCarousel() {
             />
           ))}
         </div>
+
+        <div className="text-center mt-8">
+          <Link href="/portofoliu" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+            Vezi tot portofoliul de acoperisuri
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
 
       {/* Lightbox */}
@@ -193,7 +201,7 @@ export function GalleryCarousel() {
           >
             <Image
               src={lightboxImage}
-              alt="Gallery image"
+              alt={galleryImages.find((image) => image.src === lightboxImage)?.title ?? 'Lucrare de acoperis realizata de AcoperiRO'}
               fill
               className="object-contain"
               sizes="(max-width: 1280px) 100vw, 1280px"

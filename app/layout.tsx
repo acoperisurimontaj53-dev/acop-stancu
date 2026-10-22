@@ -1,7 +1,41 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { JsonLd } from '@/components/json-ld'
+import { ORGANIZATION_ID, SITE_EMAIL, SITE_NAME, SITE_PHONE, SITE_URL, WEBSITE_ID } from '@/lib/seo'
 import './globals.css'
+
+const siteJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'RoofingContractor',
+    '@id': ORGANIZATION_ID,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/apple-icon.png`,
+    image: `${SITE_URL}/apple-icon.png`,
+    description: 'Firma de acoperisuri: montaj, reparatii, mansardari, dulgherie si hidroizolatii in toata Romania.',
+    telephone: SITE_PHONE,
+    email: SITE_EMAIL,
+    foundingDate: '2009',
+    areaServed: { '@type': 'Country', name: 'Romania' },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '07:00',
+      closes: '19:00',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': WEBSITE_ID,
+    url: SITE_URL,
+    name: SITE_NAME,
+    inLanguage: 'ro-RO',
+    publisher: { '@id': ORGANIZATION_ID },
+  },
+]
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -16,10 +50,27 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'AcoperiRO | Servicii Complete de Acoperisuri in Romania',
-  description: 'Servicii profesionale de montaj acoperisuri, reparatii acoperis, dulgherie, mansardari, hidroizolatii si multe altele. Acoperim toata Romania. Sunati acum: +40 799 676 512',
-  keywords: 'acoperisuri, montaj acoperis, reparatii acoperis, dulgherie, mansardari, hidroizolatii, tigla metalica, Romania',
-  generator: 'v0.app',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'AcoperiRO | Montaj si Reparatii Acoperisuri in Toata Romania',
+    template: '%s | AcoperiRO',
+  },
+  description: 'Firma de acoperisuri cu peste 15 ani experienta: montaj, reparatii, mansardari, dulgherie si hidroizolatii in toata Romania. Oferta gratuita.',
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  formatDetection: { telephone: true, email: true, address: false },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'ro_RO',
+    siteName: SITE_NAME,
+  },
   icons: {
     icon: [
       {
@@ -55,6 +106,7 @@ export default function RootLayout({
     <html lang="ro">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
+        <JsonLd data={siteJsonLd} />
         <Analytics />
       </body>
     </html>

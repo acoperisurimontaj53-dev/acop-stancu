@@ -41,7 +41,7 @@ export function CTASection() {
                 transition={{ duration: 0.4, delay: 0.3 }}
                 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-serif text-balance"
               >
-                Pregatit sa Iti Transformi Acoperisul?
+                Ai un Proiect de Acoperis? Cere o Oferta Gratuita
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
@@ -50,8 +50,8 @@ export function CTASection() {
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className="text-lg text-muted-foreground mb-8"
               >
-                Suna-ne acum pentru o consultatie gratuita si o oferta personalizata. 
-                Echipa noastra este pregatita sa te ajute cu orice proiect, mare sau mic.
+                Suna-ne acum pentru o consultatie gratuita si o oferta personalizata de montaj sau
+                reparatii acoperis. Echipa noastra este pregatita sa te ajute cu orice proiect, mare sau mic.
               </motion.p>
 
               <motion.div

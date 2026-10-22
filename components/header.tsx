@@ -52,19 +52,19 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2" aria-label="AcoperiRO - Acasa">
               <motion.div 
                 className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <svg className="w-6 h-6 text-primary-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg className="w-6 h-6 text-primary-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
               </motion.div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-foreground font-serif">AcoperiRO</h1>
+                <span className="block text-xl font-bold text-foreground font-serif">AcoperiRO</span>
                 <p className="text-xs text-muted-foreground -mt-1">Experti in acoperisuri</p>
               </div>
             </Link>

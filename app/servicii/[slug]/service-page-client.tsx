@@ -32,16 +32,16 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
       {/* Breadcrumb */}
       <section className="bg-secondary py-4 border-b border-border">
         <div className="max-w-7xl mx-auto px-4">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground transition-colors">
               Acasa
             </Link>
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight className="w-4 h-4" aria-hidden="true" />
             <Link href="/servicii" className="hover:text-foreground transition-colors">
               Servicii
             </Link>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-foreground font-medium">{service.name}</span>
+            <ChevronRight className="w-4 h-4" aria-hidden="true" />
+            <span className="text-foreground font-medium" aria-current="page">{service.name}</span>
           </nav>
         </div>
       </section>
@@ -61,7 +61,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                 {categoryName}
               </span>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-serif text-balance">
-                {service.name}
+                {service.name} in Toata Romania
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 {service.fullDescription}
@@ -112,7 +112,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden">
                 <Image
                   src={service.image}
-                  alt={service.name}
+                  alt={`${service.name} - lucrare realizata de AcoperiRO`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -155,6 +155,14 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
       {/* Info Section */}
       <section className="py-16 bg-secondary">
         <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="inline-block text-accent font-medium mb-2 tracking-wider uppercase text-sm">
+              De Ce AcoperiRO
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground font-serif text-balance">
+              Ce Primesti cand Alegi {service.name}
+            </h2>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -249,7 +257,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                       <div className="relative h-48 overflow-hidden">
                         <Image
                           src={related.image}
-                          alt={related.name}
+                          alt={`${related.name} - lucrare realizata de AcoperiRO`}
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
                           sizes="(max-width: 768px) 100vw, 33vw"
@@ -296,10 +304,11 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-              Interesat de {service.name}?
+              Ai Nevoie de {service.name}? Cere o Oferta Gratuita
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Contacteaza-ne acum pentru o consultatie gratuita si o oferta personalizata.
+              Contacteaza-ne acum pentru o consultatie gratuita si o oferta personalizata
+              pentru {service.name.toLowerCase()}, oriunde in Romania.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="tel:+40799676512">

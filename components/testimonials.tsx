@@ -101,7 +101,7 @@ export function Testimonials() {
             Testimoniale
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-serif">
-            Ce Spun Clientii Nostri
+            Ce Spun Clientii Despre Lucrarile AcoperiRO
           </h2>
         </motion.div>
 
