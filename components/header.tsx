@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Menu, X, ChevronDown, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { serviceCategories } from '@/lib/services-data';
+import { serviceCategories, services } from '@/lib/services-data';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -78,8 +78,10 @@ export function Header() {
                 Acasa
               </Link>
               
-              <div 
-                className="relative"
+              {/* No `relative` here: the mega menu is positioned against the sticky header.
+                  Stretched to the header's bottom edge (pb-4 -mb-4) so hover is not lost on the way to the panel. */}
+              <div
+                className="self-stretch flex items-center pb-4 -mb-4"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
@@ -95,24 +97,46 @@ export function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-64 bg-card rounded-2xl shadow-xl border border-border p-4"
+                      className="absolute top-full left-0 right-0 bg-card border-b border-border shadow-xl max-h-[calc(100vh-8rem)] overflow-y-auto"
                     >
-                      {serviceCategories.map((category) => (
-                        <Link
-                          key={category.id}
-                          href={`/servicii#${category.id}`}
-                          className="block px-4 py-3 rounded-xl hover:bg-secondary transition-colors text-foreground/80 hover:text-foreground"
-                        >
-                          {category.name}
-                        </Link>
-                      ))}
-                      <div className="border-t border-border mt-2 pt-2">
-                        <Link
-                          href="/servicii"
-                          className="block px-4 py-3 rounded-xl bg-primary text-primary-foreground text-center font-medium hover:bg-primary/90 transition-colors"
-                        >
-                          Vezi toate serviciile
-                        </Link>
+                      <div className="max-w-7xl mx-auto px-4 py-6">
+                        <div className="grid grid-cols-6 gap-6">
+                          {serviceCategories.map((category) => (
+                            <div key={category.id}>
+                              <Link
+                                href={`/servicii#${category.id}`}
+                                onClick={() => setIsServicesOpen(false)}
+                                className="block mb-2 pb-2 border-b border-border text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                              >
+                                {category.name}
+                              </Link>
+                              <ul className="space-y-0.5">
+                                {services
+                                  .filter((service) => service.category === category.id)
+                                  .map((service) => (
+                                    <li key={service.id}>
+                                      <Link
+                                        href={`/servicii/${service.slug}`}
+                                        onClick={() => setIsServicesOpen(false)}
+                                        className="block py-1 text-[13px] leading-snug text-foreground/70 hover:text-primary transition-colors"
+                                      >
+                                        {service.name}
+                                      </Link>
+                                    </li>
+                                  ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="border-t border-border mt-6 pt-4 flex justify-end">
+                          <Link
+                            href="/servicii"
+                            onClick={() => setIsServicesOpen(false)}
+                            className="px-6 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                          >
+                            Vezi toate serviciile
+                          </Link>
+                        </div>
                       </div>
                     </motion.div>
                   )}
