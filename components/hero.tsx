@@ -124,6 +124,7 @@ export function Hero() {
               <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 text-lg px-8">
                 <Phone className="w-5 h-5" />
                 Sună Acum
+                <span className="hidden md:inline">· +40 799 676 512</span>
               </Button>
             </a>
             <Link href="/servicii">

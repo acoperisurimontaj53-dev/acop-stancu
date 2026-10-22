@@ -72,27 +72,10 @@ export const metadata: Metadata = {
     locale: 'ro_RO',
     siteName: SITE_NAME,
   },
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#8B4513',
+  themeColor: '#8c352a',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
