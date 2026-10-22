@@ -123,7 +123,7 @@ export function ContactClient() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
               <p className="text-muted-foreground mb-1">Scrie-ne un mesaj</p>
-              <p className="text-primary font-medium">acoperisurimontaj53@gmail.com</p>
+              <p className="text-primary font-medium [overflow-wrap:anywhere]">acoperisurimontaj53@gmail.com</p>
             </m.a>
 
             <m.div

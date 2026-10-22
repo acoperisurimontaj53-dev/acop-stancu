@@ -106,10 +106,10 @@ export function Footer() {
                   href="tel:+40799676512" 
                   className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
                 >
-                  <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 shrink-0 bg-background/10 rounded-full flex items-center justify-center">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <div className="text-sm text-background/50">Telefon</div>
                     <div className="font-semibold text-background">+40 799 676 512</div>
                   </div>
@@ -120,31 +120,34 @@ export function Footer() {
                   href="mailto:acoperisurimontaj53@gmail.com" 
                   className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
                 >
-                  <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 shrink-0 bg-background/10 rounded-full flex items-center justify-center">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <div className="text-sm text-background/50">Email</div>
-                    <div className="font-semibold text-background">acoperisurimontaj53@gmail.com</div>
+                    <div className="font-semibold text-background [overflow-wrap:anywhere]">acoperisurimontaj53@gmail.com</div>
                   </div>
                 </a>
               </li>
               <li className="flex items-center gap-3 text-background/70">
-                <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 shrink-0 bg-background/10 rounded-full flex items-center justify-center">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-sm text-background/50">Zona de Acoperire</div>
                   <div className="font-semibold text-background">Toată România</div>
                 </div>
               </li>
               <li className="flex items-center gap-3 text-background/70">
-                <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 shrink-0 bg-background/10 rounded-full flex items-center justify-center">
                   <Clock className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-sm text-background/50">Program</div>
-                  <div className="font-semibold text-background">Luni - Sâmbătă: 07:00 - 19:00</div>
+                  <div className="font-semibold text-background">
+                    <span className="block">Luni - Sâmbătă</span>
+                    <span className="block">07:00 - 19:00</span>
+                  </div>
                 </div>
               </li>
             </ul>
