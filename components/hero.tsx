@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Phone, ArrowRight, Shield, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -44,22 +44,22 @@ export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Image Carousel */}
-      <AnimatePresence mode="wait">
+      {heroSlides.map((slide, index) => (
         <motion.div
-          key={currentSlide}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
+          key={slide.image}
+          initial={false}
+          animate={{ opacity: index === currentSlide ? 1 : 0 }}
           transition={{ duration: 1 }}
-          className="absolute inset-0"
+          className="absolute inset-0 bg-foreground"
+          aria-hidden="true"
         >
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroSlides[currentSlide].image})` }}
+            style={{ backgroundImage: `url(${slide.image})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/40" />
         </motion.div>
-      </AnimatePresence>
+      ))}
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
@@ -76,31 +76,25 @@ export function Hero() {
             </span>
           </motion.div>
 
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={`title-${currentSlide}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-4 font-serif leading-tight text-balance"
-            >
-              {heroSlides[currentSlide].title}
-            </motion.h1>
-          </AnimatePresence>
-
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={`subtitle-${currentSlide}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-xl md:text-2xl text-background/80 mb-8"
-            >
-              {heroSlides[currentSlide].subtitle}
-            </motion.p>
-          </AnimatePresence>
+          <div className="grid mb-8">
+            {heroSlides.map((slide, index) => (
+              <motion.div
+                key={slide.title}
+                initial={false}
+                animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                transition={{ duration: 0.8 }}
+                className="col-start-1 row-start-1"
+                aria-hidden={index !== currentSlide}
+              >
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-4 font-serif leading-tight text-balance">
+                  {slide.title}
+                </h2>
+                <p className="text-xl md:text-2xl text-background/80">
+                  {slide.subtitle}
+                </p>
+              </motion.div>
+            ))}
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
