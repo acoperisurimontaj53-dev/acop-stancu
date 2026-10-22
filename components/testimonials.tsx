@@ -108,11 +108,13 @@ export function Testimonials() {
         {/* Testimonial Card */}
         <div className="relative">
           {/* Quote Icon */}
-          <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-accent rounded-full flex items-center justify-center">
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-10 w-16 h-16 bg-accent rounded-full flex items-center justify-center">
             <Quote className="w-8 h-8 text-accent-foreground" />
           </div>
 
-          <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 pt-14 relative overflow-hidden min-h-[350px]">
+          <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 pt-14 relative overflow-hidden">
+            {/* Fixed min height so the navigation below doesn't jump between testimonials of different length */}
+            <div className="min-h-[300px] md:min-h-[240px]">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -145,9 +147,10 @@ export function Testimonials() {
                 </div>
               </motion.div>
             </AnimatePresence>
+            </div>
 
             {/* Navigation */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4">
+            <div className="mt-8 flex items-center justify-center gap-4">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
