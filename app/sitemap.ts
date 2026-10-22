@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl('/portofoliu'), lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: absoluteUrl('/despre'), lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: absoluteUrl('/contact'), lastModified: now, changeFrequency: 'yearly', priority: 0.8 },
+    { url: absoluteUrl('/confidentialitate'), lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: absoluteUrl('/termeni'), lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({

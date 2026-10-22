@@ -171,7 +171,7 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-6 text-sm text-background/60">
             <Link href="/confidentialitate" className="hover:text-background transition-colors">
-              Politica de Confidențialitate
+              Confidențialitate și Cookie-uri
             </Link>
             <Link href="/termeni" className="hover:text-background transition-colors">
               Termeni și Condiții
