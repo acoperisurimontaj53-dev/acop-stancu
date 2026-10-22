@@ -61,6 +61,7 @@ export const metadata: Metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   formatDetection: { telephone: true, email: true, address: false },
+  verification: { google: 'ojVWxrRy03J7Jf4sYZrn2B2FTlx3S7ys6rASzGaUUxY' },
   robots: {
     index: true,
     follow: true,
