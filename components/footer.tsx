@@ -117,7 +117,7 @@ export function Footer() {
               </li>
               <li>
                 <a 
-                  href="mailto:contact@acoperiro.ro" 
+                  href="mailto:acoperisurimontaj53@gmail.com" 
                   className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
                 >
                   <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center">
@@ -125,7 +125,7 @@ export function Footer() {
                   </div>
                   <div>
                     <div className="text-sm text-background/50">Email</div>
-                    <div className="font-semibold text-background">contact@acoperiro.ro</div>
+                    <div className="font-semibold text-background">acoperisurimontaj53@gmail.com</div>
                   </div>
                 </a>
               </li>

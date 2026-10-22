@@ -112,7 +112,7 @@ export function ContactClient() {
             </m.a>
 
             <m.a
-              href="mailto:contact@acoperiro.ro"
+              href="mailto:acoperisurimontaj53@gmail.com"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -123,7 +123,7 @@ export function ContactClient() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
               <p className="text-muted-foreground mb-1">Scrie-ne un mesaj</p>
-              <p className="text-primary font-medium">contact@acoperiro.ro</p>
+              <p className="text-primary font-medium">acoperisurimontaj53@gmail.com</p>
             </m.a>
 
             <m.div
