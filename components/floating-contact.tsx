@@ -83,10 +83,12 @@ export function FloatingContact() {
       {/* Main Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl"
-        whileHover={{ scale: 1.1 }}
+        className={`relative flex h-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl ${
+          isOpen ? "w-16" : "w-16 md:w-auto md:gap-3 md:px-7"
+        }`}
+        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        animate={isOpen ? { rotate: 0 } : { rotate: 0 }}
+        aria-label={isOpen ? "Inchide meniul de contact" : "Contacteaza-ne"}
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -112,35 +114,10 @@ export function FloatingContact() {
           )}
         </AnimatePresence>
 
-        {/* Pulse Ring Animation when closed */}
         {!isOpen && (
-          <>
-            <motion.span
-              className="absolute inset-0 rounded-full bg-primary"
-              animate={{
-                scale: [1, 1.4, 1.4],
-                opacity: [0.5, 0, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeOut",
-              }}
-            />
-            <motion.span
-              className="absolute inset-0 rounded-full bg-primary"
-              animate={{
-                scale: [1, 1.4, 1.4],
-                opacity: [0.5, 0, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeOut",
-                delay: 0.5,
-              }}
-            />
-          </>
+          <span className="hidden md:inline text-lg font-semibold whitespace-nowrap">
+            {PHONE_NUMBER}
+          </span>
         )}
       </motion.button>
     </div>
