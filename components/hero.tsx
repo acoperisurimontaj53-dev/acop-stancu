@@ -32,24 +32,33 @@ const stats = [
 ];
 
 export function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [{ currentSlide, previousSlide }, setSlides] = useState({ currentSlide: 0, previousSlide: -1 });
+
+  const goToSlide = (next: number) => {
+    setSlides((s) => (s.currentSlide === next ? s : { currentSlide: next, previousSlide: s.currentSlide }));
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      setSlides((s) => ({
+        currentSlide: (s.currentSlide + 1) % heroSlides.length,
+        previousSlide: s.currentSlide,
+      }));
     }, 6000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image Carousel */}
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-foreground">
+      {/* Background Image Carousel: the previous slide stays fully opaque underneath
+          while the new one fades in on top, so the page background never shows through */}
       {heroSlides.map((slide, index) => (
         <motion.div
           key={slide.image}
           initial={false}
-          animate={{ opacity: index === currentSlide ? 1 : 0 }}
-          transition={{ duration: 1 }}
+          animate={{ opacity: index === currentSlide || index === previousSlide ? 1 : 0 }}
+          transition={{ duration: index === currentSlide ? 1 : 0 }}
+          style={{ zIndex: index === currentSlide ? 2 : index === previousSlide ? 1 : 0 }}
           className="absolute inset-0 bg-foreground"
           aria-hidden="true"
         >
@@ -149,7 +158,7 @@ export function Hero() {
         {heroSlides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
                 ? 'w-8 bg-accent' 
