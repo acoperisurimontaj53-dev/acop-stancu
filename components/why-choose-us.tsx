@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-m';
 import { Shield, Users, Clock, Award, Wrench, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { projectImages } from '@/lib/services-data';
@@ -44,7 +44,7 @@ export function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Side */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -63,7 +63,7 @@ export function WhyChooseUs() {
             </div>
             
             {/* Floating Stats Card */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -79,15 +79,15 @@ export function WhyChooseUs() {
                   <div className="text-sm text-muted-foreground">Clienți Mulțumiți</div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
             
             {/* Accent Shape */}
             <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full bg-accent/20 rounded-3xl" />
-          </motion.div>
+          </m.div>
 
           {/* Content Side */}
           <div>
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -103,12 +103,12 @@ export function WhyChooseUs() {
                 Suntem o firmă de acoperișuri dedicată să ofere cele mai bune soluții pentru casa ta,
                 combinând expertiză tehnică cu materiale de calitate și servicii excepționale.
               </p>
-            </motion.div>
+            </m.div>
 
             {/* Features Grid */}
             <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
-                <motion.div
+                <m.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export function WhyChooseUs() {
                     <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-m';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
@@ -90,7 +90,7 @@ export function Testimonials() {
     <section className="py-20 bg-primary text-primary-foreground">
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -103,7 +103,7 @@ export function Testimonials() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-serif">
             Ce Spun Clienții Despre Lucrările AcoperiRO
           </h2>
-        </motion.div>
+        </m.div>
 
         {/* Testimonial Card */}
         <div className="relative">
@@ -116,7 +116,7 @@ export function Testimonials() {
             {/* Fixed min height so the navigation below doesn't jump between testimonials of different length */}
             <div className="min-h-[300px] md:min-h-[240px]">
             <AnimatePresence mode="wait" custom={direction}>
-              <motion.div
+              <m.div
                 key={currentIndex}
                 custom={direction}
                 variants={slideVariants}
@@ -145,13 +145,13 @@ export function Testimonials() {
                     {currentTestimonial.location} &bull; {currentTestimonial.project}
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             </AnimatePresence>
             </div>
 
             {/* Navigation */}
             <div className="mt-8 flex items-center justify-center gap-4">
-              <motion.button
+              <m.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => paginate(-1)}
@@ -159,7 +159,7 @@ export function Testimonials() {
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-5 h-5" />
-              </motion.button>
+              </m.button>
 
               <div className="flex gap-2">
                 {testimonials.map((_, index) => (
@@ -179,7 +179,7 @@ export function Testimonials() {
                 ))}
               </div>
 
-              <motion.button
+              <m.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => paginate(1)}
@@ -187,7 +187,7 @@ export function Testimonials() {
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="w-5 h-5" />
-              </motion.button>
+              </m.button>
             </div>
           </div>
         </div>

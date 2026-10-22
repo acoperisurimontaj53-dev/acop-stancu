@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-m';
 import Image from 'next/image';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
@@ -107,7 +107,7 @@ export function PortofoliuClient() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -123,7 +123,7 @@ export function PortofoliuClient() {
               Descoperă câteva dintre cele mai recente lucrări de acoperișuri finalizate cu succes,
               în toată România. Fiecare acoperiș are o poveste, iar noi suntem mândri de fiecare.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -132,7 +132,7 @@ export function PortofoliuClient() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide justify-center">
             {categories.map((category) => (
-              <motion.button
+              <m.button
                 key={category}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -144,7 +144,7 @@ export function PortofoliuClient() {
                 }`}
               >
                 {category}
-              </motion.button>
+              </m.button>
             ))}
           </div>
         </div>
@@ -154,13 +154,13 @@ export function PortofoliuClient() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="sr-only">Lucrări recente de acoperișuri</h2>
-          <motion.div
+          <m.div
             layout
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project, index) => (
-                <motion.div
+                <m.div
                   key={project.id}
                   layout
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -212,17 +212,17 @@ export function PortofoliuClient() {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </AnimatePresence>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-secondary">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -248,14 +248,14 @@ export function PortofoliuClient() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Lightbox */}
       <AnimatePresence>
         {lightboxProject && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -291,7 +291,7 @@ export function PortofoliuClient() {
             )}
 
             {/* Image */}
-            <motion.div
+            <m.div
               key={lightboxIndex}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -307,7 +307,7 @@ export function PortofoliuClient() {
                 className="object-contain"
                 sizes="(max-width: 1280px) 100vw, 1280px"
               />
-            </motion.div>
+            </m.div>
 
             {/* Info */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-background">
@@ -332,7 +332,7 @@ export function PortofoliuClient() {
                 ))}
               </div>
             )}
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
 

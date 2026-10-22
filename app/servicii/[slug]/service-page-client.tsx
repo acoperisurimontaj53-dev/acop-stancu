@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-m';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '@/components/header';
@@ -51,7 +51,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -70,7 +70,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               {/* Features */}
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {service.features.map((feature, index) => (
-                  <motion.div
+                  <m.div
                     key={feature}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                       <Check className="w-4 h-4 text-accent" />
                     </div>
                     <span className="text-foreground font-medium">{feature}</span>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
 
@@ -101,10 +101,10 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Image */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -123,7 +123,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               </div>
               
               {/* Floating Card */}
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -144,11 +144,11 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                   <MapPin className="w-4 h-4" />
                   <span>Servicii în toată România</span>
                 </div>
-              </motion.div>
+              </m.div>
               
               {/* Accent Shape */}
               <div className="absolute -z-10 -top-4 -right-4 w-full h-full bg-primary/10 rounded-3xl" />
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -165,7 +165,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -179,9 +179,9 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <p className="text-muted-foreground">
                 Oferim garanție extinsă pentru toate lucrările executate și materialele montate.
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -195,9 +195,9 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <p className="text-muted-foreground">
                 Respectăm termenele stabilite și comunicăm transparent pe tot parcursul proiectului.
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -211,7 +211,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               <p className="text-muted-foreground">
                 Echipe mobile disponibile în toată România, gata să intervină rapid.
               </p>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -220,7 +220,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
       {relatedServices.length > 0 && (
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -241,11 +241,11 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
-            </motion.div>
+            </m.div>
 
             <div className="grid md:grid-cols-3 gap-6">
               {relatedServices.map((related, index) => (
-                <motion.div
+                <m.div
                   key={related.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -279,7 +279,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                       </div>
                     </div>
                   </Link>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
@@ -298,7 +298,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
       {/* Final CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -325,7 +325,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

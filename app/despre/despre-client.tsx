@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-m';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '@/components/header';
@@ -71,7 +71,7 @@ export function DespreClient() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -87,7 +87,7 @@ export function DespreClient() {
               De peste 15 ani montăm, reparăm și renovăm acoperișuri în toată România,
               cu dedicare și profesionalism.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -96,7 +96,7 @@ export function DespreClient() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 -mt-28 relative z-10">
             {stats.map((stat, index) => (
-              <motion.div
+              <m.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export function DespreClient() {
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">{stat.value}</div>
                 <div className="text-muted-foreground">{stat.label}</div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -119,7 +119,7 @@ export function DespreClient() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -140,7 +140,7 @@ export function DespreClient() {
               <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full bg-accent/20 rounded-3xl" />
               
               {/* Experience Badge */}
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -149,11 +149,11 @@ export function DespreClient() {
               >
                 <div className="text-4xl font-bold">15+</div>
                 <div className="text-sm text-primary-foreground/80">Ani de Experiență</div>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
 
             {/* Content */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -198,7 +198,7 @@ export function DespreClient() {
                   <span className="text-foreground font-medium">Garanție Extinsă</span>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -206,7 +206,7 @@ export function DespreClient() {
       {/* Values Section */}
       <section className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -219,11 +219,11 @@ export function DespreClient() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
               Principiile După Care Lucrăm la Fiecare Acoperiș
             </h2>
-          </motion.div>
+          </m.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <motion.div
+              <m.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -236,7 +236,7 @@ export function DespreClient() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{value.title}</h3>
                 <p className="text-muted-foreground text-sm">{value.description}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -245,7 +245,7 @@ export function DespreClient() {
       {/* Timeline Section */}
       <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -258,14 +258,14 @@ export function DespreClient() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
               Evoluția AcoperiRO din 2009 până Astăzi
             </h2>
-          </motion.div>
+          </m.div>
 
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-border" />
 
             {timeline.map((item, index) => (
-              <motion.div
+              <m.div
                 key={item.year}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -286,7 +286,7 @@ export function DespreClient() {
                   <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -295,7 +295,7 @@ export function DespreClient() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -321,7 +321,7 @@ export function DespreClient() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-m';
 import { Phone, ArrowRight, Shield, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -35,6 +35,15 @@ const stats = [
 export function Hero() {
   const [{ currentSlide, previousSlide }, setSlides] = useState({ currentSlide: 0, previousSlide: -1 });
 
+  // Only the first slide image loads up front, so it gets all the bandwidth for LCP.
+  // The other two start loading shortly after, well before the first transition at 6s.
+  const [loadAllSlides, setLoadAllSlides] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoadAllSlides(true), 1500);
+    return () => clearTimeout(timeout);
+  }, []);
+
   const goToSlide = (next: number) => {
     setSlides((s) => (s.currentSlide === next ? s : { currentSlide: next, previousSlide: s.currentSlide }));
   };
@@ -54,7 +63,7 @@ export function Hero() {
       {/* Background Image Carousel: the previous slide stays fully opaque underneath
           while the new one fades in on top, so the page background never shows through */}
       {heroSlides.map((slide, index) => (
-        <motion.div
+        <m.div
           key={slide.image}
           initial={false}
           animate={{ opacity: index === currentSlide || index === previousSlide ? 1 : 0 }}
@@ -63,22 +72,24 @@ export function Hero() {
           className="absolute inset-0 bg-foreground"
           aria-hidden="true"
         >
-          <Image
-            src={slide.image}
-            alt=""
-            fill
-            priority={index === 0}
-            sizes="100vw"
-            className="object-cover object-center"
-          />
+          {(index === 0 || loadAllSlides) && (
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              priority={index === 0}
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/40" />
-        </motion.div>
+        </m.div>
       ))}
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
         <div className="max-w-2xl">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -88,7 +99,7 @@ export function Hero() {
             <span className="text-primary-foreground text-sm font-medium">
               Servicii în toată România
             </span>
-          </motion.div>
+          </m.div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-6 font-serif leading-tight text-balance">
             Firmă de Acoperișuri în Toată România: Montaj, Reparații și Renovări
@@ -96,7 +107,7 @@ export function Hero() {
 
           <div className="grid mb-8">
             {heroSlides.map((slide, index) => (
-              <motion.div
+              <m.div
                 key={slide.title}
                 initial={false}
                 animate={{ opacity: index === currentSlide ? 1 : 0 }}
@@ -110,11 +121,11 @@ export function Hero() {
                 <p className="text-lg md:text-xl text-background/80">
                   {slide.subtitle}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -133,17 +144,17 @@ export function Hero() {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-          </motion.div>
+          </m.div>
 
           {/* Stats */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="grid grid-cols-3 gap-4 md:gap-8"
           >
             {stats.map((stat, index) => (
-              <motion.div
+              <m.div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -157,9 +168,9 @@ export function Hero() {
                   <div className="text-2xl md:text-3xl font-bold text-background">{stat.value}</div>
                   <div className="text-xs md:text-sm text-background/70">{stat.label}</div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
         </div>
       </div>
 
@@ -180,20 +191,20 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         className="absolute bottom-8 right-8 hidden md:block"
       >
-        <motion.div
+        <m.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-6 h-10 border-2 border-background/30 rounded-full flex justify-center pt-2"
         >
           <div className="w-1.5 h-3 bg-background/50 rounded-full" />
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </section>
   );
 }

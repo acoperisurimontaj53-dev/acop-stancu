@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-m';
 import { Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
 import { services, serviceCategories } from '@/lib/services-data';
 
@@ -183,7 +183,7 @@ export function Footer() {
       {/* Scroll to Top Button: shown only after scrolling, sits above the floating contact button */}
       <AnimatePresence>
         {showScrollTop && (
-          <motion.button
+          <m.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -194,7 +194,7 @@ export function Footer() {
             whileTap={{ scale: 0.9 }}
           >
             <ArrowUp className="w-5 h-5" />
-          </motion.button>
+          </m.button>
         )}
       </AnimatePresence>
     </footer>

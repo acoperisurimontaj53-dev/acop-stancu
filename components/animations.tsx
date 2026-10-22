@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, type Variants } from "framer-motion";
+import { m, useInView, type Variants } from "framer-m";
 import { useRef, type ReactNode } from "react";
 
 // Fade In Animation Wrapper
@@ -19,7 +19,7 @@ export function FadeIn({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export function FadeIn({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -45,7 +45,7 @@ export function SlideInLeft({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, x: -50 }}
       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -53,7 +53,7 @@ export function SlideInLeft({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -71,7 +71,7 @@ export function SlideInRight({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, x: 50 }}
       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -79,7 +79,7 @@ export function SlideInRight({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -97,7 +97,7 @@ export function ScaleUp({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
@@ -105,7 +105,7 @@ export function ScaleUp({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -133,7 +133,7 @@ export function StaggerContainer({
   };
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       variants={containerVariants}
       initial="hidden"
@@ -141,7 +141,7 @@ export function StaggerContainer({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -163,9 +163,9 @@ export function StaggerItem({
   };
 
   return (
-    <motion.div variants={itemVariants} className={className}>
+    <m.div variants={itemVariants} className={className}>
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -180,7 +180,7 @@ export function ParallaxWrapper({
   className?: string;
 }) {
   return (
-    <motion.div
+    <m.div
       initial={{ y: offset }}
       whileInView={{ y: 0 }}
       viewport={{ once: true }}
@@ -188,7 +188,7 @@ export function ParallaxWrapper({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -203,14 +203,14 @@ export function HoverScale({
   className?: string;
 }) {
   return (
-    <motion.div
+    <m.div
       whileHover={{ scale }}
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.2 }}
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -226,7 +226,7 @@ export function TextReveal({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
       animate={
@@ -238,7 +238,7 @@ export function TextReveal({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -251,7 +251,7 @@ export function Bounce({
   className?: string;
 }) {
   return (
-    <motion.div
+    <m.div
       animate={{
         y: [0, -10, 0],
       }}
@@ -264,7 +264,7 @@ export function Bounce({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -277,7 +277,7 @@ export function Pulse({
   className?: string;
 }) {
   return (
-    <motion.div
+    <m.div
       animate={{
         scale: [1, 1.05, 1],
       }}
@@ -290,6 +290,6 @@ export function Pulse({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

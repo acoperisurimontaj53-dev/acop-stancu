@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { motion, useAnimation, useMotionValue } from 'framer-motion';
+import { m, useAnimation, useMotionValue } from 'framer-m';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, ChevronLeft, ChevronRight, Expand, X } from 'lucide-react';
@@ -59,7 +59,7 @@ export function GalleryCarousel() {
     <section className="py-20 bg-secondary overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -77,7 +77,7 @@ export function GalleryCarousel() {
           
           {/* Navigation Arrows */}
           <div className="flex gap-3 mt-6 md:mt-0">
-            <motion.button
+            <m.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={prev}
@@ -86,8 +86,8 @@ export function GalleryCarousel() {
               aria-label="Previous"
             >
               <ChevronLeft className="w-5 h-5" />
-            </motion.button>
-            <motion.button
+            </m.button>
+            <m.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={next}
@@ -96,16 +96,16 @@ export function GalleryCarousel() {
               aria-label="Next"
             >
               <ChevronRight className="w-5 h-5" />
-            </motion.button>
+            </m.button>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Carousel */}
-        <motion.div 
+        <m.div 
           ref={carousel} 
           className="cursor-grab overflow-hidden"
         >
-          <motion.div
+          <m.div
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
             onDragEnd={handleDragEnd}
@@ -114,7 +114,7 @@ export function GalleryCarousel() {
             className="flex gap-6"
           >
             {galleryImages.map((image, index) => (
-              <motion.div
+              <m.div
                 key={image.id}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -133,7 +133,7 @@ export function GalleryCarousel() {
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Expand Button */}
-                <motion.button
+                <m.button
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileHover={{ scale: 1.1 }}
                   onClick={() => setLightboxImage(image.src)}
@@ -141,16 +141,16 @@ export function GalleryCarousel() {
                   aria-label="Expand image"
                 >
                   <Expand className="w-5 h-5 text-foreground" />
-                </motion.button>
+                </m.button>
                 
                 {/* Title */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-background font-semibold text-lg">{image.title}</h3>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
 
         {/* Progress Indicators */}
         <div className="flex justify-center gap-2 mt-8">
@@ -178,7 +178,7 @@ export function GalleryCarousel() {
 
       {/* Lightbox */}
       {lightboxImage && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -192,7 +192,7 @@ export function GalleryCarousel() {
           >
             <X className="w-6 h-6 text-background" />
           </button>
-          <motion.div
+          <m.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
@@ -206,8 +206,8 @@ export function GalleryCarousel() {
               className="object-contain"
               sizes="(max-width: 1280px) 100vw, 1280px"
             />
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       )}
     </section>
   );

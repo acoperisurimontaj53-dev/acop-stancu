@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-m';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
@@ -44,7 +44,7 @@ export function ContactClient() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -60,7 +60,7 @@ export function ContactClient() {
               Suntem aici să te ajutăm cu montaj, reparații sau renovare acoperiș. Contactează-ne
               prin telefon sau completează formularul și te vom contacta în cel mai scurt timp.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -69,7 +69,7 @@ export function ContactClient() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="sr-only">Date de contact AcoperiRO</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 -mt-28 relative z-10">
-            <motion.a
+            <m.a
               href="tel:+40799676512"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -82,9 +82,9 @@ export function ContactClient() {
               <h3 className="text-lg font-semibold text-foreground mb-2">Telefon</h3>
               <p className="text-muted-foreground mb-1">Sună-ne oricând</p>
               <p className="text-xl font-bold text-primary">+40 799 676 512</p>
-            </motion.a>
+            </m.a>
 
-            <motion.a
+            <m.a
               href="mailto:contact@acoperiro.ro"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -97,9 +97,9 @@ export function ContactClient() {
               <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
               <p className="text-muted-foreground mb-1">Scrie-ne un mesaj</p>
               <p className="text-primary font-medium">contact@acoperiro.ro</p>
-            </motion.a>
+            </m.a>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -111,9 +111,9 @@ export function ContactClient() {
               <h3 className="text-lg font-semibold text-foreground mb-2">Locație</h3>
               <p className="text-muted-foreground mb-1">Zona de acoperire</p>
               <p className="text-foreground font-medium">Toată România</p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -125,7 +125,7 @@ export function ContactClient() {
               <h3 className="text-lg font-semibold text-foreground mb-2">Program</h3>
               <p className="text-muted-foreground mb-1">Luni - Sâmbătă</p>
               <p className="text-foreground font-medium">07:00 - 19:00</p>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -135,7 +135,7 @@ export function ContactClient() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Form */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -153,7 +153,7 @@ export function ContactClient() {
               </p>
 
               {isSubmitted ? (
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="bg-card rounded-2xl p-8 border border-border text-center"
@@ -174,7 +174,7 @@ export function ContactClient() {
                   >
                     Trimite alt mesaj
                   </Button>
-                </motion.div>
+                </m.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
@@ -274,7 +274,7 @@ export function ContactClient() {
                   >
                     {isSubmitting ? (
                       <>
-                        <motion.div
+                        <m.div
                           animate={{ rotate: 360 }}
                           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                           className="w-5 h-5 border-2 border-accent-foreground/30 border-t-accent-foreground rounded-full"
@@ -290,10 +290,10 @@ export function ContactClient() {
                   </Button>
                 </form>
               )}
-            </motion.div>
+            </m.div>
 
             {/* Info Side */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -367,7 +367,7 @@ export function ContactClient() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { JsonLd } from '@/components/json-ld'
+import { MotionProvider } from '@/components/motion-provider'
 import { ORGANIZATION_ID, SITE_EMAIL, SITE_NAME, SITE_PHONE, SITE_URL, WEBSITE_ID } from '@/lib/seo'
 import './globals.css'
 
@@ -89,7 +90,7 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        {children}
+        <MotionProvider>{children}</MotionProvider>
         <JsonLd data={siteJsonLd} />
         <Analytics />
       </body>

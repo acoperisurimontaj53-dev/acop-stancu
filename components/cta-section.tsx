@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-m';
 import { Phone, ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -9,7 +9,7 @@ export function CTASection() {
   return (
     <section className="py-20 bg-secondary">
       <div className="max-w-7xl mx-auto px-4">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -25,7 +25,7 @@ export function CTASection() {
           <div className="relative grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div>
-              <motion.span
+              <m.span
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -33,8 +33,8 @@ export function CTASection() {
                 className="inline-block text-accent font-medium mb-4 tracking-wider uppercase text-sm"
               >
                 Contactează-ne
-              </motion.span>
-              <motion.h2
+              </m.span>
+              <m.h2
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -42,8 +42,8 @@ export function CTASection() {
                 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-serif text-balance"
               >
                 Ai un Proiect de Acoperiș? Cere o Ofertă Gratuită
-              </motion.h2>
-              <motion.p
+              </m.h2>
+              <m.p
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -52,9 +52,9 @@ export function CTASection() {
               >
                 Sună-ne acum pentru o consultație gratuită și o ofertă personalizată de montaj sau
                 reparații acoperiș. Echipa noastră este pregătită să te ajute cu orice proiect, mare sau mic.
-              </motion.p>
+              </m.p>
 
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -73,11 +73,11 @@ export function CTASection() {
                     Trimite Mesaj
                   </Button>
                 </Link>
-              </motion.div>
+              </m.div>
             </div>
 
             {/* Stats Cards */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -100,9 +100,9 @@ export function CTASection() {
                 <div className="text-4xl font-bold text-primary mb-2">RO</div>
                 <div className="text-sm text-muted-foreground">Toată România</div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

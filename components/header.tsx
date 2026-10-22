@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-m';
 import { Phone, Menu, X, ChevronDown, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { serviceCategories, services } from '@/lib/services-data';
@@ -63,7 +63,7 @@ export function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2" aria-label="AcoperiRO - Acasă">
-              <motion.div 
+              <m.div 
                 className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -72,7 +72,7 @@ export function Header() {
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
-              </motion.div>
+              </m.div>
               <div className="hidden sm:block">
                 <span className="block text-xl font-bold text-foreground font-serif">AcoperiRO</span>
                 <p className="text-xs text-muted-foreground -mt-1">Experți în acoperișuri</p>
@@ -109,7 +109,7 @@ export function Header() {
                 
                 <AnimatePresence>
                   {isServicesOpen && (
-                    <motion.div
+                    <m.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
@@ -155,7 +155,7 @@ export function Header() {
                           </Link>
                         </div>
                       </div>
-                    </motion.div>
+                    </m.div>
                   )}
                 </AnimatePresence>
               </div>
@@ -224,7 +224,7 @@ export function Header() {
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -279,7 +279,7 @@ export function Header() {
                   +40 799 676 512
                 </a>
               </nav>
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
       </header>

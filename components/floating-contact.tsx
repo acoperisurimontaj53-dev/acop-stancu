@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-m";
 import { Phone, X, MessageCircle, Mail } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -16,7 +16,7 @@ export function FloatingContact() {
         {isOpen && (
           <>
             {/* Contact Options */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.8 }}
@@ -24,7 +24,7 @@ export function FloatingContact() {
               className="flex flex-col gap-3"
             >
               {/* Call Button */}
-              <motion.a
+              <m.a
                 href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
                 className="flex items-center gap-3 rounded-2xl bg-card px-4 py-3 shadow-lg border border-border hover:shadow-xl transition-shadow"
                 whileHover={{ scale: 1.02, x: -5 }}
@@ -37,10 +37,10 @@ export function FloatingContact() {
                   <p className="text-sm font-medium text-foreground">Sunați acum</p>
                   <p className="text-xs text-muted-foreground">{PHONE_NUMBER}</p>
                 </div>
-              </motion.a>
+              </m.a>
 
               {/* WhatsApp Button */}
-              <motion.a
+              <m.a
                 href={`https://wa.me/${PHONE_NUMBER.replace(/\s/g, "").replace("+", "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -55,10 +55,10 @@ export function FloatingContact() {
                   <p className="text-sm font-medium text-foreground">WhatsApp</p>
                   <p className="text-xs text-muted-foreground">Scrieți-ne un mesaj</p>
                 </div>
-              </motion.a>
+              </m.a>
 
               {/* Email/Contact Page Button */}
-              <motion.div
+              <m.div
                 whileHover={{ scale: 1.02, x: -5 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -74,14 +74,14 @@ export function FloatingContact() {
                     <p className="text-xs text-muted-foreground">Cereți o ofertă</p>
                   </div>
                 </Link>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
           </>
         )}
       </AnimatePresence>
 
       {/* Main Toggle Button */}
-      <motion.button
+      <m.button
         onClick={() => setIsOpen(!isOpen)}
         className={`relative flex h-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl ${
           isOpen ? "w-16" : "w-16 md:w-auto md:gap-3 md:px-7"
@@ -92,7 +92,7 @@ export function FloatingContact() {
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
-            <motion.div
+            <m.div
               key="close"
               initial={{ opacity: 0, rotate: -90 }}
               animate={{ opacity: 1, rotate: 0 }}
@@ -100,9 +100,9 @@ export function FloatingContact() {
               transition={{ duration: 0.2 }}
             >
               <X className="h-7 w-7" />
-            </motion.div>
+            </m.div>
           ) : (
-            <motion.div
+            <m.div
               key="phone"
               initial={{ opacity: 0, rotate: 90 }}
               animate={{ opacity: 1, rotate: 0 }}
@@ -110,7 +110,7 @@ export function FloatingContact() {
               transition={{ duration: 0.2 }}
             >
               <Phone className="h-7 w-7" />
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
 
@@ -119,7 +119,7 @@ export function FloatingContact() {
             {PHONE_NUMBER}
           </span>
         )}
-      </motion.button>
+      </m.button>
     </div>
   );
 }

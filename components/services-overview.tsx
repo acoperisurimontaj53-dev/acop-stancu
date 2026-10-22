@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-m';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
@@ -32,7 +32,7 @@ export function ServicesOverview() {
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -49,10 +49,10 @@ export function ServicesOverview() {
             Oferim o gamă completă de servicii pentru acoperișuri: montaj acoperișuri noi,
             reparații, dulgherie, mansardări, izolații termice și hidroizolații, în toată România.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Services Grid */}
-        <motion.div
+        <m.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -60,7 +60,7 @@ export function ServicesOverview() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {featuredServices.map((service, index) => (
-            <motion.div
+            <m.div
               key={service.id}
               variants={itemVariants}
               className="group"
@@ -99,19 +99,19 @@ export function ServicesOverview() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
 
         {/* View All Button */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block">
+          <m.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block">
             <Link
               href="/servicii"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors"
@@ -119,8 +119,8 @@ export function ServicesOverview() {
               Vezi Toate Cele {services.length} Servicii de Acoperișuri
               <ArrowRight className="w-5 h-5" />
             </Link>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-m';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '@/components/header';
@@ -35,7 +35,7 @@ export function ServiciiClient() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -65,7 +65,7 @@ export function ServiciiClient() {
                 className="w-full pl-12 pr-4 py-4 rounded-full bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
               />
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -73,7 +73,7 @@ export function ServiciiClient() {
       <section className="py-8 bg-secondary border-b border-border sticky top-[72px] z-30 backdrop-blur-md bg-secondary/95">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
-            <motion.button
+            <m.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setSelectedCategory(null)}
@@ -84,11 +84,11 @@ export function ServiciiClient() {
               }`}
             >
               Toate ({services.length})
-            </motion.button>
+            </m.button>
             {serviceCategories.map((category) => {
               const count = services.filter(s => s.category === category.id).length;
               return (
-                <motion.button
+                <m.button
                   key={category.id}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -100,7 +100,7 @@ export function ServiciiClient() {
                   }`}
                 >
                   {category.name} ({count})
-                </motion.button>
+                </m.button>
               );
             })}
           </div>
@@ -112,13 +112,13 @@ export function ServiciiClient() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="sr-only">Lista serviciilor de acoperișuri</h2>
           {filteredServices.length > 0 ? (
-            <motion.div
+            <m.div
               layout
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               <AnimatePresence mode="popLayout">
                 {filteredServices.map((service, index) => (
-                  <motion.div
+                  <m.div
                     key={service.id}
                     layout
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -179,12 +179,12 @@ export function ServiciiClient() {
                         </div>
                       </div>
                     </Link>
-                  </motion.div>
+                  </m.div>
                 ))}
               </AnimatePresence>
-            </motion.div>
+            </m.div>
           ) : (
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-16"
@@ -207,7 +207,7 @@ export function ServiciiClient() {
               >
                 Resetează filtrele
               </Button>
-            </motion.div>
+            </m.div>
           )}
         </div>
       </section>
@@ -244,7 +244,7 @@ export function ServiciiClient() {
       {/* CTA Section */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -263,7 +263,7 @@ export function ServiciiClient() {
                 +40 799 676 512
               </Button>
             </a>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

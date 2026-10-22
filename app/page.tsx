@@ -5,6 +5,7 @@ import { GalleryCarousel } from '@/components/gallery-carousel';
 import { WhyChooseUs } from '@/components/why-choose-us';
 import { Testimonials } from '@/components/testimonials';
 import { CTASection } from '@/components/cta-section';
+import { HomeIntro } from '@/components/home-intro';
 import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
 import { buildMetadata } from '@/lib/seo';
@@ -26,6 +27,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <GalleryCarousel />
       <Testimonials />
+      <HomeIntro />
       <CTASection />
       <Footer />
       <FloatingContact />
