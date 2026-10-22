@@ -155,9 +155,20 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-background/10">
         <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-background/60 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} AcoperiRO. Toate drepturile rezervate.
-          </p>
+          <div className="text-background/60 text-sm text-center md:text-left">
+            <p>© {new Date().getFullYear()} AcoperiRO. Toate drepturile rezervate.</p>
+            <p className="mt-1">
+              Website optimizat și actualizat de{' '}
+              <a
+                href="https://webbase.ro"
+                target="_blank"
+                rel="noopener"
+                className="font-medium text-background/80 hover:text-accent transition-colors"
+              >
+                WebBase
+              </a>
+            </p>
+          </div>
           <div className="flex items-center gap-6 text-sm text-background/60">
             <Link href="/confidentialitate" className="hover:text-background transition-colors">
               Politica de Confidențialitate
