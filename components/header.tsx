@@ -42,15 +42,12 @@ export function Header() {
       </div>
 
       {/* Main Header */}
-      <motion.header
+      <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-background/95 backdrop-blur-md shadow-lg' 
+          isScrolled
+            ? 'bg-background/95 backdrop-blur-md shadow-lg'
             : 'bg-background'
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
       >
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -235,7 +232,7 @@ export function Header() {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.header>
+      </header>
     </>
   );
 }
