@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { m, AnimatePresence } from 'framer-m';
+import { m, AnimatePresence } from 'framer-motion';
 import { Phone, Menu, X, ChevronDown, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { serviceCategories, services } from '@/lib/services-data';

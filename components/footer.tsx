@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { m, AnimatePresence } from 'framer-m';
+import { m, AnimatePresence } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
 import { services, serviceCategories } from '@/lib/services-data';
 

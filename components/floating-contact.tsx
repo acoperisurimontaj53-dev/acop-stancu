@@ -1,6 +1,6 @@
 "use client";
 
-import { m, AnimatePresence } from "framer-m";
+import { m, AnimatePresence } from "framer-motion";
 import { Phone, X, MessageCircle, Mail } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";

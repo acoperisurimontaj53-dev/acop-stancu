@@ -1,6 +1,6 @@
 'use client';
 
-import { m } from 'framer-m';
+import { m } from 'framer-motion';
 import { Phone, ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';

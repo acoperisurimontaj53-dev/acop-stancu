@@ -1,6 +1,6 @@
 'use client';
 
-import { m } from 'framer-m';
+import { m } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '@/components/header';

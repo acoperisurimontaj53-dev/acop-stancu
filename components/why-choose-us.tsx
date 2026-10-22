@@ -1,6 +1,6 @@
 'use client';
 
-import { m } from 'framer-m';
+import { m } from 'framer-motion';
 import { Shield, Users, Clock, Award, Wrench, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { projectImages } from '@/lib/services-data';

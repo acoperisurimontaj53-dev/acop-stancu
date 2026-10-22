@@ -1,6 +1,6 @@
 "use client";
 
-import { m, useInView, type Variants } from "framer-m";
+import { m, useInView, type Variants } from "framer-motion";
 import { useRef, type ReactNode } from "react";
 
 // Fade In Animation Wrapper

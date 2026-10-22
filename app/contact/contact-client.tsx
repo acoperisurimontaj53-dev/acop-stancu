@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { m } from 'framer-m';
+import { m } from 'framer-motion';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
@@ -21,15 +21,42 @@ export function ContactClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const [error, setError] = useState('');
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const serviceSelect = form.elements.namedItem('service') as HTMLSelectElement;
+
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          phone: data.get('phone'),
+          email: data.get('email'),
+          service: serviceSelect.value ? serviceSelect.selectedOptions[0].text : '',
+          message: data.get('message'),
+          website: data.get('website'),
+        }),
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || 'Mesajul nu a putut fi trimis. Te rugăm să încerci din nou.');
+      }
+
+      setIsSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Mesajul nu a putut fi trimis. Te rugăm să încerci din nou.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -177,6 +204,12 @@ export function ContactClient() {
                 </m.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot field: hidden from people, filled in by bots */}
+                  <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+                  </div>
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="relative">
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -265,6 +298,12 @@ export function ContactClient() {
                       />
                     </div>
                   </div>
+
+                  {error && (
+                    <p role="alert" className="rounded-xl border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                      {error}
+                    </p>
+                  )}
 
                   <Button
                     type="submit"
