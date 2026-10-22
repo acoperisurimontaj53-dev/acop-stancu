@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { projectImages } from '@/lib/services-data';
 
-// The production domain. Override with NEXT_PUBLIC_SITE_URL on Vercel if it differs.
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://acoperiro.ro').replace(/\/$/, '');
+// The production domain (with www). Override with NEXT_PUBLIC_SITE_URL on Vercel if it ever changes.
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.specialisti-acoperis.ro').replace(/\/$/, '');
 export const SITE_NAME = 'AcoperiRO';
 export const SITE_PHONE = '+40799676512';
 export const SITE_PHONE_DISPLAY = '+40 799 676 512';
