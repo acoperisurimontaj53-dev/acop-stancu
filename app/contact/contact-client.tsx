@@ -8,6 +8,7 @@ import { FloatingContact } from '@/components/floating-contact';
 import { Button } from '@/components/ui/button';
 import { COUNTIES } from '@/lib/counties';
 import { readLeadSource } from '@/lib/lead-source';
+import { trackConversion } from '@/lib/tracking';
 import {
   Phone,
   Mail,
@@ -55,6 +56,7 @@ export function ContactClient() {
         throw new Error(result?.error || 'Mesajul nu a putut fi trimis. Te rugăm să încerci din nou.');
       }
 
+      trackConversion('form');
       setIsSubmitted(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Mesajul nu a putut fi trimis. Te rugăm să încerci din nou.');

@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ConversionTracker } from '@/components/conversion-tracker'
+import { CookieConsent } from '@/components/cookie-consent'
+import { GoogleTag } from '@/components/google-tag'
 import { JsonLd } from '@/components/json-ld'
 import { LeadSourceTracker } from '@/components/lead-source-tracker'
 import { MotionProvider } from '@/components/motion-provider'
@@ -94,6 +97,9 @@ export default function RootLayout({
         <MotionProvider>{children}</MotionProvider>
         <JsonLd data={siteJsonLd} />
         <LeadSourceTracker />
+        <GoogleTag />
+        <ConversionTracker />
+        <CookieConsent />
         <Analytics />
       </body>
     </html>

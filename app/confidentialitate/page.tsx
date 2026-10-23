@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CookieSettingsButton } from '@/components/cookie-consent';
 import { JsonLd } from '@/components/json-ld';
 import { LegalPage, type LegalSection } from '@/components/legal-page';
 import {
@@ -258,11 +259,32 @@ const sections: LegalSection[] = [
 
         <h3>Ce cookie-uri folosim</h3>
         <p>
-          <strong>Site-ul nu folosește cookie-uri de marketing, de publicitate sau de urmărire a vizitatorilor</strong>, nici
-          proprii, nici ale terților. Pentru că nu folosim cookie-uri care necesită consimțământul tău, nu afișăm un banner
-          de cookie-uri.
+          La prima vizită îți afișăm o bară prin care alegi dacă accepți sau refuzi cookie-urile de marketing. Până alegi,
+          și dacă refuzi, <strong>nu se salvează cookie-uri de publicitate</strong>, iar site-ul funcționează la fel. Poți
+          schimba oricând alegerea din linkul „Setări cookie-uri" din subsolul paginii sau de aici:{' '}
+          <CookieSettingsButton className="font-medium text-primary underline underline-offset-2">
+            deschide setările cookie-urilor
+          </CookieSettingsButton>
+          . Alegerea ta este valabilă 6 luni, apoi te întrebăm din nou.
         </p>
         <ul>
+          <li>
+            <strong>Necesare:</strong> păstrăm în browser (localStorage) alegerea ta privind cookie-urile, ca să nu te
+            întrebăm la fiecare pagină, și, pe durata vizitei, sursa de unde ai ajuns pe site (sessionStorage), pentru a ști
+            ce reclamă sau căutare ți-a adus cererea de ofertă. Aceste date nu părăsesc dispozitivul tău decât atunci când ne
+            trimiți formularul de contact.
+          </li>
+          <li>
+            <strong>Marketing (doar cu acordul tău):</strong> folosim eticheta Google Ads (Google Ireland Limited) pentru a
+            măsura câte apeluri, mesaje WhatsApp și cereri de ofertă vin din reclamele noastre. Dacă accepți, Google poate
+            salva cookie-uri precum <code>_gcl_au</code>, <code>_gcl_aw</code> și <code>IDE</code>, folosite pentru
+            măsurarea conversiilor și personalizarea reclamelor. Dacă refuzi, Google nu primește identificatori de
+            publicitate. Mai multe pe{' '}
+            <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">
+              policies.google.com
+            </a>
+            .
+          </li>
           <li>
             <strong>Statistici de vizitare:</strong> folosim Vercel Web Analytics, un serviciu care măsoară vizitele în mod
             agregat, fără cookie-uri și fără să te urmărească între site-uri. Nu stocăm în browserul tău identificatori
@@ -295,8 +317,8 @@ const sections: LegalSection[] = [
 
         <h3>Modificări</h3>
         <p>
-          Dacă vom introduce în viitor cookie-uri care necesită consimțământul tău (de exemplu pentru statistici sau
-          reclame), vom actualiza această politică și vom afișa un mecanism prin care îți poți da sau retrage acordul.
+          Dacă vom introduce în viitor alte cookie-uri care necesită consimțământul tău, vom actualiza această politică și
+          vom păstra mecanismul prin care îți poți da sau retrage acordul.
         </p>
       </>
     ),
@@ -337,7 +359,7 @@ export default function ConfidentialitatePage() {
         eyebrow="Informații legale"
         title="Politica de Confidențialitate și Cookie-uri"
         intro="Cum folosim și protejăm datele tale personale, ce drepturi ai și ce cookie-uri folosește site-ul AcoperiRO."
-        updatedAt="22 octombrie 2026"
+        updatedAt="23 octombrie 2026"
         sections={sections}
       />
     </>

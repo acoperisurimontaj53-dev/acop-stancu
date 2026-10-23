@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { m, AnimatePresence } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
+import { CookieSettingsButton } from '@/components/cookie-consent';
 import { services, serviceCategories } from '@/lib/services-data';
 
 const quickLinks = [
@@ -172,10 +173,11 @@ export function Footer() {
               </a>
             </p>
           </div>
-          <div className="flex items-center gap-6 text-sm text-background/60">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-background/60">
             <Link href="/confidentialitate" className="hover:text-background transition-colors">
               Confidențialitate și Cookie-uri
             </Link>
+            <CookieSettingsButton className="hover:text-background transition-colors">Setări cookie-uri</CookieSettingsButton>
             <Link href="/termeni" className="hover:text-background transition-colors">
               Termeni și Condiții
             </Link>
