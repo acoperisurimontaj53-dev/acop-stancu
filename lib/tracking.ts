@@ -7,7 +7,7 @@ export const GOOGLE_ADS_ID = 'AW-18532968088';
  */
 export const CONVERSION_LABELS = {
   call: 'Vt96CIW9h6cdEJjNmoVF',
-  whatsapp: '',
+  whatsapp: 'zIxJCLLVh6cdEJjNmoVF',
   form: '',
 } as const;
 
