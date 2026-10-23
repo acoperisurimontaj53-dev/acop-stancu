@@ -131,11 +131,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
-            <a href="tel:+40799676512">
+            <a href="tel:+40743364243">
               <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 text-lg px-8">
                 <Phone className="w-5 h-5" />
                 Sună Acum
-                <span className="hidden md:inline">· +40 799 676 512</span>
+                <span className="hidden md:inline">· +40 743 364 243</span>
               </Button>
             </a>
             <Link href="/servicii">

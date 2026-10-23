@@ -87,11 +87,11 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+40799676512">
+                <a href="tel:+40743364243">
                   <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 w-full sm:w-auto">
                     <Phone className="w-5 h-5" />
                     Sună Acum
-                    <span className="hidden md:inline">· +40 799 676 512</span>
+                    <span className="hidden md:inline">· +40 743 364 243</span>
                   </Button>
                 </a>
                 <Link href="/contact">
@@ -135,8 +135,8 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Sună pentru detalii</div>
-                    <a href="tel:+40799676512" className="text-lg font-bold text-foreground hover:text-primary transition-colors">
-                      +40 799 676 512
+                    <a href="tel:+40743364243" className="text-lg font-bold text-foreground hover:text-primary transition-colors">
+                      +40 743 364 243
                     </a>
                   </div>
                 </div>
@@ -312,10 +312,10 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               pentru {service.name.toLowerCase()}, oriunde în România.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="tel:+40799676512">
+              <a href="tel:+40743364243">
                 <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 w-full sm:w-auto">
                   <Phone className="w-5 h-5" />
-                  +40 799 676 512
+                  +40 743 364 243
                 </Button>
               </a>
               <Link href="/servicii">

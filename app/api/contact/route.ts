@@ -79,7 +79,7 @@ export async function POST(request: Request) {
   if (!apiKey || !to || !from) {
     console.error('Contact form: RESEND_API_KEY, CONTACT_TO_EMAIL or CONTACT_FROM_EMAIL is not set.');
     return NextResponse.json(
-      { error: 'Momentan nu putem trimite mesajul. Te rugăm să ne suni la +40 799 676 512.' },
+      { error: 'Momentan nu putem trimite mesajul. Te rugăm să ne suni la +40 743 364 243.' },
       { status: 500 },
     );
   }
@@ -124,7 +124,7 @@ export async function POST(request: Request) {
   if (!response.ok) {
     console.error('Contact form: Resend error', response.status, await response.text());
     return NextResponse.json(
-      { error: 'Mesajul nu a putut fi trimis. Te rugăm să încerci din nou sau să ne suni la +40 799 676 512.' },
+      { error: 'Mesajul nu a putut fi trimis. Te rugăm să încerci din nou sau să ne suni la +40 743 364 243.' },
       { status: 502 },
     );
   }

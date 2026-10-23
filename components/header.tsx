@@ -42,11 +42,11 @@ export function Header() {
             </div>
           </div>
           <a 
-            href="tel:+40799676512" 
+            href="tel:+40743364243" 
             className="flex items-center gap-2 font-semibold hover:opacity-80 transition-opacity"
           >
             <Phone className="w-4 h-4" />
-            <span>+40 799 676 512</span>
+            <span>+40 743 364 243</span>
           </a>
         </div>
       </div>
@@ -188,12 +188,12 @@ export function Header() {
             {/* CTA Buttons */}
             <div className="flex items-center gap-3">
               <a 
-                href="tel:+40799676512"
+                href="tel:+40743364243"
                 className="hidden sm:flex"
               >
                 <Button variant="outline" className="rounded-full gap-2">
                   <Phone className="w-4 h-4" />
-                  <span className="hidden md:inline">+40 799 676 512</span>
+                  <span className="hidden md:inline">+40 743 364 243</span>
                   <span className="md:hidden">Sună</span>
                 </Button>
               </a>
@@ -272,11 +272,11 @@ export function Header() {
                   Contact
                 </Link>
                 <a 
-                  href="tel:+40799676512" 
+                  href="tel:+40743364243" 
                   className="flex items-center gap-2 py-2 text-primary font-semibold"
                 >
                   <Phone className="w-5 h-5" />
-                  +40 799 676 512
+                  +40 743 364 243
                 </a>
               </nav>
             </m.div>

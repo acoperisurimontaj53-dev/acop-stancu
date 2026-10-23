@@ -103,7 +103,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="tel:+40799676512" 
+                  href="tel:+40743364243" 
                   className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
                 >
                   <div className="w-10 h-10 shrink-0 bg-background/10 rounded-full flex items-center justify-center">
@@ -111,7 +111,7 @@ export function Footer() {
                   </div>
                   <div className="min-w-0">
                     <div className="text-sm text-background/50">Telefon</div>
-                    <div className="font-semibold text-background">+40 799 676 512</div>
+                    <div className="font-semibold text-background">+40 743 364 243</div>
                   </div>
                 </a>
               </li>

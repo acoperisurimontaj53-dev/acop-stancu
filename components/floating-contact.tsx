@@ -5,7 +5,7 @@ import { Phone, X, MessageCircle, Mail } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
-const PHONE_NUMBER = "+40 799 676 512";
+const PHONE_NUMBER = "+40 743 364 243";
 
 export function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);

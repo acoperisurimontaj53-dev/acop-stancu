@@ -5,7 +5,7 @@ import { ContactClient } from './contact-client';
 export const metadata = buildMetadata({
   title: 'Contact și Ofertă Gratuită pentru Acoperiș',
   description:
-    'Sună la +40 799 676 512 sau cere o ofertă gratuită pentru montaj, reparații ori renovare acoperiș. Răspundem în maximum 24 de ore, în toată România.',
+    'Sună la +40 743 364 243 sau cere o ofertă gratuită pentru montaj, reparații ori renovare acoperiș. Răspundem în maximum 24 de ore, în toată România.',
   path: '/contact',
 });
 

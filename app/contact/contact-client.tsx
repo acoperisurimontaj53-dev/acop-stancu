@@ -101,7 +101,7 @@ export function ContactClient() {
           <h2 className="sr-only">Date de contact AcoperiRO</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 -mt-28 relative z-10">
             <m.a
-              href="tel:+40799676512"
+              href="tel:+40743364243"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -112,7 +112,7 @@ export function ContactClient() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Telefon</h3>
               <p className="text-muted-foreground mb-1">Sună-ne oricând</p>
-              <p className="text-xl font-bold text-primary">+40 799 676 512</p>
+              <p className="text-xl font-bold text-primary">+40 743 364 243</p>
             </m.a>
 
             <m.a
@@ -244,7 +244,7 @@ export function ContactClient() {
                           name="phone"
                           required
                           className="w-full pl-12 pr-4 py-3 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                          placeholder="0799 123 456"
+                          placeholder="0743 123 456"
                         />
                       </div>
                     </div>
@@ -424,10 +424,10 @@ export function ContactClient() {
                   <p className="text-sm text-muted-foreground mb-4">
                     Preferi să vorbești direct cu noi?
                   </p>
-                  <a href="tel:+40799676512">
+                  <a href="tel:+40743364243">
                     <Button className="w-full rounded-xl bg-primary hover:bg-primary/90 gap-2">
                       <Phone className="w-5 h-5" />
-                      +40 799 676 512
+                      +40 743 364 243
                     </Button>
                   </a>
                 </div>

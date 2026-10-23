@@ -61,10 +61,10 @@ export function CTASection() {
                 transition={{ duration: 0.4, delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <a href="tel:+40799676512">
+                <a href="tel:+40743364243">
                   <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 text-lg px-8 w-full sm:w-auto">
                     <Phone className="w-5 h-5" />
-                    +40 799 676 512
+                    +40 743 364 243
                   </Button>
                 </a>
                 <Link href="/contact">

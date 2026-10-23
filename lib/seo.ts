@@ -4,8 +4,8 @@ import { projectImages } from '@/lib/services-data';
 // The production domain (without www; www redirects here in Vercel). Override with NEXT_PUBLIC_SITE_URL if it ever changes.
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://specialisti-acoperis.ro').replace(/\/$/, '');
 export const SITE_NAME = 'AcoperiRO';
-export const SITE_PHONE = '+40799676512';
-export const SITE_PHONE_DISPLAY = '+40 799 676 512';
+export const SITE_PHONE = '+40743364243';
+export const SITE_PHONE_DISPLAY = '+40 743 364 243';
 export const SITE_EMAIL = 'acoperisurimontaj53@gmail.com';
 export const DEFAULT_OG_IMAGE = projectImages[1];
 
