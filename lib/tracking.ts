@@ -6,7 +6,7 @@ export const GOOGLE_ADS_ID = 'AW-18532968088';
  * An action with an empty label is skipped.
  */
 export const CONVERSION_LABELS = {
-  call: '',
+  call: 'Vt96CIW9h6cdEJjNmoVF',
   whatsapp: '',
   form: '',
 } as const;
