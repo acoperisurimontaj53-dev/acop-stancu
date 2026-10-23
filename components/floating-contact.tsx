@@ -83,9 +83,7 @@ export function FloatingContact() {
       {/* Main Toggle Button */}
       <m.button
         onClick={() => setIsOpen(!isOpen)}
-        className={`relative flex h-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl ${
-          isOpen ? "w-16" : "w-16 md:w-auto md:gap-3 md:px-7"
-        }`}
+        className="relative flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label={isOpen ? "Închide meniul de contact" : "Contacteaza-ne"}
@@ -103,22 +101,16 @@ export function FloatingContact() {
             </m.div>
           ) : (
             <m.div
-              key="phone"
+              key="mail"
               initial={{ opacity: 0, rotate: 90 }}
               animate={{ opacity: 1, rotate: 0 }}
               exit={{ opacity: 0, rotate: -90 }}
               transition={{ duration: 0.2 }}
             >
-              <Phone className="h-7 w-7" />
+              <Mail className="h-7 w-7" />
             </m.div>
           )}
         </AnimatePresence>
-
-        {!isOpen && (
-          <span className="hidden md:inline text-lg font-semibold whitespace-nowrap">
-            {PHONE_NUMBER}
-          </span>
-        )}
       </m.button>
     </div>
   );
