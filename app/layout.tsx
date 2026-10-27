@@ -57,8 +57,8 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'AcoperiRO | Montaj și Reparații Acoperișuri în Toată România',
-    template: '%s | AcoperiRO',
+    default: 'Specialiști Acoperișuri | Montaj și Reparații în Toată România',
+    template: '%s | Specialiști Acoperișuri',
   },
   description: 'Firmă de acoperișuri cu peste 15 ani experiență: montaj, reparații, mansardări, dulgherie și hidroizolații în toată România. Ofertă gratuită.',
   applicationName: SITE_NAME,

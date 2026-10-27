@@ -201,7 +201,7 @@ export function GalleryCarousel() {
           >
             <Image
               src={lightboxImage}
-              alt={galleryImages.find((image) => image.src === lightboxImage)?.title ?? 'Lucrare de acoperiș realizată de AcoperiRO'}
+              alt={galleryImages.find((image) => image.src === lightboxImage)?.title ?? 'Lucrare de acoperiș realizată de echipa noastră'}
               fill
               className="object-contain"
               sizes="(max-width: 1280px) 100vw, 1280px"

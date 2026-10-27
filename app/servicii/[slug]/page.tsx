@@ -30,9 +30,9 @@ function buildServiceDescription(service: Service) {
   return service.shortDescription;
 }
 
-/** Keeps the full title (name + " | AcoperiRO" from the layout template) within ~60 characters. */
+/** Keeps the full title (name + " | Specialiști Acoperișuri" from the layout template) within ~60 characters. */
 function buildServiceTitle(service: Service) {
-  return service.name.length <= 24 ? `${service.name} - Servicii Profesionale` : service.name;
+  return service.name.length <= 18 ? `${service.name} - Ofertă Gratuită` : service.name;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

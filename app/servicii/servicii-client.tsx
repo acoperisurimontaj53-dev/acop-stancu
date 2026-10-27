@@ -221,7 +221,7 @@ export function ServiciiClient() {
           </h2>
           <div className="space-y-4 text-lg text-muted-foreground">
             <p>
-              AcoperiRO oferă servicii complete pentru acoperișuri, de la{' '}
+              Oferim servicii complete pentru acoperișuri, de la{' '}
               <Link href="/servicii/montaj-acoperisuri" className="text-primary font-medium hover:underline">montaj acoperișuri</Link>{' '}
               noi cu <Link href="/servicii/tigla-metalica" className="text-primary font-medium hover:underline">țiglă metalică</Link>,{' '}
               <Link href="/servicii/tigla-ceramica" className="text-primary font-medium hover:underline">țiglă ceramică</Link> sau{' '}

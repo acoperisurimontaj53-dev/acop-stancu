@@ -87,7 +87,7 @@ export function ContactClient() {
               Contact
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif text-balance">
-              Contact AcoperiRO: Cere o Ofertă Gratuită pentru Acoperișul Tău
+              Contact: Cere o Ofertă Gratuită pentru Acoperișul Tău
             </h1>
             <p className="text-xl text-primary-foreground/80">
               Suntem aici să te ajutăm cu montaj, reparații sau renovare acoperiș. Contactează-ne
@@ -100,7 +100,7 @@ export function ContactClient() {
       {/* Contact Info Cards */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="sr-only">Date de contact AcoperiRO</h2>
+          <h2 className="sr-only">Date de contact Specialiști Acoperișuri</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 -mt-28 relative z-10">
             <m.a
               href="tel:+40743364243"
@@ -369,7 +369,7 @@ export function ContactClient() {
             >
               <div className="bg-card rounded-3xl p-8 border border-border">
                 <h2 className="text-2xl font-bold text-foreground mb-6 font-serif">
-                  De Ce Să Alegi AcoperiRO
+                  De Ce Să Ne Alegi
                 </h2>
                 
                 <div className="space-y-6">

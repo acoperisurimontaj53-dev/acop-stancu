@@ -80,7 +80,7 @@ export function DespreClient() {
               Despre Noi
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif text-balance">
-              Despre AcoperiRO: Firmă de Acoperișuri cu Peste 15 Ani de Experiență
+              Despre Specialiști Acoperișuri: Firmă cu Peste 15 Ani de Experiență
             </h1>
             <p className="text-xl text-primary-foreground/80">
               De peste 15 ani montăm, reparăm și renovăm acoperișuri în toată România,
@@ -128,7 +128,7 @@ export function DespreClient() {
               <div className="relative h-[500px] rounded-3xl overflow-hidden">
                 <Image
                   src={projectImages[10]}
-                  alt="Echipa AcoperiRO la lucru pe un acoperiș"
+                  alt="Echipa noastră la lucru pe un acoperiș"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -167,8 +167,8 @@ export function DespreClient() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  AcoperiRO a început în 2009 ca o mică echipă de trei dulgheri pasionați,
-                  cu un vis simplu: să ofere servicii de acoperișuri de cea mai înaltă calitate
+                  Am început în 2009 ca o mică echipă de trei dulgheri pasionați,
+                  cu un vis simplu: să oferim servicii de acoperișuri de cea mai înaltă calitate
                   la prețuri corecte, de la{' '}
                   <Link href="/servicii/montaj-acoperisuri" className="text-primary font-medium hover:underline">montaj acoperiș</Link>{' '}
                   până la{' '}
@@ -261,7 +261,7 @@ export function DespreClient() {
               Istoria Noastră
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
-              Evoluția AcoperiRO din 2009 până Astăzi
+              Evoluția Noastră din 2009 până Astăzi
             </h2>
           </m.div>
 

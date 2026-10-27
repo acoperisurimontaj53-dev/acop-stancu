@@ -13,7 +13,7 @@ export function GET() {
 
   const body = `# ${SITE_NAME}
 
-> ${SITE_NAME} este o firmă de acoperișuri din România, activă din 2009. Oferă montaj acoperișuri, reparații, dulgherie, mansardări, hidroizolații, izolații termice, tablă, țiglă și jgheaburi, în toată țara. Consultația și evaluarea inițială sunt gratuite.
+> Firmă de acoperișuri din România, activă din 2009. Oferă montaj acoperișuri, reparații, dulgherie, mansardări, hidroizolații, izolații termice, tablă, țiglă și jgheaburi, în toată țara. Consultația și evaluarea inițială sunt gratuite.
 
 Site-ul prezintă ${services.length} de servicii, proiecte din portofoliu și datele de contact. Prețurile nu sunt afișate, pentru că se stabilesc în oferta personalizată, după evaluarea lucrării.
 

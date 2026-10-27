@@ -46,8 +46,8 @@ export function Footer() {
                 </svg>
               </div>
               <div>
-                <span className="block text-xl font-bold font-serif">AcoperiRO</span>
-                <p className="text-xs text-background/60 -mt-1">Experți în acoperișuri</p>
+                <span className="block text-xl font-bold font-serif">Specialiști Acoperișuri</span>
+                <p className="text-xs text-background/60 -mt-1">Montaj și reparații, în toată țara</p>
               </div>
             </Link>
             <p className="text-background/70 mb-6 leading-relaxed">
@@ -160,7 +160,7 @@ export function Footer() {
       <div className="border-t border-background/10">
         <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-background/60 text-sm text-center md:text-left">
-            <p>© {new Date().getFullYear()} AcoperiRO. Toate drepturile rezervate.</p>
+            <p>© {new Date().getFullYear()} Specialiști Acoperișuri. Toate drepturile rezervate.</p>
             <p className="mt-1">
               Website optimizat și actualizat de{' '}
               <a

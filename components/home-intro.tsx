@@ -79,7 +79,7 @@ export function HomeIntro() {
 
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
           <p>
-            AcoperiRO este o firmă de acoperișuri activă din 2009, cu echipe care lucrează în toată România. Executăm{' '}
+            Suntem o firmă de acoperișuri activă din 2009, cu echipe care lucrează în toată România. Executăm{' '}
             <Link href="/servicii/montaj-acoperisuri" className={linkClass}>montaj de acoperișuri noi</Link>,{' '}
             <Link href="/servicii/reparatii-acoperis" className={linkClass}>reparații și renovări</Link>,{' '}
             <Link href="/servicii/dulgherie" className={linkClass}>dulgherie</Link> și șarpante,{' '}

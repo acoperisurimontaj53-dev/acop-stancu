@@ -10,7 +10,7 @@ const testimonials = [
     name: 'Mihai Popescu',
     location: 'București',
     rating: 5,
-    text: 'Echipa de la AcoperiRO a făcut o treabă excepțională cu acoperișul nostru. Profesionalism, punctualitate și calitate la cel mai înalt nivel. Recomand cu încredere!',
+    text: 'Echipa a făcut o treabă excepțională cu acoperișul nostru. Profesionalism, punctualitate și calitate la cel mai înalt nivel. Recomand cu încredere!',
     project: 'Montaj țiglă metalică',
   },
   {
@@ -18,7 +18,7 @@ const testimonials = [
     name: 'Ana Maria Ionescu',
     location: 'Cluj-Napoca',
     rating: 5,
-    text: 'Mansardarea casei noastre a fost un vis devenit realitate datorită echipei AcoperiRO. Au transformat podul într-un spațiu magnific, cu atenție la fiecare detaliu.',
+    text: 'Mansardarea casei noastre a fost un vis devenit realitate datorită echipei lor. Au transformat podul într-un spațiu magnific, cu atenție la fiecare detaliu.',
     project: 'Mansardare completă',
   },
   {
@@ -101,7 +101,7 @@ export function Testimonials() {
             Testimoniale
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-serif">
-            Ce Spun Clienții Despre Lucrările AcoperiRO
+            Ce Spun Clienții Despre Lucrările Noastre
           </h2>
         </m.div>
 

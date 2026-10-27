@@ -15,7 +15,7 @@ import {
 export const metadata = buildMetadata({
   title: 'Termeni și Condiții',
   description:
-    'Termenii și condițiile de utilizare a site-ului AcoperiRO: informații despre servicii, oferte, garanții, drepturile consumatorilor și legea aplicabilă.',
+    'Termenii și condițiile de utilizare a site-ului specialisti-acoperis.ro: informații despre servicii, oferte, garanții, drepturile consumatorilor și legea aplicabilă.',
   path: '/termeni',
 });
 
@@ -29,7 +29,7 @@ const sections: LegalSection[] = [
       <>
         <p>
           Acești termeni și condiții reglementează utilizarea site-ului <a href={SITE_URL}>{SITE_URL.replace('https://', '')}</a>,
-          operat de <strong>AcoperiRO</strong>, firmă de acoperișuri care oferă servicii de montaj, reparații, dulgherie,
+          operat de <strong>Specialiști Acoperișuri</strong>, firmă de acoperișuri care oferă servicii de montaj, reparații, dulgherie,
           mansardări, hidroizolații, izolații termice și alte lucrări conexe în toată România.
         </p>
         <p>
@@ -46,7 +46,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          Site-ul prezintă serviciile AcoperiRO, grupate pe categorii: montaj acoperișuri, reparații, izolații, structuri,
+          Site-ul prezintă serviciile noastre, grupate pe categorii: montaj acoperișuri, reparații, izolații, structuri,
           finisaje și drenaj, împreună cu proiecte din portofoliul nostru. Descrierile, imaginile și caracteristicile
           afișate au caracter informativ și nu reprezintă o ofertă fermă.
         </p>
@@ -136,8 +136,8 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          Conținutul site-ului (texte, imagini, fotografii din portofoliu, logo, denumirea AcoperiRO, grafică și structură)
-          aparține AcoperiRO sau este folosit cu acordul titularilor drepturilor și este protejat de legislația privind
+          Conținutul site-ului (texte, imagini, fotografii din portofoliu, logo, denumirea Specialiști Acoperișuri, grafică și structură)
+          aparține operatorului site-ului sau este folosit cu acordul titularilor drepturilor și este protejat de legislația privind
           dreptul de autor și proprietatea intelectuală.
         </p>
         <p>
@@ -299,7 +299,7 @@ export default function TermeniPage() {
       <LegalPage
         eyebrow="Informații legale"
         title="Termeni și Condiții de Utilizare"
-        intro="Regulile de utilizare a site-ului AcoperiRO, informații despre oferte, contracte și garanții și drepturile tale ca beneficiar."
+        intro="Regulile de utilizare a site-ului nostru, informații despre oferte, contracte și garanții și drepturile tale ca beneficiar."
         updatedAt="22 octombrie 2026"
         sections={sections}
       />

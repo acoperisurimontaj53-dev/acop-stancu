@@ -62,7 +62,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2" aria-label="AcoperiRO - Acasă">
+            <Link href="/" className="flex items-center gap-2" aria-label="Specialiști Acoperișuri - Acasă">
               <m.div 
                 className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
@@ -74,8 +74,8 @@ export function Header() {
                 </svg>
               </m.div>
               <div className="hidden sm:block">
-                <span className="block text-xl font-bold text-foreground font-serif">AcoperiRO</span>
-                <p className="text-xs text-muted-foreground -mt-1">Experți în acoperișuri</p>
+                <span className="block text-xl font-bold text-foreground font-serif">Specialiști Acoperișuri</span>
+                <p className="text-xs text-muted-foreground -mt-1">Montaj și reparații, în toată țara</p>
               </div>
             </Link>
 

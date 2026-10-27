@@ -54,7 +54,7 @@ export function WhyChooseUs() {
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
                 src={projectImages[3]}
-                alt="Echipa AcoperiRO la montajul unui acoperiș"
+                alt="Echipa noastră la montajul unui acoperiș"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -97,7 +97,7 @@ export function WhyChooseUs() {
                 De Ce Noi
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-serif text-balance">
-                De Ce Să Alegi AcoperiRO pentru Acoperișul Tău
+                De Ce Să Ne Alegi pentru Acoperișul Tău
               </h2>
               <p className="text-lg text-muted-foreground mb-10">
                 Suntem o firmă de acoperișuri dedicată să ofere cele mai bune soluții pentru casa ta,

@@ -10,7 +10,7 @@ import { SITE_PHONE, SITE_PHONE_DISPLAY } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Pagina nu a fost găsită',
-  description: 'Pagina pe care o cauți nu există sau a fost mutată. Vezi serviciile AcoperiRO sau întoarce-te la prima pagină.',
+  description: 'Pagina pe care o cauți nu există sau a fost mutată. Vezi serviciile noastre sau întoarce-te la prima pagină.',
   robots: { index: false, follow: true },
 };
 

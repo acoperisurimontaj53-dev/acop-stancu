@@ -14,7 +14,7 @@ export default function ContactPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
-      name: 'Contact AcoperiRO',
+      name: 'Contact Specialiști Acoperișuri',
       url: absoluteUrl('/contact'),
       inLanguage: 'ro-RO',
       isPartOf: { '@id': WEBSITE_ID },

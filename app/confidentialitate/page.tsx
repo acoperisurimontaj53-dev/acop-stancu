@@ -16,7 +16,7 @@ import {
 export const metadata = buildMetadata({
   title: 'Politica de Confidențialitate și Cookie-uri',
   description:
-    'Află cum prelucrează AcoperiRO datele tale personale, ce drepturi ai conform GDPR și ce cookie-uri folosește site-ul specialisti-acoperis.ro.',
+    'Află cum prelucrăm datele tale personale, ce drepturi ai conform GDPR și ce cookie-uri folosește site-ul specialisti-acoperis.ro.',
   path: '/confidentialitate',
 });
 
@@ -31,9 +31,9 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          Site-ul <a href={SITE_URL}>{SITE_URL.replace('https://', '')}</a> este operat de <strong>AcoperiRO</strong>,
+          Site-ul <a href={SITE_URL}>{SITE_URL.replace('https://', '')}</a> este operat de <strong>Specialiști Acoperișuri</strong>,
           firmă de acoperișuri care oferă servicii de montaj, reparații, dulgherie, mansardări, hidroizolații și izolații
-          termice în toată România. În această politică, „AcoperiRO", „noi" și „Operatorul" desemnează operatorul site-ului,
+          termice în toată România. În această politică, „Specialiști Acoperișuri", „noi" și „Operatorul" desemnează operatorul site-ului,
           iar „tu" desemnează persoana care vizitează site-ul sau ne contactează.
         </p>
         <p>
@@ -358,7 +358,7 @@ export default function ConfidentialitatePage() {
       <LegalPage
         eyebrow="Informații legale"
         title="Politica de Confidențialitate și Cookie-uri"
-        intro="Cum folosim și protejăm datele tale personale, ce drepturi ai și ce cookie-uri folosește site-ul AcoperiRO."
+        intro="Cum folosim și protejăm datele tale personale, ce drepturi ai și ce cookie-uri folosește site-ul nostru."
         updatedAt="23 octombrie 2026"
         sections={sections}
       />

@@ -3,7 +3,7 @@ import { projectImages } from '@/lib/services-data';
 
 // The production domain (without www; www redirects here in Vercel). Override with NEXT_PUBLIC_SITE_URL if it ever changes.
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://specialisti-acoperis.ro').replace(/\/$/, '');
-export const SITE_NAME = 'AcoperiRO';
+export const SITE_NAME = 'Specialiști Acoperișuri';
 export const SITE_PHONE = '+40743364243';
 export const SITE_PHONE_DISPLAY = '+40 743 364 243';
 export const SITE_WHATSAPP_URL = 'https://wa.me/40743364243';
@@ -14,7 +14,7 @@ export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 interface PageMetaInput {
-  /** Page title without the site suffix; the layout template appends " | AcoperiRO". */
+  /** Page title without the site suffix; the layout template appends " | Specialiști Acoperișuri". */
   title: string;
   description: string;
   /** Path of the page, e.g. "/servicii". Used for canonical, og:url and the sitemap. */

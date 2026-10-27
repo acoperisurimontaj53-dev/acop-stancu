@@ -105,7 +105,7 @@ export function ServicePageClient({ service, relatedServices, categoryName, cont
               <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden">
                 <Image
                   src={service.image}
-                  alt={`${service.name} - lucrare realizată de AcoperiRO`}
+                  alt={`${service.name} - lucrare realizată de Specialiști Acoperișuri`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -152,7 +152,7 @@ export function ServicePageClient({ service, relatedServices, categoryName, cont
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="inline-block text-accent font-medium mb-2 tracking-wider uppercase text-sm">
-              De Ce AcoperiRO
+              De Ce Să Ne Alegi
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground font-serif text-balance">
               Ce Primești când Alegi {service.name}
@@ -261,7 +261,7 @@ export function ServicePageClient({ service, relatedServices, categoryName, cont
                       <div className="relative h-48 overflow-hidden">
                         <Image
                           src={related.image}
-                          alt={`${related.name} - lucrare realizată de AcoperiRO`}
+                          alt={`${related.name} - lucrare realizată de Specialiști Acoperișuri`}
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

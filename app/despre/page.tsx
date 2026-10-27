@@ -6,7 +6,7 @@ import { DespreClient } from './despre-client';
 export const metadata = buildMetadata({
   title: 'Despre Noi: Firmă de Acoperișuri din 2009',
   description:
-    'Află povestea AcoperiRO: din 2009 montăm și reparăm acoperișuri în toată România, cu o echipă de specialiști, materiale certificate și garanție extinsă.',
+    'Află povestea noastră: din 2009 montăm și reparăm acoperișuri în toată România, cu o echipă de specialiști, materiale certificate și garanție extinsă.',
   path: '/despre',
   image: projectImages[10],
 });
@@ -16,7 +16,7 @@ export default function DesprePage() {
     {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
-      name: 'Despre AcoperiRO',
+      name: 'Despre Specialiști Acoperișuri',
       url: absoluteUrl('/despre'),
       inLanguage: 'ro-RO',
       isPartOf: { '@id': WEBSITE_ID },

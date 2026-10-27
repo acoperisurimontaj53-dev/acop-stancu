@@ -12,7 +12,7 @@ import { FloatingContact } from '@/components/floating-contact';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  title: 'AcoperiRO | Montaj și Reparații Acoperișuri în Toată România',
+  title: 'Specialiști Acoperișuri | Montaj și Reparații în Toată România',
   absoluteTitle: true,
   description:
     'Firmă de acoperișuri cu peste 15 ani experiență: montaj, reparații, mansardări, dulgherie și hidroizolații în toată România. Ofertă gratuită: +40 743 364 243.',
