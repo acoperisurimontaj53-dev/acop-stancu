@@ -216,7 +216,7 @@ export const izolatieStructuriContent: Record<string, BaseServiceContent> = {
       'Executăm șarpante tradiționale, structuri din lemn și grinzi lamelare, cu lemn tratat împotriva insectelor, ciupercilor și focului. Putem lucra pe baza proiectului tău sau te ajutăm prin [consultanță și proiectare](consultanta-proiectare). Pentru lucrări complete vezi [construcția șarpantei](constructie-sarpanta) și [renovarea șarpantei](renovare-sarpanta). Structura susține apoi [mansardarea](mansardari).',
     ],
     whenNeeded: [
-      'Construiești o casă și ai nevoie de șarpantă',
+      'Construiești o casă și cauți o firmă dulgherie pentru șarpantă',
       'Vrei o structură de lemn pentru terasă, foișor sau anexă',
       'Șarpanta existentă s-a deformat sau are lemn degradat',
       'Pregătești podul pentru mansardare',

@@ -4,13 +4,13 @@ export const seoMontajFinisaje: Record<string, ServiceSeo> = {
   'montaj-acoperisuri': {
     sections: [
       {
-        heading: 'Montaj acoperiș casă: ce include o lucrare completă',
+        heading: 'Firmă acoperișuri: montaj acoperiș casă nouă în toată România',
         paragraphs: [
-          'Un montaj de acoperiș complet pornește de la șarpantă și ajunge până la ultima piesă de pe coamă. Include structura din lemn, bariera de vapori, izolația, membrana respirantă, șipcile și contra-șipcile, învelitoarea, coamele, șorțurile, jgheaburile și burlanele. Firma care montează acoperișul trebuie să răspundă pentru tot sistemul, nu doar pentru stratul vizibil, pentru că infiltrațiile apar de obicei la îmbinări și la detalii.',
+          'Un montaj de acoperiș complet pornește de la șarpantă și ajunge până la ultima piesă de pe coamă. Include structura din lemn, bariera de vapori, izolația, membrana respirantă, șipcile și contra-șipcile, învelitoarea, coamele, șorțurile, jgheaburile și burlanele. La orice construcție acoperiș casă, firma care montează acoperișul trebuie să răspundă pentru tot sistemul, nu doar pentru stratul vizibil, pentru că infiltrațiile apar de obicei la îmbinări și la detalii.',
         ],
       },
       {
-        heading: 'Preț montaj acoperiș: de ce depinde și cum primești oferta',
+        heading: 'Cât costă un acoperiș? Prețul montajului și cum primești oferta',
         paragraphs: [
           'Prețul montajului de acoperiș variază în funcție de suprafață, forma acoperișului, tipul de învelitoare, accesul pe șantier și lucrările de pregătire. De aceea nu afișăm tarife fixe pe metru pătrat. După o evaluare pe baza proiectului, a pozelor sau la fața locului, îți trimitem o ofertă cu materiale, manoperă și termen. Executăm montaj de acoperișuri în toată România, pentru case, vile, pensiuni și clădiri comerciale.',
         ],
@@ -18,7 +18,7 @@ export const seoMontajFinisaje: Record<string, ServiceSeo> = {
     ],
     extraFaqs: [
       {
-        question: 'Cât costă montajul unui acoperiș?',
+        question: 'Cât costă un acoperiș nou?',
         answer:
           'Depinde de suprafață, de materialul ales, de complexitatea acoperișului și de accesul la locație. Îți facem o ofertă gratuită, detaliată, după ce discutăm proiectul.',
       },
@@ -30,11 +30,11 @@ export const seoMontajFinisaje: Record<string, ServiceSeo> = {
       {
         heading: 'Montaj țiglă metalică: profile, culori și grosimi',
         paragraphs: [
-          'Țigla metalică se produce din oțel zincat acoperit cu vopsea poliesterică sau cu alte straturi de protecție, în profile care imită țigla ceramică sau în modele moderne. Grosimea tablei, tipul stratului de protecție, profilul și culoarea influențează atât prețul, cât și durata de viață a acoperișului. Te ajutăm să alegi modelul potrivit casei, cu garanție de la producător pentru material și garanție de la noi pentru montaj.',
+          'Țigla metalică se produce din oțel zincat acoperit cu vopsea poliesterică sau cu alte straturi de protecție, în profile care imită țigla ceramică sau în modele moderne. Grosimea tablei, tipul stratului de protecție, profilul și culoarea influențează atât prețul, cât și durata de viață a acoperișului. Un acoperiș țiglă metalică bine ales rămâne ușor de întreținut. Te ajutăm să alegi modelul potrivit casei, cu garanție de la producător pentru material și garanție de la noi pentru montaj.',
         ],
       },
       {
-        heading: 'Preț țiglă metalică și montaj în toată România',
+        heading: 'Cât costă țiglă metalică? Preț acoperiș țiglă metalică și montaj',
         paragraphs: [
           'Prețul unui acoperiș din țiglă metalică depinde de suprafață, de calitatea tablei, de numărul de ape, de accesorii (coame, dolii, parazăpezi, jgheaburi) și de lucrările de dulgherie. Oferta o facem după ce vedem proiectul sau acoperișul. Montăm țiglă metalică pentru case, anexe și clădiri comerciale, în toată România, cu echipe care lucrează zilnic cu acest material.',
         ],
@@ -42,9 +42,9 @@ export const seoMontajFinisaje: Record<string, ServiceSeo> = {
     ],
     extraFaqs: [
       {
-        question: 'Cât costă un acoperiș din țiglă metalică?',
+        question: 'Cât costă țiglă metalică și montajul ei?',
         answer:
-          'Prețul depinde de suprafață, de grosimea și calitatea tablei, de complexitatea acoperișului și de accesorii. Primești o ofertă detaliată, gratuită, după evaluare.',
+          'Prețul unui acoperiș țiglă metalică depinde de suprafață, de grosimea și calitatea tablei, de complexitatea acoperișului și de accesorii. Primești o ofertă detaliată, gratuită, după evaluare.',
       },
     ],
   },
@@ -52,23 +52,23 @@ export const seoMontajFinisaje: Record<string, ServiceSeo> = {
   'tigla-ceramica': {
     sections: [
       {
-        heading: 'Țiglă ceramică: avantaje, durată de viață și întreținere',
+        heading: 'Acoperiș țiglă ceramică: avantaje, durată de viață și întreținere',
         paragraphs: [
           'Țigla ceramică este un material natural, obținut prin arderea argilei, apreciat pentru stabilitatea culorii, rezistența la foc și durata de viață foarte mare. Se potrivește caselor clasice, dar și celor moderne, în variante cu glazură sau engobă. Cere întreținere puțină, în principal curățarea periodică și înlocuirea pieselor sparte, iar un montaj corect, cu membrană și ventilație, prelungește și mai mult viața acoperișului.',
         ],
       },
       {
-        heading: 'Montaj țiglă ceramică: preț și zone de lucru',
+        heading: 'Cât costă țiglă ceramică și montajul ei: ce influențează prețul',
         paragraphs: [
-          'Costul montajului de țiglă ceramică depinde de modelul și producătorul ales, de suprafață, de forma acoperișului și de structura necesară pentru greutatea țiglei. Facem oferte personalizate, după evaluare, pentru case noi, renovări și clădiri tradiționale. Lucrăm în toată România, cu echipe care montează țiglă ceramică românească și din import.',
+          'Costul unui acoperiș țiglă ceramică depinde de modelul și producătorul ales, de suprafață, de forma acoperișului și de structura necesară pentru greutatea țiglei. Facem oferte personalizate, după evaluare, pentru case noi, renovări și clădiri tradiționale. Lucrăm în toată România, cu echipe care montează țiglă ceramică românească și din import.',
         ],
       },
     ],
     extraFaqs: [
       {
-        question: 'Cât costă montajul de țiglă ceramică?',
+        question: 'Cât costă țiglă ceramică montată?',
         answer:
-          'Depinde de modelul țiglei, de suprafață, de complexitatea acoperișului și de necesarul de întărire a șarpantei. Ofertă gratuită, după evaluare.',
+          'Prețul unui acoperiș țiglă ceramică depinde de modelul țiglei, de suprafață, de complexitatea acoperișului și de necesarul de întărire a șarpantei. Ofertă gratuită, după evaluare.',
       },
     ],
   },
@@ -76,21 +76,21 @@ export const seoMontajFinisaje: Record<string, ServiceSeo> = {
   'tabla-faltuita': {
     sections: [
       {
-        heading: 'Acoperiș din tablă fălțuită: zinc-titan, cupru, aluminiu',
+        heading: 'Acoperiș tablă fălțuită: zinc-titan, cupru, aluminiu',
         paragraphs: [
-          'Tabla fălțuită se livrează în rolă sau în benzi și se profilează pe șantier, ceea ce permite adaptarea la orice formă de acoperiș. Zinc-titanul și cuprul sunt materiale premium, cu durată foarte mare de viață și patină naturală. Aluminiul și oțelul vopsit sunt mai accesibile și vin într-o gamă largă de culori. Falțurile duble, etanșe, nu necesită găuri în suprafața vizibilă, de aceea acoperișul rămâne curat și etanș.',
+          'Tabla fălțuită se livrează în rolă sau în benzi și se profilează pe șantier, ceea ce permite adaptarea la orice formă de acoperiș. Zinc-titanul și cuprul sunt materiale premium, cu durată foarte mare de viață și patină naturală. Aluminiul și oțelul vopsit sunt mai accesibile și vin într-o gamă largă de culori. Falțurile duble, etanșe, nu necesită găuri în suprafața vizibilă, de aceea un acoperiș tablă fălțuită rămâne curat și etanș.',
         ],
       },
       {
-        heading: 'Preț tablă fălțuită și execuție în toată România',
+        heading: 'Cât costă tablă fălțuită? Preț montaj tablă fălțuită',
         paragraphs: [
-          'Prețul unui acoperiș din tablă fălțuită depinde de metalul ales, de grosimea foii, de numărul de racorduri și de complexitatea formelor. Fiind lucrare manuală, contează mult și experiența echipei. Executăm acoperișuri din tablă fălțuită pentru case, clădiri istorice, biserici și construcții moderne, în toată România.',
+          'Prețul pentru acoperiș tablă fălțuită depinde de metalul ales, de grosimea foii, de numărul de racorduri și de complexitatea formelor. Fiind lucrare manuală, contează mult și experiența echipei. Executăm montaj tablă fălțuită pentru case, clădiri istorice, biserici și construcții moderne, în toată România.',
         ],
       },
     ],
     extraFaqs: [
       {
-        question: 'Cât costă un acoperiș din tablă fălțuită?',
+        question: 'Cât costă tablă fălțuită pentru acoperiș?',
         answer:
           'Depinde de materialul ales (zinc-titan, cupru, aluminiu, oțel), de suprafață și de complexitatea acoperișului. Îți facem o ofertă după evaluare.',
       },

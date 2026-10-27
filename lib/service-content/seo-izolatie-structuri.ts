@@ -172,7 +172,7 @@ export const seoIzolatieStructuri: Record<string, ServiceSeo> = {
   dulgherie: {
     sections: [
       {
-        heading: 'Dulgherie: șarpante, grinzi lamelare și structuri din lemn',
+        heading: 'Firmă dulgherie: șarpante, grinzi lamelare și structuri din lemn',
         paragraphs: [
           'Lucrările de dulgherie includ șarpante pentru acoperișuri în două, patru sau mai multe ape, structuri pentru mansarde, foișoare, pergole și terase. Grinzile lamelare permit deschideri mari și arată bine în construcții moderne. Lemnul este uscat și tratat împotriva ciupercilor și a insectelor, iar îmbinările se fac clasic sau cu elemente metalice, după proiect.',
         ],
@@ -180,7 +180,7 @@ export const seoIzolatieStructuri: Record<string, ServiceSeo> = {
       {
         heading: 'Preț dulgherie și șarpantă: cum se stabilește oferta',
         paragraphs: [
-          'Prețul unei lucrări de dulgherie depinde de volumul de lemn, de complexitatea structurii, de tratamentele aplicate și de accesul la șantier. Executăm lucrări de dulgherie în toată România, pentru case, pensiuni, anexe și construcții din lemn, pe baza proiectului sau a schițelor.',
+          'Prețul unei lucrări de dulgherie depinde de volumul de lemn, de complexitatea structurii, de tratamentele aplicate și de accesul la șantier. Suntem o firmă dulgherie cu echipe în toată România și executăm lucrări pentru case, pensiuni, anexe și construcții din lemn, pe baza proiectului sau a schițelor.',
         ],
       },
     ],

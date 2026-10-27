@@ -5,10 +5,10 @@ export const montajFinisajeContent: Record<string, BaseServiceContent> = {
   'montaj-acoperisuri': {
     intro: [
       'Un acoperiș nou se montează în etape, iar ordinea contează: structura din lemn, hidroizolația și bariera de vapori, șipcile, apoi învelitoarea și accesoriile. Dacă una dintre ele e făcută în grabă, defectul apare abia după prima iarnă sau după prima ploaie puternică.',
-      'Montăm acoperișuri pentru case noi, extinderi și clădiri comerciale, cu [țiglă metalică](tigla-metalica), [țiglă ceramică](tigla-ceramica), [tablă fălțuită](tabla-faltuita) sau [șindrilă bituminoasă](sindrila-bituminoasa). Alegem materialul împreună cu tine, în funcție de panta acoperișului, de buget și de aspectul dorit, iar structura o pregătim prin [construcția șarpantei](constructie-sarpanta).',
+      'Ca firmă acoperișuri, montăm acoperișuri pentru case noi, extinderi și clădiri comerciale, cu [țiglă metalică](tigla-metalica), [țiglă ceramică](tigla-ceramica), [tablă fălțuită](tabla-faltuita) sau [șindrilă bituminoasă](sindrila-bituminoasa). Alegem materialul împreună cu tine, în funcție de panta acoperișului, de buget și de aspectul dorit, iar structura o pregătim prin [construcția șarpantei](constructie-sarpanta).',
     ],
     whenNeeded: [
-      'Construiești o casă sau o extindere și ai nevoie de învelitoare nouă',
+      'Construiești o casă sau o extindere și ai nevoie de un acoperiș casă nouă, cu învelitoare și șarpantă',
       'Acoperișul actual e foarte vechi și curge în mai multe locuri',
       'Vrei să schimbi materialul: de la tablă veche sau țiglă degradată la o învelitoare nouă',
       'Ai nevoie de acoperiș pentru o anexă, un garaj sau o clădire comercială',
@@ -27,7 +27,7 @@ export const montajFinisajeContent: Record<string, BaseServiceContent> = {
       {
         question: 'Ce primesc în ofertă?',
         answer:
-          'Lista materialelor, manopera, termenul de execuție și condițiile de garanție. Prețul final depinde de suprafață și de materialele alese, de aceea nu afișăm tarife fixe, ci le stabilim după o evaluare.',
+          'Oferta pentru construcție acoperiș casă include lista materialelor, manopera, termenul de execuție și condițiile de garanție. Prețul final depinde de suprafață și de materialele alese, de aceea nu afișăm tarife fixe, ci le stabilim după o evaluare.',
       },
     ],
   },
@@ -65,7 +65,7 @@ export const montajFinisajeContent: Record<string, BaseServiceContent> = {
   'tigla-ceramica': {
     intro: [
       'Țigla ceramică este alegerea clasică pentru cine vrea un acoperiș care să dureze zeci de ani. Este un material natural, stabil la culoare și la temperaturi, dar și greu, ceea ce cere o șarpantă dimensionată corect.',
-      'Lucrăm cu țiglă românească și din import, în funcție de model și buget. Montajul include [șipci și contra-șipci](sipci-contra-sipci), [membrană respirantă](membrane-respirante), coame și accesorii de ventilație. Dacă ai doar câteva țigle sparte, facem și [înlocuire de țiglă](inlocuire-tigla).',
+      'Pentru montaj țiglă ceramică lucrăm cu țiglă românească și din import, în funcție de model și buget. Montajul include [șipci și contra-șipci](sipci-contra-sipci), [membrană respirantă](membrane-respirante), coame și accesorii de ventilație. Dacă ai doar câteva țigle sparte, facem și [înlocuire de țiglă](inlocuire-tigla).',
     ],
     whenNeeded: [
       'Vrei un aspect tradițional și o durată mare de viață',
@@ -95,7 +95,7 @@ export const montajFinisajeContent: Record<string, BaseServiceContent> = {
   'tabla-faltuita': {
     intro: [
       'Tabla fălțuită se îmbină prin falț, adică prin îndoirea marginilor foilor una în alta, fără șuruburi în suprafața vizibilă. Rezultatul e o învelitoare etanșă, cu linii curate, potrivită pentru acoperișuri cu pante mici sau cu forme complicate: turnuri, curbe, lucarne.',
-      'Se execută în mare parte manual, pe șantier, de aceea contează experiența echipei. Folosim zinc-titan, cupru, aluminiu sau oțel, în funcție de proiect și de buget. Pentru clădiri speciale vezi și [acoperișuri de biserici](acoperisuri-biserici), iar pentru scurgerea apei montăm [jgheaburi și burlane](jgheaburi-burlane) din același material.',
+      'Pentru montaj tablă fălțuită contează experiența echipei, fiindcă lucrarea se execută în mare parte manual, pe șantier. Folosim zinc-titan, cupru, aluminiu sau oțel, în funcție de proiect și de buget. Pentru clădiri speciale vezi și [acoperișuri de biserici](acoperisuri-biserici), iar pentru scurgerea apei montăm [jgheaburi și burlane](jgheaburi-burlane) din același material.',
     ],
     whenNeeded: [
       'Acoperișul are formă complexă, cu multe racorduri și ieșiri',
