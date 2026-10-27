@@ -6,10 +6,9 @@ import Link from 'next/link';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
-import { Button } from '@/components/ui/button';
+import { ContactActions } from '@/components/contact-actions';
 import { projectImages } from '@/lib/services-data';
 import { 
-  Phone,
   Award,
   Users,
   MapPin,
@@ -170,12 +169,18 @@ export function DespreClient() {
                 <p>
                   AcoperiRO a început în 2009 ca o mică echipă de trei dulgheri pasionați,
                   cu un vis simplu: să ofere servicii de acoperișuri de cea mai înaltă calitate
-                  la prețuri corecte, de la montaj acoperiș până la reparații și dulgherie.
+                  la prețuri corecte, de la{' '}
+                  <Link href="/servicii/montaj-acoperisuri" className="text-primary font-medium hover:underline">montaj acoperiș</Link>{' '}
+                  până la{' '}
+                  <Link href="/servicii/reparatii-acoperis" className="text-primary font-medium hover:underline">reparații</Link>{' '}
+                  și <Link href="/servicii/dulgherie" className="text-primary font-medium hover:underline">dulgherie</Link>.
                 </p>
                 <p>
                   De-a lungul anilor, am crescut organic, bazându-ne pe recomandări și pe
                   reputația construită proiect după proiect. Astăzi, suntem o echipă de peste
-                  50 de specialiști, cu capacitatea de a executa proiecte în toată România.
+                  50 de specialiști, cu capacitatea de a executa proiecte în toată România. Poți vedea
+                  câteva dintre ele în{' '}
+                  <Link href="/portofoliu" className="text-primary font-medium hover:underline">portofoliul nostru</Link>.
                 </p>
                 <p>
                   Principiile noastre au rămas aceleași: calitate fără compromis, comunicare
@@ -308,19 +313,18 @@ export function DespreClient() {
               Contactează-ne acum pentru o consultație gratuită. Suntem aici să te ajutăm
               cu orice proiect legat de acoperișuri: montaj, reparații, mansardări sau hidroizolații.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="tel:+40743364243">
-                <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 w-full sm:w-auto">
-                  <Phone className="w-5 h-5" />
-                  +40 743 364 243
-                </Button>
-              </a>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="rounded-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
-                  Trimite un Mesaj
-                </Button>
+            <ContactActions variant="onDark" className="justify-center" />
+            <p className="mt-8 text-primary-foreground/80">
+              Vezi{' '}
+              <Link href="/portofoliu" className="font-semibold text-primary-foreground underline underline-offset-4 hover:opacity-80">
+                lucrările noastre
+              </Link>{' '}
+              sau{' '}
+              <Link href="/servicii" className="font-semibold text-primary-foreground underline underline-offset-4 hover:opacity-80">
+                toate serviciile
               </Link>
-            </div>
+              .
+            </p>
           </m.div>
         </div>
       </section>

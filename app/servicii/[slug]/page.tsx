@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import { services, getServiceBySlug, getServicesByCategory, serviceCategories, type Service } from '@/lib/services-data';
+import { services, getServiceBySlug, serviceCategories, type Service } from '@/lib/services-data';
+import { getRelatedServices } from '@/lib/related-services';
 import { JsonLd } from '@/components/json-ld';
 import { absoluteUrl, breadcrumbJsonLd, buildMetadata, ORGANIZATION_ID } from '@/lib/seo';
 import { ServicePageClient } from './service-page-client';
@@ -60,9 +61,7 @@ export default async function ServicePage({ params }: PageProps) {
     notFound();
   }
 
-  const relatedServices = getServicesByCategory(service.category)
-    .filter((s) => s.id !== service.id)
-    .slice(0, 3);
+  const relatedServices = getRelatedServices(service);
 
   const categoryName = serviceCategories.find(c => c.id === service.category)?.name || service.category;
 

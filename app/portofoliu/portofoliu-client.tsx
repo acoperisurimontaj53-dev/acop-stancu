@@ -6,14 +6,16 @@ import Image from 'next/image';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
-import { Button } from '@/components/ui/button';
+import { ContactActions } from '@/components/contact-actions';
 import { projectImages } from '@/lib/services-data';
-import { X, ChevronLeft, ChevronRight, Phone } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 const projects = [
   {
     id: 1,
+    serviceSlug: 'tigla-ceramica',
+    serviceName: 'Țiglă Ceramică',
     title: 'Renovare Completă Casă Familială',
     location: 'București',
     category: 'Renovare',
@@ -22,6 +24,8 @@ const projects = [
   },
   {
     id: 2,
+    serviceSlug: 'mansardari',
+    serviceName: 'Mansardări',
     title: 'Mansardare Vilă',
     location: 'Cluj-Napoca',
     category: 'Mansardare',
@@ -30,6 +34,8 @@ const projects = [
   },
   {
     id: 3,
+    serviceSlug: 'tigla-metalica',
+    serviceName: 'Țiglă Metalică',
     title: 'Acoperiș Nou Casă Modernă',
     location: 'Timișoara',
     category: 'Montaj',
@@ -38,6 +44,8 @@ const projects = [
   },
   {
     id: 4,
+    serviceSlug: 'renovare-sarpanta',
+    serviceName: 'Renovare Șarpantă',
     title: 'Renovare Clădire Istorică',
     location: 'Brașov',
     category: 'Renovare',
@@ -46,6 +54,8 @@ const projects = [
   },
   {
     id: 5,
+    serviceSlug: 'hidroizolatii',
+    serviceName: 'Hidroizolații',
     title: 'Hidroizolație Terasă',
     location: 'Constanța',
     category: 'Hidroizolație',
@@ -54,6 +64,8 @@ const projects = [
   },
   {
     id: 6,
+    serviceSlug: 'lambriu-metalic',
+    serviceName: 'Lambriu Metalic',
     title: 'Finisaje Lambriu Metalic',
     location: 'Sibiu',
     category: 'Finisaje',
@@ -210,6 +222,14 @@ export function PortofoliuClient() {
                       <p className="text-muted-foreground line-clamp-2">
                         {project.description}
                       </p>
+                      <Link
+                        href={`/servicii/${project.serviceSlug}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                      >
+                        Vezi serviciul: {project.serviceName}
+                        <ChevronRight className="w-4 h-4" />
+                      </Link>
                     </div>
                   </div>
                 </m.div>
@@ -235,19 +255,7 @@ export function PortofoliuClient() {
               Contactează-ne acum și hai să discutăm despre montajul sau renovarea acoperișului tău.
               Fiecare acoperiș poate fi transformat.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="tel:+40743364243">
-                <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
-                  <Phone className="w-5 h-5" />
-                  +40 743 364 243
-                </Button>
-              </a>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="rounded-full">
-                  Solicită Ofertă
-                </Button>
-              </Link>
-            </div>
+            <ContactActions className="justify-center" whatsappMessage="Bună ziua, am văzut lucrările voastre și aș dori o ofertă pentru acoperișul meu." />
           </m.div>
         </div>
       </section>

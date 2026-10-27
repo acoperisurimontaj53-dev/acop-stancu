@@ -8,8 +8,9 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
 import { services, serviceCategories } from '@/lib/services-data';
-import { ArrowRight, Search, Phone } from 'lucide-react';
+import { ArrowRight, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ContactActions } from '@/components/contact-actions';
 
 export function ServiciiClient() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -220,22 +221,24 @@ export function ServiciiClient() {
           </h2>
           <div className="space-y-4 text-lg text-muted-foreground">
             <p>
-              AcoperiRO ofera servicii complete pentru acoperisuri, de la{' '}
+              AcoperiRO oferă servicii complete pentru acoperișuri, de la{' '}
               <Link href="/servicii/montaj-acoperisuri" className="text-primary font-medium hover:underline">montaj acoperișuri</Link>{' '}
               noi cu <Link href="/servicii/tigla-metalica" className="text-primary font-medium hover:underline">țiglă metalică</Link>,{' '}
               <Link href="/servicii/tigla-ceramica" className="text-primary font-medium hover:underline">țiglă ceramică</Link> sau{' '}
               <Link href="/servicii/tabla-faltuita" className="text-primary font-medium hover:underline">tablă fălțuită</Link>,
-              pana la <Link href="/servicii/reparatii-acoperis" className="text-primary font-medium hover:underline">reparații acoperiș</Link>{' '}
+              până la <Link href="/servicii/reparatii-acoperis" className="text-primary font-medium hover:underline">reparații acoperiș</Link>{' '}
               și intervenții urgente după furtuni sau infiltrații.
             </p>
             <p>
-              Executam lucrari de <Link href="/servicii/dulgherie" className="text-primary font-medium hover:underline">dulgherie</Link>,{' '}
+              Executăm lucrări de <Link href="/servicii/dulgherie" className="text-primary font-medium hover:underline">dulgherie</Link>,{' '}
               <Link href="/servicii/mansardari" className="text-primary font-medium hover:underline">mansardări</Link>,{' '}
-              <Link href="/servicii/hidroizolatii" className="text-primary font-medium hover:underline">hidroizolații</Link> si{' '}
+              <Link href="/servicii/hidroizolatii" className="text-primary font-medium hover:underline">hidroizolații</Link> și{' '}
               <Link href="/servicii/izolatie-termica-acoperis" className="text-primary font-medium hover:underline">izolație termică a acoperișului</Link>,
-              iar pentru scurgerea apei montam{' '}
+              iar pentru scurgerea apei montăm{' '}
               <Link href="/servicii/jgheaburi-burlane" className="text-primary font-medium hover:underline">jgheaburi și burlane</Link>.
               Lucrăm în toată România, atât pentru locuințe, cât și pentru hale, terase și clădiri de patrimoniu.
+              Poți vedea exemple în <Link href="/portofoliu" className="text-primary font-medium hover:underline">portofoliul nostru</Link>{' '}
+              sau poți afla <Link href="/despre" className="text-primary font-medium hover:underline">cine suntem</Link>.
             </p>
           </div>
         </div>
@@ -257,12 +260,7 @@ export function ServiciiClient() {
               Sună-ne și discutăm despre proiectul tău. Oferim soluții personalizate
               pentru orice tip de acoperiș, cu ofertă gratuită.
             </p>
-            <a href="tel:+40743364243">
-              <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
-                <Phone className="w-5 h-5" />
-                +40 743 364 243
-              </Button>
-            </a>
+            <ContactActions className="justify-center" />
           </m.div>
         </div>
       </section>

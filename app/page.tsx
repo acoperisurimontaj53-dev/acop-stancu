@@ -5,6 +5,7 @@ import { GalleryCarousel } from '@/components/gallery-carousel';
 import { WhyChooseUs } from '@/components/why-choose-us';
 import { Testimonials } from '@/components/testimonials';
 import { CTASection } from '@/components/cta-section';
+import { ContactBanner } from '@/components/contact-actions';
 import { HomeIntro } from '@/components/home-intro';
 import { Footer } from '@/components/footer';
 import { FloatingContact } from '@/components/floating-contact';
@@ -24,6 +25,10 @@ export default function HomePage() {
       <Header />
       <Hero />
       <ServicesOverview />
+      <ContactBanner
+        title="Ai nevoie de un acoperiș nou sau de o reparație?"
+        text="Descrie-ne lucrarea prin telefon, WhatsApp sau formular. Ofertă gratuită, fără obligații."
+      />
       <WhyChooseUs />
       <GalleryCarousel />
       <Testimonials />

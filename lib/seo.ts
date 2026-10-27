@@ -6,7 +6,8 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://specialist
 export const SITE_NAME = 'AcoperiRO';
 export const SITE_PHONE = '+40743364243';
 export const SITE_PHONE_DISPLAY = '+40 743 364 243';
-export const SITE_EMAIL = 'acoperisurimontaj53@gmail.com';
+export const SITE_WHATSAPP_URL = 'https://wa.me/40743364243';
+export const SITE_EMAIL ='acoperisurimontaj53@gmail.com';
 export const DEFAULT_OG_IMAGE = projectImages[1];
 
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;

@@ -6,11 +6,12 @@ import Link from 'next/link';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
+import { ContactActions, ContactBanner } from '@/components/contact-actions';
+import { FloatingContact } from '@/components/floating-contact';
 import { Service } from '@/lib/services-data';
-import { 
+import {
   Phone,
   ArrowRight,
-  ArrowLeft,
   Check,
   MapPin,
   Clock,
@@ -25,6 +26,8 @@ interface ServicePageClientProps {
 }
 
 export function ServicePageClient({ service, relatedServices, categoryName }: ServicePageClientProps) {
+  const whatsappMessage = `Bună ziua, aș dori o ofertă pentru: ${service.name.toLowerCase()}.`;
+
   return (
     <main>
       <Header />
@@ -61,7 +64,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                 {categoryName}
               </span>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-serif text-balance">
-                {service.name} in Toata Romania
+                {service.name} în Toată România
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 {service.fullDescription}
@@ -86,21 +89,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+40743364243">
-                  <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 w-full sm:w-auto">
-                    <Phone className="w-5 h-5" />
-                    Sună Acum
-                    <span className="hidden md:inline">· +40 743 364 243</span>
-                  </Button>
-                </a>
-                <Link href="/contact">
-                  <Button size="lg" variant="outline" className="rounded-full gap-2 w-full sm:w-auto">
-                    Solicită Ofertă
-                    <ArrowRight className="w-5 h-5" />
-                  </Button>
-                </Link>
-              </div>
+              <ContactActions whatsappMessage={whatsappMessage} showNumber={false} />
             </m.div>
 
             {/* Image */}
@@ -216,6 +205,12 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
         </div>
       </section>
 
+      <ContactBanner
+        title={`Vrei un preț pentru ${service.name.toLowerCase()}?`}
+        text="Spune-ne pe scurt ce ai de făcut și revenim cu o ofertă, gratuit și fără obligații."
+        whatsappMessage={whatsappMessage}
+      />
+
       {/* Related Services */}
       {relatedServices.length > 0 && (
         <section className="py-16 bg-background">
@@ -229,10 +224,10 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
             >
               <div>
                 <span className="inline-block text-accent font-medium mb-2 tracking-wider uppercase text-sm">
-                  Servicii Similare
+                  Se Potrivește Cu
                 </span>
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground font-serif">
-                  Alte Servicii din Categoria {categoryName}
+                  Lucrări care merg împreună cu {service.name.toLowerCase()}
                 </h2>
               </div>
               <Link href="/servicii" className="hidden md:flex">
@@ -243,7 +238,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               </Link>
             </m.div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedServices.map((related, index) => (
                 <m.div
                   key={related.id}
@@ -261,7 +256,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
                           alt={`${related.name} - lucrare realizată de AcoperiRO`}
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
-                          sizes="(max-width: 768px) 100vw, 33vw"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
                       </div>
@@ -311,25 +306,24 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               Contactează-ne acum pentru o consultație gratuită și o ofertă personalizată
               pentru {service.name.toLowerCase()}, oriunde în România.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="tel:+40743364243">
-                <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 w-full sm:w-auto">
-                  <Phone className="w-5 h-5" />
-                  +40 743 364 243
-                </Button>
-              </a>
-              <Link href="/servicii">
-                <Button size="lg" variant="outline" className="rounded-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 gap-2 w-full sm:w-auto">
-                  <ArrowLeft className="w-5 h-5" />
-                  Înapoi la Servicii
-                </Button>
+            <ContactActions variant="onDark" whatsappMessage={whatsappMessage} className="justify-center" />
+            <p className="mt-8 text-primary-foreground/80">
+              Vrei să vezi mai întâi cum arată lucrările noastre?{' '}
+              <Link href="/portofoliu" className="font-semibold text-primary-foreground underline underline-offset-4 hover:opacity-80">
+                Vezi portofoliul
+              </Link>{' '}
+              sau{' '}
+              <Link href="/despre" className="font-semibold text-primary-foreground underline underline-offset-4 hover:opacity-80">
+                află cine suntem
               </Link>
-            </div>
+              .
+            </p>
           </m.div>
         </div>
       </section>
 
       <Footer />
+      <FloatingContact />
     </main>
   );
 }
