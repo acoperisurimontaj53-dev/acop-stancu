@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { m, AnimatePresence } from 'framer-motion';
@@ -63,15 +64,12 @@ export function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2" aria-label="Specialiști Acoperișuri - Acasă">
-              <m.div 
-                className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center"
+              <m.div
+                className="w-11 h-11 shrink-0"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <svg className="w-6 h-6 text-primary-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
+                <Image src="/logo.png" alt="" width={44} height={44} priority className="w-11 h-11" />
               </m.div>
               <div className="hidden sm:block">
                 <span className="block text-xl font-bold text-foreground font-serif">Specialiști Acoperișuri</span>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { m, AnimatePresence } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
@@ -39,12 +40,7 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center">
-                <svg className="w-6 h-6 text-accent-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
-              </div>
+              <Image src="/logo.png" alt="" width={44} height={44} className="w-11 h-11 shrink-0" />
               <div>
                 <span className="block text-xl font-bold font-serif">Specialiști Acoperișuri</span>
                 <p className="text-xs text-background/60 -mt-1">Montaj și reparații, în toată țara</p>
