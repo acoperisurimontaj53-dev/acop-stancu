@@ -2,12 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { m } from 'framer-motion';
-import { Phone, ArrowRight, MessageCircle, Shield, Award, Clock } from 'lucide-react';
+import { Phone, ArrowRight, Shield, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { projectImages } from '@/lib/services-data';
-import { SITE_WHATSAPP_URL } from '@/lib/seo';
 
 const heroSlides = [
   {
@@ -135,14 +134,7 @@ export function Hero() {
             <a href="tel:+40743364243">
               <Button size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2 text-lg px-8">
                 <Phone className="w-5 h-5" />
-                Sună Acum
-                <span className="hidden md:inline">· +40 743 364 243</span>
-              </Button>
-            </a>
-            <a href={SITE_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="rounded-full border-background/30 bg-transparent dark:bg-transparent text-background hover:bg-background/10 hover:text-background dark:hover:bg-background/10 gap-2 text-lg px-8">
-                <MessageCircle className="w-5 h-5" />
-                WhatsApp
+                Sună Acum · +40 743 364 243
               </Button>
             </a>
             <Link href="/contact">

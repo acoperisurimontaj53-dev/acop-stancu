@@ -6,15 +6,18 @@ import { SITE_PHONE, SITE_PHONE_DISPLAY, SITE_WHATSAPP_URL } from '@/lib/seo';
 interface ContactActionsProps {
   /** `onDark` for sections with a dark / primary background. */
   variant?: 'default' | 'onDark';
+  /** `compact` keeps only call + quote form (for heroes); `full` adds WhatsApp. */
+  layout?: 'full' | 'compact';
   /** Pre-filled WhatsApp message, e.g. "Bună ziua, vreau o ofertă pentru mansardări." */
   whatsappMessage?: string;
-  /** Show the number inside the call button (hidden on small screens). */
-  showNumber?: boolean;
   className?: string;
 }
 
-/** Call + WhatsApp + quote form: the three ways to reach us, used in every call-to-action block. */
-export function ContactActions({ variant = 'default', whatsappMessage, showNumber = true, className = '' }: ContactActionsProps) {
+/**
+ * The ways to reach us, used in every call-to-action block. The call button always shows the number:
+ * on desktop a bare "Sună" button does nothing, so visitors need to be able to read and dial it.
+ */
+export function ContactActions({ variant = 'default', layout = 'full', whatsappMessage, className = '' }: ContactActionsProps) {
   const whatsappHref = whatsappMessage ? `${SITE_WHATSAPP_URL}?text=${encodeURIComponent(whatsappMessage)}` : SITE_WHATSAPP_URL;
   const outlineClass =
     variant === 'onDark'
@@ -26,16 +29,17 @@ export function ContactActions({ variant = 'default', whatsappMessage, showNumbe
       <a href={`tel:${SITE_PHONE}`}>
         <Button size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
           <Phone className="w-5 h-5" />
-          Sună acum
-          {showNumber && <span className="hidden md:inline">· {SITE_PHONE_DISPLAY}</span>}
+          Sună acum · {SITE_PHONE_DISPLAY}
         </Button>
       </a>
-      <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
-        <Button size="lg" variant="outline" className={`w-full sm:w-auto rounded-full gap-2 ${outlineClass}`}>
-          <MessageCircle className="w-5 h-5" />
-          Scrie pe WhatsApp
-        </Button>
-      </a>
+      {layout === 'full' && (
+        <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+          <Button size="lg" variant="outline" className={`w-full sm:w-auto rounded-full gap-2 ${outlineClass}`}>
+            <MessageCircle className="w-5 h-5" />
+            Scrie pe WhatsApp
+          </Button>
+        </a>
+      )}
       <Link href="/contact">
         <Button size="lg" variant="outline" className={`w-full sm:w-auto rounded-full gap-2 ${outlineClass}`}>
           Cere ofertă gratuită
@@ -57,11 +61,11 @@ export function ContactBanner({ title, text, whatsappMessage }: ContactBannerPro
   return (
     <section className="py-10 bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-        <div className="max-w-2xl">
+        <div className="max-w-xl">
           <p className="text-2xl md:text-3xl font-bold font-serif text-balance">{title}</p>
           {text && <p className="mt-2 text-primary-foreground/80">{text}</p>}
         </div>
-        <ContactActions variant="onDark" whatsappMessage={whatsappMessage} showNumber={false} />
+        <ContactActions variant="onDark" layout="full" whatsappMessage={whatsappMessage} />
       </div>
     </section>
   );

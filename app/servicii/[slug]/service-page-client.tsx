@@ -8,6 +8,8 @@ import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { ContactActions, ContactBanner } from '@/components/contact-actions';
 import { FloatingContact } from '@/components/floating-contact';
+import { ServiceFaqSection, ServiceIntro, ServiceSeoSections } from '@/components/service-content-sections';
+import type { ServiceContent } from '@/lib/service-content';
 import { Service } from '@/lib/services-data';
 import {
   Phone,
@@ -23,9 +25,10 @@ interface ServicePageClientProps {
   service: Service;
   relatedServices: Service[];
   categoryName: string;
+  content?: ServiceContent;
 }
 
-export function ServicePageClient({ service, relatedServices, categoryName }: ServicePageClientProps) {
+export function ServicePageClient({ service, relatedServices, categoryName, content }: ServicePageClientProps) {
   const whatsappMessage = `Bună ziua, aș dori o ofertă pentru: ${service.name.toLowerCase()}.`;
 
   return (
@@ -89,7 +92,7 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
               </div>
 
               {/* CTA Buttons */}
-              <ContactActions whatsappMessage={whatsappMessage} showNumber={false} />
+              <ContactActions layout="compact" />
             </m.div>
 
             {/* Image */}
@@ -141,6 +144,8 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
           </div>
         </div>
       </section>
+
+      {content && <ServiceIntro name={service.name} content={content} />}
 
       {/* Info Section */}
       <section className="py-16 bg-secondary">
@@ -204,6 +209,9 @@ export function ServicePageClient({ service, relatedServices, categoryName }: Se
           </div>
         </div>
       </section>
+
+      {content && <ServiceSeoSections content={content} />}
+      {content && <ServiceFaqSection name={service.name} content={content} />}
 
       <ContactBanner
         title={`Vrei un preț pentru ${service.name.toLowerCase()}?`}

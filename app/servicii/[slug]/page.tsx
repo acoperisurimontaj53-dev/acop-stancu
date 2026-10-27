@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { services, getServiceBySlug, serviceCategories, type Service } from '@/lib/services-data';
 import { getRelatedServices } from '@/lib/related-services';
+import { getServiceContent, stripLinks } from '@/lib/service-content';
 import { JsonLd } from '@/components/json-ld';
 import { absoluteUrl, breadcrumbJsonLd, buildMetadata, ORGANIZATION_ID } from '@/lib/seo';
 import { ServicePageClient } from './service-page-client';
@@ -62,10 +63,11 @@ export default async function ServicePage({ params }: PageProps) {
   }
 
   const relatedServices = getRelatedServices(service);
+  const content = getServiceContent(service.slug);
 
   const categoryName = serviceCategories.find(c => c.id === service.category)?.name || service.category;
 
-  const jsonLd = [
+  const jsonLd: Array<Record<string, unknown>> = [
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -85,6 +87,18 @@ export default async function ServicePage({ params }: PageProps) {
     ]),
   ];
 
+  if (content && content.faqs.length > 0) {
+    jsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: content.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: stripLinks(faq.answer) },
+      })),
+    });
+  }
+
   return (
     <>
       <JsonLd data={jsonLd} />
@@ -92,6 +106,7 @@ export default async function ServicePage({ params }: PageProps) {
         service={service}
         relatedServices={relatedServices}
         categoryName={categoryName}
+        content={content}
       />
     </>
   );
